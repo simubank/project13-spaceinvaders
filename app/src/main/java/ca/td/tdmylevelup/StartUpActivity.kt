@@ -3,10 +3,10 @@ package ca.td.tdmylevelup
 import android.app.Activity
 import android.os.Bundle
 
-class DashboardActivity : Activity() {
+class StartUpActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dashboard)
+        setContentView(R.layout.activity_startup)
     }
 }
