@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">td4m3</string>
+    <string name="hello_to_the_survey">Hello to the survey!</string>
+    <string name="first_time_message">If you see this, this is the first time you have installed
+        the app!</string>
+    <string name="survey_header_title">Welcome!</string>
 </resources>
