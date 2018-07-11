@@ -23,6 +23,7 @@ android {
 }
 
 dependencies {
+    implementation project(path: ':td4m3')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'

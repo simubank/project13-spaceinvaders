@@ -1,9 +1,9 @@
 package ca.td.td4m3
 
-import android.support.v7.app.AppCompatActivity
+import android.app.Activity
 import android.os.Bundle
 
-class DashboardActivity : AppCompatActivity() {
+class DashboardActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
