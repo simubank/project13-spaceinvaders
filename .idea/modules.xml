@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TDMyLevelUp.iml" filepath="$PROJECT_DIR$/TDMyLevelUp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/project13-spaceinvaders.iml" filepath="$PROJECT_DIR$/project13-spaceinvaders.iml" />
-      <module fileurl="file://$PROJECT_DIR$/td4m3/td4m3.iml" filepath="$PROJECT_DIR$/td4m3/td4m3.iml" />
       <module fileurl="file://$PROJECT_DIR$/td4m3/td4m3.iml" filepath="$PROJECT_DIR$/td4m3/td4m3.iml" />
     </modules>
   </component>
