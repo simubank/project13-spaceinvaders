@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="white">#FFFFFF</color>
     <color name="td_green">#006400</color>
+    <color name="stroke_grey">#CABBBBBB</color>
 </resources>
