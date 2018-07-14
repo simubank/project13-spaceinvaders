@@ -4,7 +4,7 @@
 
     <application
         android:theme="@style/AppTheme">
-        <activity android:name=".dashboard.activity.DashboardActivity"/>
+        <activity android:name=".dashboard.DashboardActivity"/>
         <activity android:name=".survey.activity.SurveyActivity"/>
     </application>
 
