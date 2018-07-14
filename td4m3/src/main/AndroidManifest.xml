@@ -2,9 +2,10 @@
 <manifest package="ca.td.td4m3"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <application>
-        <activity android:name=".DashboardActivity"/>
-        <activity android:name=".SurveyActivity"/>
+    <application
+        android:theme="@style/AppTheme">
+        <activity android:name=".dashboard.activity.DashboardActivity"/>
+        <activity android:name=".survey.activity.SurveyActivity"/>
     </application>
 
 </manifest>
