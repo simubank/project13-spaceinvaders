@@ -8,5 +8,6 @@
     <string name="hello_to_the_survey">Hello to the survey!</string>
     <string name="first_time_message">If you see this, this is the first time you have installed
         the app!</string>
+    <string name="td_mortgage_cd">TD My Mortgage</string>
 
 </resources>
