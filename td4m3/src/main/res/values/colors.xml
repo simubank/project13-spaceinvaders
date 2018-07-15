@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="white">#FFFFFF</color>
+    <color name="td_dark_green">#163D22</color>
     <color name="td_green">#006400</color>
-    <color name="stroke_grey">#CABBBBBB</color>
+    <color name="td_pure_green">#008000</color>
+    <color name="td_light_green">#00B624</color>
+    <color name="td_very_light_green">#00FF00</color>
+    <color name="td_limegreen_green">#32CD32</color>
+    <color name="td_chartreuse_green">#7FFF00</color>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#CABBBBBB</color>
 </resources>
