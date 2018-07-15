@@ -6,7 +6,7 @@
         android:theme="@style/NoActionBar">
         <activity android:name=".dashboard.DashboardActivity"/>
         <activity android:name=".survey.activity.SurveyActivity"/>
-        <activity android:name=".activities.MortgageActivity"/>
+        <activity android:name=".mortgage.activity.MortgageActivity"/>
     </application>
 
 </manifest>
