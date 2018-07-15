@@ -7,5 +7,5 @@
     <dimen name="stroke_width">2dp</dimen>
 
     <dimen name="half_pie_chart_height">200dp</dimen>
-    <dimen name="card_bottom_spacing">5dp</dimen>
+    <dimen name="card_divider_spacing">5dp</dimen>
 </resources>
