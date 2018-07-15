@@ -6,8 +6,10 @@
 
     <ca.td.td4m3.dashboard.creditCard.cardView.CreditCardCardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/card_top_spacing">
+    </ca.td.td4m3.dashboard.creditCard.cardView.CreditCardCardView>
+  
     <ca.td.td4m3.dashboard.creditCard.cardView.MortgageCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

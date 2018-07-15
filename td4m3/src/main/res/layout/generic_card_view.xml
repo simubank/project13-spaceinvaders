@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/text_30_sp"
-                android:textColor="@android:color/black"
+                android:textColor="@color/td_green"
                 tools:text="Card Text" />
 
             <android.support.v7.widget.RecyclerView
