@@ -8,6 +8,6 @@ import com.ngam.rvabstractions.AbstractDataBindAdapter
 class MortgageAdapter(val presenter: MortgagePresenter): AbstractDataBindAdapter() {
 
     override fun buildRows() {
-        add(MortgageBinder(R.drawable.mortgage_picture, presenter.createOnClickListener()))
+        add(MortgageBinder(R.drawable.mortgage_picture,"", presenter.createOnClickListener()))
     }
 }

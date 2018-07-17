@@ -7,7 +7,7 @@ import ca.td.td4m3.R
 import ca.td.td4m3.components.mortgage.viewholder.MortgageViewHolder
 import com.ngam.rvabstractions.AbstractDataBinder
 
-class MortgageBinder(@DrawableRes private val drawableId: Int,
+class MortgageBinder(@DrawableRes private val drawableId: Int, private val title: String,
                      private val listener: View.OnClickListener?): AbstractDataBinder<MortgageViewHolder>() {
 
     override fun createViewHolder(parent: ViewGroup): MortgageViewHolder {
@@ -18,5 +18,13 @@ class MortgageBinder(@DrawableRes private val drawableId: Int,
         viewHolder.imageView.setBackgroundResource(drawableId)
         viewHolder.imageView.invalidate()
         viewHolder.imageView.setOnClickListener(listener)
+
+        if (title.isEmpty()) {
+            viewHolder.textView.visibility = View.GONE
+        } else {
+            viewHolder.textView.visibility = View.VISIBLE
+            viewHolder.textView.text = title
+            viewHolder.textView.setOnClickListener(listener)
+        }
     }
 }
