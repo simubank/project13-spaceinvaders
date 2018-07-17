@@ -22,7 +22,7 @@
             android:id="@+id/mortgage_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/text_20_sp"
+            android:padding="@dimen/card_top_spacing"
             android:textColor="@color/td_green"
             android:textSize="@dimen/text_30_sp" />
 

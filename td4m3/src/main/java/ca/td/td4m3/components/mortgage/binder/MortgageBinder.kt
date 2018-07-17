@@ -22,6 +22,7 @@ class MortgageBinder(@DrawableRes private val drawableId: Int, private val title
         if (title.isEmpty()) {
             viewHolder.textView.visibility = View.GONE
         } else {
+            viewHolder.textView.visibility = View.VISIBLE
             viewHolder.textView.text = title
             viewHolder.textView.setOnClickListener(listener)
         }

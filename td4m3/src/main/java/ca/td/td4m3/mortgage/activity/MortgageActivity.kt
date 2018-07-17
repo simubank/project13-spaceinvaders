@@ -1,5 +1,6 @@
 package ca.td.td4m3.mortgage.activity
 
+import android.os.Bundle
 import ca.td.td4m3.R
 import ca.td.td4m3.mortgage.adapter.MortgageActivityAdapter
 import ca.td.td4m3.mortgage.presenter.MortgageActivityPresenter
@@ -10,8 +11,8 @@ import com.ngam.rvabstractions.AbstractClassProperties
 class MortgageActivity : AbstractActivity<MortgageActivityPresenter, MortgageActivityAdapter>(),
         MortgageActivityView {
 
-    override fun onResume() {
-        super.onResume()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         val padding = resources.getDimensionPixelOffset(R.dimen.card_top_spacing)
         window.decorView.setBackgroundColor(getColor(R.color.grey))
         listView.setPadding(0, padding, 0, 0)
