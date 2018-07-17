@@ -6,9 +6,9 @@ import com.ngam.rvabstractions.AbstractPresenter
 
 class MortgageActivityPresenter(val view: MortgageActivityView): AbstractPresenter() {
 
-    fun getMortgageCalculatorActivity(): View.OnClickListener {
+    fun getMortgageCalculatorListener(): View.OnClickListener {
         return View.OnClickListener {
-            view.getMortgageCalculatorActivity()
+            view.launchMortgageCalculatorActivity()
         }
     }
 }

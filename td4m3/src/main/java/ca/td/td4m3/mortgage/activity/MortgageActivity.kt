@@ -25,6 +25,6 @@ class MortgageActivity : AbstractActivity<MortgageActivityPresenter, MortgageAct
         return AbstractClassProperties(presenter, adapter, "")
     }
 
-    override fun getMortgageCalculatorActivity() {
+    override fun launchMortgageCalculatorActivity() {
     }
 }

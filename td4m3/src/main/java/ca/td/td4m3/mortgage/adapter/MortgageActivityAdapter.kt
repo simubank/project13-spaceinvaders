@@ -9,6 +9,6 @@ class MortgageActivityAdapter(val presenter: MortgageActivityPresenter) : Abstra
 
     override fun buildRows() {
         add(MortgageBinder(R.drawable.mortgage_calculator, "Mortgage Calculator",
-                presenter.getMortgageCalculatorActivity()))
+                presenter.getMortgageCalculatorListener()))
     }
 }
