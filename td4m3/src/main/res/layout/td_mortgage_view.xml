@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="@dimen/card_divider_spacing"
+    android:layout_marginEnd="@dimen/card_side_spacing"
+    android:layout_marginStart="@dimen/card_side_spacing"
+    android:background="@drawable/card_shadow"
+    card_view:cardCornerRadius="@dimen/card_corner_radius">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_shadow"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:id="@+id/mortgage_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/text_20_sp"
+            android:textColor="@color/td_green"
+            android:textSize="@dimen/text_30_sp" />
+
+        <ImageView
+            android:id="@+id/mortgage_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/td_mortgage_cd" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

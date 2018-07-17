@@ -20,6 +20,7 @@
 
             <TextView
                 android:id="@+id/cardTitle"
+                android:layout_marginStart="@dimen/card_side_spacing"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/text_30_sp"
