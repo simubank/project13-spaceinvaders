@@ -12,6 +12,10 @@
 
     <ca.td.td4m3.dashboard.mortgage.cardView.MortgageCardView
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ca.td.td4m3.dashboard.accountsCard.cardView.AccountCardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/card_divider_spacing" />
+        android:layout_marginTop="10dp"/>
 </LinearLayout>

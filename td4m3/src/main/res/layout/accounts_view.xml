@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/accounts_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Accounts"
+        android:textSize="40sp"
+        android:textColor="@color/td_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bank_account_title"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Bank Account"
+        android:textColor="@color/td_dark_green"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accounts_title" />
+
+    <TextView
+        android:id="@+id/account_balance"
+        android:layout_width="65dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="$3290.00"
+        android:textColor="@color/td_pure_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bank_account_title" />
+
+    <TextView
+        android:id="@+id/account_currency"
+        android:layout_width="40dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="CAD"
+        android:textColor="@color/td_dark_green"
+        app:layout_constraintStart_toEndOf="@+id/account_balance"
+        app:layout_constraintTop_toBottomOf="@+id/bank_account_title" />
+
+
+    <TextView
+        android:id="@+id/credit_account_title"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginTop="20dp"
+        android:text="Credit Account"
+        android:textColor="@color/td_dark_green"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/bank_account_title"
+        app:layout_constraintTop_toBottomOf="@+id/account_balance" />
+
+    <TextView
+        android:id="@+id/credit_balance"
+        android:layout_width="65dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="$25.32"
+        android:textColor="@color/td_pure_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/credit_account_title" />
+
+    <TextView
+        android:id="@+id/credit_currency"
+        android:layout_width="40dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="CAD"
+        android:textColor="@color/td_dark_green"
+        app:layout_constraintStart_toEndOf="@+id/credit_balance"
+        app:layout_constraintTop_toBottomOf="@+id/credit_account_title" />
+
+</android.support.constraint.ConstraintLayout>
