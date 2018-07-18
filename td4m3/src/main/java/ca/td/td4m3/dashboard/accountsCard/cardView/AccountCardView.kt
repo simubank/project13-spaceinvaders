@@ -7,7 +7,7 @@ import ca.td.td4m3.components.genericCard.GenericCardView
 import ca.td.td4m3.dashboard.accountsCard.adapter.AccountsCardAdapter
 import ca.td.td4m3.dashboard.accountsCard.presenter.AccountsCardPresenter
 
-class AccountdCardView(context: Context, attrSet: AttributeSet?, defStyleAttr: Int):
+class AccountCardView(context: Context, attrSet: AttributeSet?, defStyleAttr: Int):
         GenericCardView<AccountsCardPresenter, AccountsCardAdapter>(context, attrSet, defStyleAttr) {
     // Constructors for LinearLayout
     constructor(context: Context, attrSet: AttributeSet?): this(context, attrSet, 0)
