@@ -1,12 +1,12 @@
 package ca.td.td4m3.accounts.activity
 
-import ca.td.td4m3.survey.adapter.SurveyAdapter
-import ca.td.td4m3.survey.presenter.SurveyPresenter
-import com.ngam.rvabstractions.AbstractActivity
-import com.ngam.rvabstractions.AbstractClassProperties
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import ca.td.td4m3.R
 
-class AccountsActivity : AbstractActivity<SurveyPresenter, SurveyAdapter>() {
-    override fun setProperties(): AbstractClassProperties<SurveyPresenter, SurveyAdapter> {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+class AccountsActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.accounts_view)
     }
 }
