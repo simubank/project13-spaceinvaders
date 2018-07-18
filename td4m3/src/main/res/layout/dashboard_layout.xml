@@ -2,20 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey"
     android:orientation="vertical">
 
     <ca.td.td4m3.dashboard.creditCard.cardView.CreditCardCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/card_top_spacing">
-    </ca.td.td4m3.dashboard.creditCard.cardView.CreditCardCardView>
-  
-    <ca.td.td4m3.dashboard.creditCard.cardView.MortgageCardView
+        android:layout_marginTop="@dimen/card_top_spacing" />
+
+    <ca.td.td4m3.dashboard.mortgage.cardView.MortgageCardView
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="wrap_content"/>
 
     <ca.td.td4m3.dashboard.accountsCard.cardView.AccountCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"/>
+=======
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/card_divider_spacing" />
+>>>>>>> 23d156bee4c117a016f460ec400dd6000700c05f
 </LinearLayout>
