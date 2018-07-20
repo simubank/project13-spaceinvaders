@@ -42,7 +42,7 @@ class AccountsViewController: UIViewController {
         view.backgroundColor = .white
         
         accountsHeaderLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(100)
+            $0.top.equalToSuperview().offset(130)
             $0.left.equalTo(20)
         }
         

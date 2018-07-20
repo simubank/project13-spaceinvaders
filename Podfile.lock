@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.2)
+  - EFCountingLabel (4.0.1)
   - Hero (1.0.1)
   - IGListKit (3.4.0):
     - IGListKit/Default (= 3.4.0)
@@ -16,6 +17,7 @@ PODS:
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
+  - EFCountingLabel
   - Hero (= 1.0.1)
   - IGListKit
   - Moya
@@ -25,6 +27,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - EFCountingLabel
     - Hero
     - IGListKit
     - Moya
@@ -34,6 +37,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  EFCountingLabel: 1beb6707761ad00b97efc8bde5c3fceaa7cb9eec
   Hero: cee286821578e170d8c0c9c9cda7897357401112
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
   Moya: a725035953bc1c0eb1be505ab903984501d82440
@@ -41,6 +45,6 @@ SPEC CHECKSUMS:
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 8fd10de81feebd0ffcc83eda348c590c76c6427a
+PODFILE CHECKSUM: 228d37b2190b5fbe6306c0a3875f8dac4bc5a745
 
 COCOAPODS: 1.5.3

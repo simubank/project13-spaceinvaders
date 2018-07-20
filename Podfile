@@ -11,4 +11,5 @@ target 'TD MyLevelUp' do
   pod 'IGListKit'
   pod 'Moya'
   pod 'Shimmer'
+  pod 'EFCountingLabel'
 end

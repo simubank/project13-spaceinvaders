@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import EFCountingLabel
 
 class AccountsWidgetView: DashboardWidgetView, AccountsWidgetViewContract {
     
@@ -7,7 +8,8 @@ class AccountsWidgetView: DashboardWidgetView, AccountsWidgetViewContract {
         didSet {
             guard let balance = account?.balance else { return }
             guard let currency = account?.currency else { return }
-            accountsBalanceLabel.text = "$\(balance) \(currency)"
+            accountsBalanceLabel.countFrom(0, to: CGFloat(balance), withDuration: 1.0)
+            accountCurrencyLabel.text = currency
         }
     }
     
@@ -19,9 +21,18 @@ class AccountsWidgetView: DashboardWidgetView, AccountsWidgetViewContract {
         return label
     }()
     
-    public lazy var accountsBalanceLabel: UILabel = {
-        let label = UILabel()
-        label.text = "$0.00 CAD"
+    public lazy var accountsBalanceLabel: EFCountingLabel = {
+        let label = EFCountingLabel()
+        label.format = "$%.1f"
+        label.text = "$0.0"
+        label.font = .medium(withSize: 32.0)
+        addSubview(label)
+        return label
+    }()
+    
+    public lazy var accountCurrencyLabel: UILabel = {
+       let label = UILabel()
+        label.text = "CAD"
         label.font = .medium(withSize: 32.0)
         addSubview(label)
         return label
@@ -38,6 +49,11 @@ class AccountsWidgetView: DashboardWidgetView, AccountsWidgetViewContract {
         accountsBalanceLabel.snp.makeConstraints { make in
             make.top.equalTo(accountsWidgetHeaderLabel.snp.bottom).offset(15)
             make.left.equalTo(8)
+        }
+        
+        accountCurrencyLabel.snp.makeConstraints { make in
+            make.top.equalTo(accountsBalanceLabel)
+            make.left.equalTo(accountsBalanceLabel.snp.right).offset(10)
         }
         
     }
