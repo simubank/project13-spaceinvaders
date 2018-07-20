@@ -11,7 +11,7 @@ class AccountsWidgetView: DashboardWidgetView, AccountsWidgetViewContract {
         }
     }
     
-    public lazy var accountsHeaderLabel: UILabel = {
+    public lazy var accountsWidgetHeaderLabel: UILabel = {
         let label = UILabel()
         label.text = "Balance"
         label.font = .heavy(withSize: 40.0)
@@ -21,6 +21,7 @@ class AccountsWidgetView: DashboardWidgetView, AccountsWidgetViewContract {
     
     public lazy var accountsBalanceLabel: UILabel = {
         let label = UILabel()
+        label.text = "$0.00 CAD"
         label.font = .medium(withSize: 32.0)
         addSubview(label)
         return label
@@ -29,13 +30,13 @@ class AccountsWidgetView: DashboardWidgetView, AccountsWidgetViewContract {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        accountsHeaderLabel.snp.makeConstraints { make in
+        accountsWidgetHeaderLabel.snp.makeConstraints { make in
             make.top.equalTo(8)
             make.left.equalTo(8)
         }
         
         accountsBalanceLabel.snp.makeConstraints { make in
-            make.top.equalTo(accountsHeaderLabel.snp.bottom).offset(15)
+            make.top.equalTo(accountsWidgetHeaderLabel.snp.bottom).offset(15)
             make.left.equalTo(8)
         }
         
