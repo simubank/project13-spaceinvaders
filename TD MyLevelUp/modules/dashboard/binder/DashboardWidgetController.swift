@@ -33,6 +33,7 @@ public class DashboardWidgetController: ListSectionController {
         guard let cell = collectionContext?.dequeueReusableCell(of: DashboardWidgetCell.self, for: self, at: index) as? DashboardWidgetCell else {
             fatalError("Could not dequeue DashboardWidgetCell")
         }
+        cell.widgetIconImageView.image = model?.icon
         cell.widgetContent = model?.contentView
         cell.titleLabel.text = model?.title
         return cell
