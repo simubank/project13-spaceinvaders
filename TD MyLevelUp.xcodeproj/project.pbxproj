@@ -210,12 +210,12 @@
 			path = presenters;
 			sourceTree = "<group>";
 		};
-		161B6AE12103833F00713CFB /* Data */ = {
+		161B6AE12103833F00713CFB /* data */ = {
 			isa = PBXGroup;
 			children = (
 				161B6AE22103835000713CFB /* PersonalAccounts.swift */,
 			);
-			path = Data;
+			path = data;
 			sourceTree = "<group>";
 		};
 		46B240B02100355500A2E45C = {
@@ -468,7 +468,7 @@
 		46B241282101292F00A2E45C /* accounts */ = {
 			isa = PBXGroup;
 			children = (
-				161B6AE12103833F00713CFB /* Data */,
+				161B6AE12103833F00713CFB /* data */,
 				161B6ADB21027AB300713CFB /* presenters */,
 				161B6AD12102590A00713CFB /* resources */,
 				161B6AC9210256A700713CFB /* controllers */,
