@@ -1,5 +1,6 @@
 package ca.td.td4m3.mortgage.activity
 
+import android.content.Intent
 import android.os.Bundle
 import ca.td.td4m3.R
 import ca.td.td4m3.mortgage.adapter.MortgageActivityAdapter
@@ -26,5 +27,7 @@ class MortgageActivity : AbstractActivity<MortgageActivityPresenter, MortgageAct
     }
 
     override fun launchMortgageCalculatorActivity() {
+        val intent = Intent(this, MortgageCalculatorActivity::class.java)
+        startActivity(intent)
     }
 }
