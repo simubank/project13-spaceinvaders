@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		161B6ACB210256C300713CFB /* AccountsWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161B6ACA210256C300713CFB /* AccountsWidgetView.swift */; };
+		161B6ACD2102575F00713CFB /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161B6ACC2102575F00713CFB /* AccountsViewController.swift */; };
+		161B6AD42102594A00713CFB /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 161B6AD32102594A00713CFB /* Image.xcassets */; };
+		161B6ADD21027AC600713CFB /* AccountsWidgetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161B6ADC21027AC600713CFB /* AccountsWidgetPresenter.swift */; };
+		161B6ADF21029A3800713CFB /* PersonalAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161B6ADE21029A3800713CFB /* PersonalAccount.swift */; };
 		46B240BD2100355500A2E45C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B240BC2100355500A2E45C /* AppDelegate.swift */; };
 		46B240BF2100355500A2E45C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B240BE2100355500A2E45C /* DashboardViewController.swift */; };
 		46B240C42100355800A2E45C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B240C32100355800A2E45C /* Assets.xcassets */; };
@@ -48,7 +53,6 @@
 		46B24127210128FB00A2E45C /* MortgageWidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B24126210128FB00A2E45C /* MortgageWidgetModel.swift */; };
 		46B2412A2101293700A2E45C /* AccountsWidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B241292101293700A2E45C /* AccountsWidgetModel.swift */; };
 		46B2413421012AF700A2E45C /* InvestmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2413321012AF700A2E45C /* InvestmentsViewController.swift */; };
-		46B2413D2101301900A2E45C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B2413C2101301900A2E45C /* Images.xcassets */; };
 		46B2413F2101302600A2E45C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B2413E2101302600A2E45C /* Images.xcassets */; };
 		46B241412101303100A2E45C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B241402101303100A2E45C /* Images.xcassets */; };
 		46B241432101303B00A2E45C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B241422101303B00A2E45C /* Images.xcassets */; };
@@ -71,6 +75,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		161B6ACA210256C300713CFB /* AccountsWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsWidgetView.swift; sourceTree = "<group>"; };
+		161B6ACC2102575F00713CFB /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		161B6AD32102594A00713CFB /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		161B6ADC21027AC600713CFB /* AccountsWidgetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsWidgetPresenter.swift; sourceTree = "<group>"; };
+		161B6ADE21029A3800713CFB /* PersonalAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccount.swift; sourceTree = "<group>"; };
 		3C9598CB0185B11536D9D305 /* Pods-TD MyLevelUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TD MyLevelUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TD MyLevelUp/Pods-TD MyLevelUp.debug.xcconfig"; sourceTree = "<group>"; };
 		46B240B92100355500A2E45C /* TD MyLevelUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TD MyLevelUp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B240BC2100355500A2E45C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,7 +124,6 @@
 		46B24126210128FB00A2E45C /* MortgageWidgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageWidgetModel.swift; sourceTree = "<group>"; };
 		46B241292101293700A2E45C /* AccountsWidgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsWidgetModel.swift; sourceTree = "<group>"; };
 		46B2413321012AF700A2E45C /* InvestmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentsViewController.swift; sourceTree = "<group>"; };
-		46B2413C2101301900A2E45C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		46B2413E2101302600A2E45C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		46B241402101303100A2E45C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		46B241422101303B00A2E45C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -157,6 +165,47 @@
 				6CB7F97A4F48472D955CE9D1 /* Pods-TD MyLevelUp.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		161B6AC72102569600713CFB /* models */ = {
+			isa = PBXGroup;
+			children = (
+				46B241292101293700A2E45C /* AccountsWidgetModel.swift */,
+				161B6ADE21029A3800713CFB /* PersonalAccount.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		161B6AC8210256A400713CFB /* views */ = {
+			isa = PBXGroup;
+			children = (
+				161B6ACA210256C300713CFB /* AccountsWidgetView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		161B6AC9210256A700713CFB /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				161B6ACC2102575F00713CFB /* AccountsViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		161B6AD12102590A00713CFB /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				161B6AD32102594A00713CFB /* Image.xcassets */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		161B6ADB21027AB300713CFB /* presenters */ = {
+			isa = PBXGroup;
+			children = (
+				161B6ADC21027AC600713CFB /* AccountsWidgetPresenter.swift */,
+			);
+			path = presenters;
 			sourceTree = "<group>";
 		};
 		46B240B02100355500A2E45C = {
@@ -409,26 +458,13 @@
 		46B241282101292F00A2E45C /* accounts */ = {
 			isa = PBXGroup;
 			children = (
-				46B2413521012FB300A2E45C /* resources */,
-				46B2412C21012ACF00A2E45C /* service */,
-				46B2412B21012ACC00A2E45C /* ui */,
-				46B241292101293700A2E45C /* AccountsWidgetModel.swift */,
+				161B6ADB21027AB300713CFB /* presenters */,
+				161B6AD12102590A00713CFB /* resources */,
+				161B6AC9210256A700713CFB /* controllers */,
+				161B6AC8210256A400713CFB /* views */,
+				161B6AC72102569600713CFB /* models */,
 			);
 			path = accounts;
-			sourceTree = "<group>";
-		};
-		46B2412B21012ACC00A2E45C /* ui */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ui;
-			sourceTree = "<group>";
-		};
-		46B2412C21012ACF00A2E45C /* service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = service;
 			sourceTree = "<group>";
 		};
 		46B2412D21012AD400A2E45C /* service */ = {
@@ -477,14 +513,6 @@
 				46B2416021018B5600A2E45C /* AlphaVantage.swift */,
 			);
 			path = service;
-			sourceTree = "<group>";
-		};
-		46B2413521012FB300A2E45C /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				46B2413C2101301900A2E45C /* Images.xcassets */,
-			);
-			path = resources;
 			sourceTree = "<group>";
 		};
 		46B2413621012FB700A2E45C /* resources */ = {
@@ -653,7 +681,6 @@
 				46B241432101303B00A2E45C /* Images.xcassets in Resources */,
 				46B240F62100438200A2E45C /* HKGrotesk-Medium.otf in Resources */,
 				46B240F12100438200A2E45C /* HKGrotesk-BoldItalic.otf in Resources */,
-				46B2413D2101301900A2E45C /* Images.xcassets in Resources */,
 				46B240C42100355800A2E45C /* Assets.xcassets in Resources */,
 				46B240F32100438200A2E45C /* HKGrotesk-MediumItalic.otf in Resources */,
 				46B241412101303100A2E45C /* Images.xcassets in Resources */,
@@ -663,6 +690,7 @@
 				46B2413F2101302600A2E45C /* Images.xcassets in Resources */,
 				46B240F42100438200A2E45C /* HKGrotesk-SemiBold.otf in Resources */,
 				46B240F92100438200A2E45C /* HKGrotesk-Bold.otf in Resources */,
+				161B6AD42102594A00713CFB /* Image.xcassets in Resources */,
 				46B240F82100438200A2E45C /* HKGrotesk-SemiBoldItalic.otf in Resources */,
 				46B240F22100438200A2E45C /* HKGrotesk-Italic.otf in Resources */,
 			);
@@ -697,6 +725,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TD MyLevelUp/Pods-TD MyLevelUp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/EFCountingLabel/EFCountingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -707,6 +736,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EFCountingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
@@ -727,6 +757,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46B24124210128C600A2E45C /* CreditCardWidgetModel.swift in Sources */,
+				161B6ADF21029A3800713CFB /* PersonalAccount.swift in Sources */,
 				46B240D221003D2100A2E45C /* BaseCollectionViewController.swift in Sources */,
 				46B240E32100400900A2E45C /* TDShadowable.swift in Sources */,
 				46B2410C21004BFE00A2E45C /* Branch.swift in Sources */,
@@ -762,12 +793,15 @@
 				46B2415B21015AB700A2E45C /* InvestingWidgetPresenter.swift in Sources */,
 				46B2412A2101293700A2E45C /* AccountsWidgetModel.swift in Sources */,
 				46B24156210149C500A2E45C /* UICollectionView+Center.swift in Sources */,
+				161B6ACD2102575F00713CFB /* AccountsViewController.swift in Sources */,
 				46B24104210047C600A2E45C /* String+Network.swift in Sources */,
 				46B2415D21015BFC00A2E45C /* InvestingIntent.swift in Sources */,
+				161B6ADD21027AC600713CFB /* AccountsWidgetPresenter.swift in Sources */,
 				46B241212101283E00A2E45C /* InvestingWidgetModel.swift in Sources */,
 				46B2414A2101381700A2E45C /* DashboardWidgetView.swift in Sources */,
 				46B2410E21004C2A00A2E45C /* Customer.swift in Sources */,
 				46B240FB2100439300A2E45C /* UIFont+LevelUp.swift in Sources */,
+				161B6ACB210256C300713CFB /* AccountsWidgetView.swift in Sources */,
 				46B240BD2100355500A2E45C /* AppDelegate.swift in Sources */,
 				46B2411E2101252900A2E45C /* AccountManager.swift in Sources */,
 			);

@@ -3,6 +3,7 @@ import IGListKit
 
 class DashboardViewController: BaseCollectionViewController {
     var name: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "TD MyLevelUp"

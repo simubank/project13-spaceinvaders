@@ -28,7 +28,6 @@ public class DashboardWidgetCell: TDBaseCell {
     lazy var widgetIconImageView: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
-        view.image = UIImage(named: "investing_icon_small")
         whiteBackground.addSubview(view)
         return view
     }()
