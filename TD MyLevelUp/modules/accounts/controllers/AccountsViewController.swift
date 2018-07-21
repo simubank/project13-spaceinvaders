@@ -19,7 +19,8 @@ class AccountsViewController: UIViewController {
             let accountText  = "\(recommendedAccount?.accountName.rawValue ?? "") account."
             let attributedString = NSMutableAttributedString(string: normalText)
             
-            let attrs = [NSAttributedStringKey.font : UIFont.bold]
+            let attrs = [NSAttributedStringKey.font : UIFont.bold,
+                         NSAttributedStringKey.foregroundColor: UIColor.primaryLight]
             let boldString = NSMutableAttributedString(string: accountText, attributes: attrs)
             
             attributedString.append(boldString)
@@ -46,7 +47,7 @@ class AccountsViewController: UIViewController {
     
     public lazy var recommendationsHeaderLabel: UILabel = {
         let label = UILabel()
-        label.text = "Recommendation"
+        label.text = "What we recommend"
         label.textColor = .black
         label.font = .bold(withSize: 30.0)
         view.addSubview(label)
