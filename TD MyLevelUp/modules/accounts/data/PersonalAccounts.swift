@@ -46,16 +46,16 @@ class PersonalAccounts {
     
     
     // MARK:- Banking accounts
-    let allInclusiveBanking = PersonalAccount(accountName: .AllInclusiveBanking, monthlyFee: 29.95, transactionsPerMonth: .infinity, planHighlights: allInclusiveHighlights, moreInfoURL: URL(string: "https://www.td.com/ca/en/personal-banking/products/bank-accounts/chequing-accounts/all-inclusive-banking-plan/")!)
+    static let allInclusiveBanking = PersonalAccount(accountName: .AllInclusiveBanking, monthlyFee: 29.95, transactionsPerMonth: .infinity, planHighlights: allInclusiveHighlights, moreInfoURL: URL(string: "https://www.td.com/ca/en/personal-banking/products/bank-accounts/chequing-accounts/all-inclusive-banking-plan/")!)
     
-    let unlimitedChequing = PersonalAccount(accountName: .UnlimitedChequing, monthlyFee: 15.95, transactionsPerMonth: .infinity, planHighlights: unlimitedHighlights, moreInfoURL: URL(string: "https://www.td.com/ca/en/personal-banking/products/bank-accounts/chequing-accounts/unlimited-chequing-account/")!)
+    static let unlimitedChequing = PersonalAccount(accountName: .UnlimitedChequing, monthlyFee: 15.95, transactionsPerMonth: .infinity, planHighlights: unlimitedHighlights, moreInfoURL: URL(string: "https://www.td.com/ca/en/personal-banking/products/bank-accounts/chequing-accounts/unlimited-chequing-account/")!)
     
-    let everyDayChequing = PersonalAccount(accountName: .EveryDayChequing, monthlyFee: 10.95, transactionsPerMonth: 25, planHighlights: everyDayHighlights, moreInfoURL: URL(string: "https://www.td.com/ca/en/personal-banking/products/bank-accounts/savings-accounts/every-day-savings-account/")!)
+    static let everyDayChequing = PersonalAccount(accountName: .EveryDayChequing, monthlyFee: 10.95, transactionsPerMonth: 25, planHighlights: everyDayHighlights, moreInfoURL: URL(string: "https://www.td.com/ca/en/personal-banking/products/bank-accounts/savings-accounts/every-day-savings-account/")!)
     
-    let minimumChequing = PersonalAccount(accountName: .MinimumChequing, monthlyFee: 3.95, transactionsPerMonth: 12, planHighlights: minimumCheqHighlights, moreInfoURL: URL(string: "https://www.td.com/ca/en/personal-banking/products/bank-accounts/chequing-accounts/minimum-chequing-account/")!)
+    static let minimumChequing = PersonalAccount(accountName: .MinimumChequing, monthlyFee: 3.95, transactionsPerMonth: 12, planHighlights: minimumCheqHighlights, moreInfoURL: URL(string: "https://www.td.com/ca/en/personal-banking/products/bank-accounts/chequing-accounts/minimum-chequing-account/")!)
     
-    let studentChequing = PersonalAccount(accountName: .StudentChequing, monthlyFee: 0.00, transactionsPerMonth: 25, planHighlights: studentCheqHighlights, moreInfoURL: URL(string: "https://www.td.com/ca/en/personal-banking/products/bank-accounts/chequing-accounts/student-chequing-account/")!)
+    static let studentChequing = PersonalAccount(accountName: .StudentChequing, monthlyFee: 0.00, transactionsPerMonth: 25, planHighlights: studentCheqHighlights, moreInfoURL: URL(string: "https://www.td.com/ca/en/personal-banking/products/bank-accounts/chequing-accounts/student-chequing-account/")!)
     
-    let youthChequing = PersonalAccount(accountName: .YouthAccount, monthlyFee: 0.00, transactionsPerMonth: .infinity, planHighlights: youthPlanHighlights, moreInfoURL: URL(string: "https://www.td.com/ca/en/personal-banking/products/bank-accounts/savings-accounts/youth-account/")!)
+    static let youthChequing = PersonalAccount(accountName: .YouthAccount, monthlyFee: 0.00, transactionsPerMonth: .infinity, planHighlights: youthPlanHighlights, moreInfoURL: URL(string: "https://www.td.com/ca/en/personal-banking/products/bank-accounts/savings-accounts/youth-account/")!)
     
 }

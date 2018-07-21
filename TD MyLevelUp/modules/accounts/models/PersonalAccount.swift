@@ -1,12 +1,12 @@
 import Foundation
 
-enum PersonalAccountType {
-    case AllInclusiveBanking
-    case UnlimitedChequing
-    case EveryDayChequing
-    case MinimumChequing
-    case StudentChequing
-    case YouthAccount
+enum PersonalAccountType: String {
+    case AllInclusiveBanking = "All Inclusive Banking"
+    case UnlimitedChequing = "Unlimited Chequing"
+    case EveryDayChequing = "Every Day Chequing"
+    case MinimumChequing  = "Minimum Chequing"
+    case StudentChequing = "Student Chequing"
+    case YouthAccount = "Youth"
 }
 
 class PersonalAccount {
