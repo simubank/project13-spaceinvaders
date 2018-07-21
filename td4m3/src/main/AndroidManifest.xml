@@ -7,5 +7,6 @@
         <activity android:name=".dashboard.DashboardActivity"/>
         <activity android:name=".survey.activity.SurveyActivity"/>
         <activity android:name=".mortgage.activity.MortgageActivity"/>
+        <activity android:name=".mortgage.activity.MortgageCalculatorActivity"/>
     </application>
 </manifest>

@@ -26,6 +26,7 @@ dependencies {
     implementation 'com.github.itsAlexNguyen:VirtualBank:master-SNAPSHOT'
     implementation 'com.github.TheRishabhB:RecyclerViewAbstractions:1.1'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    implementation "com.thejuki:k-form-master:$kform_master_version"
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
