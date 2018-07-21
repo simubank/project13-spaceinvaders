@@ -63,6 +63,17 @@ class AccountsViewController: UIViewController {
         return label
     }()
     
+    public lazy var learnMoreButton: UIButton = {
+        let button = UIButton()
+        button.tintColor = .primary
+        button.titleLabel?.font = .bold
+        button.setTitle("Learn More", for: .normal)
+        button.addTarget(self, action: #selector(handleButtonClick), for: .touchUpInside)
+        button.backgroundColor = .primary
+        view.addSubview(button)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -94,6 +105,14 @@ class AccountsViewController: UIViewController {
             $0.left.equalTo(accountsHeaderLabel)
             $0.right.equalTo(-8)
         }
+        
+        learnMoreButton.snp.makeConstraints {
+            $0.top.equalTo(recommendedAccountLabel).offset(70)
+            $0.centerX.equalToSuperview()
+            $0.left.equalTo(15)
+            $0.right.equalTo(-15)
+            $0.height.equalTo(60)
+        }
     }
     
     private func getAccountInfo() {
@@ -111,7 +130,6 @@ class AccountsViewController: UIViewController {
                 print(error)
             }
         }
-        
         
     }
     
@@ -132,5 +150,10 @@ class AccountsViewController: UIViewController {
             return PersonalAccounts.minimumChequing
         }
         
+    }
+    
+    @objc func handleButtonClick() {
+        guard let moreInfoURL = recommendedAccount?.moreInfoURL else { return }
+        UIApplication.shared.open(moreInfoURL, options: [:], completionHandler: nil)
     }
 }
