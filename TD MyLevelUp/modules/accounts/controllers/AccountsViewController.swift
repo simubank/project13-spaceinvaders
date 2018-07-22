@@ -5,10 +5,11 @@ import SnapKit
 class AccountsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var accounts = [Account]()
+    var recommendedText: String = "Based on your account information, the account that would suit you best is a(n) "
     
     var recommendedAccount: PersonalAccount? {
         didSet {
-            let normalText = "Based on your account information, the account that would suit you best is a(n) "
+            let normalText = recommendedText
             let accountText  = "\(recommendedAccount?.accountName.rawValue ?? "") account."
             let attributedString = NSMutableAttributedString(string: normalText)
             
@@ -135,12 +136,16 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
         
         switch maxAccountBalance {
         case 2000..<3000:
+            recommendedText = "You seem to have over $2000 in your balances. Maybe you would be interested in a(n) "
             return PersonalAccounts.minimumChequing
         case 3000..<4000:
+            recommendedText = "You seem to have over $3000 in your balances. Maybe you would be interested in a(n) "
             return PersonalAccounts.everyDayChequing
         case 4000..<5000:
+            recommendedText = "You seem to have over $4000 in your balances. Maybe you would be interested in a(n) "
             return PersonalAccounts.unlimitedChequing
         case 5000...:
+            recommendedText = "You seem to have over $5000 in your balances. Maybe you would be interested in a(n) "
             return PersonalAccounts.allInclusiveBanking
         default:
             return PersonalAccounts.minimumChequing
