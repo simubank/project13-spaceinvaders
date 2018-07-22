@@ -72,11 +72,12 @@
 		46B2416121018B5600A2E45C /* AlphaVantage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2416021018B5600A2E45C /* AlphaVantage.swift */; };
 		46B241652102003B00A2E45C /* TopGainersSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B241642102003B00A2E45C /* TopGainersSectionController.swift */; };
 		46B241672102004800A2E45C /* StockQuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B241662102004800A2E45C /* StockQuoteCell.swift */; };
-		46F88EFA2103E2A70012077E /* InvestingTFSAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88EF92103E2A70012077E /* InvestingTFSAViewController.swift */; };
+		46F88EFA2103E2A70012077E /* WhyInvestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88EF92103E2A70012077E /* WhyInvestingViewController.swift */; };
 		46F88EFC210414B00012077E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F88EFB210414AF0012077E /* Images.xcassets */; };
 		46F88F00210420E80012077E /* getAccountsSelf.json in Resources */ = {isa = PBXBuildFile; fileRef = 46F88EFF210420E80012077E /* getAccountsSelf.json */; };
 		46F88F02210420FE0012077E /* getCustomer.json in Resources */ = {isa = PBXBuildFile; fileRef = 46F88F01210420FE0012077E /* getCustomer.json */; };
 		46F88F04210421710012077E /* Data+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F03210421710012077E /* Data+JSON.swift */; };
+		46F88F06210425BE0012077E /* getAccounts.json in Resources */ = {isa = PBXBuildFile; fileRef = 46F88F05210425BE0012077E /* getAccounts.json */; };
 		DC960470A15BFFBFD95B5201 /* Pods_TD_MyLevelUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2294332CE8B3D5822C541A /* Pods_TD_MyLevelUp.framework */; };
 /* End PBXBuildFile section */
 
@@ -149,11 +150,12 @@
 		46B2416021018B5600A2E45C /* AlphaVantage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaVantage.swift; sourceTree = "<group>"; };
 		46B241642102003B00A2E45C /* TopGainersSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGainersSectionController.swift; sourceTree = "<group>"; };
 		46B241662102004800A2E45C /* StockQuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockQuoteCell.swift; sourceTree = "<group>"; };
-		46F88EF92103E2A70012077E /* InvestingTFSAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestingTFSAViewController.swift; sourceTree = "<group>"; };
+		46F88EF92103E2A70012077E /* WhyInvestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyInvestingViewController.swift; sourceTree = "<group>"; };
 		46F88EFB210414AF0012077E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		46F88EFF210420E80012077E /* getAccountsSelf.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getAccountsSelf.json; sourceTree = "<group>"; };
 		46F88F01210420FE0012077E /* getCustomer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getCustomer.json; sourceTree = "<group>"; };
 		46F88F03210421710012077E /* Data+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+JSON.swift"; sourceTree = "<group>"; };
+		46F88F05210425BE0012077E /* getAccounts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getAccounts.json; sourceTree = "<group>"; };
 		6CB7F97A4F48472D955CE9D1 /* Pods-TD MyLevelUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TD MyLevelUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TD MyLevelUp/Pods-TD MyLevelUp.release.xcconfig"; sourceTree = "<group>"; };
 		CC2294332CE8B3D5822C541A /* Pods_TD_MyLevelUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TD_MyLevelUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -526,7 +528,7 @@
 				46B241622101FFF500A2E45C /* controllers */,
 				46B2413321012AF700A2E45C /* InvestmentsViewController.swift */,
 				46B24146210135AD00A2E45C /* InvestingWidgetView.swift */,
-				46F88EF92103E2A70012077E /* InvestingTFSAViewController.swift */,
+				46F88EF92103E2A70012077E /* WhyInvestingViewController.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -647,6 +649,7 @@
 			children = (
 				46F88EFF210420E80012077E /* getAccountsSelf.json */,
 				46F88F01210420FE0012077E /* getCustomer.json */,
+				46F88F05210425BE0012077E /* getAccounts.json */,
 			);
 			path = mock;
 			sourceTree = "<group>";
@@ -738,6 +741,7 @@
 				161B6AD42102594A00713CFB /* Image.xcassets in Resources */,
 				46B240F82100438200A2E45C /* HKGrotesk-SemiBoldItalic.otf in Resources */,
 				46B240F22100438200A2E45C /* HKGrotesk-Italic.otf in Resources */,
+				46F88F06210425BE0012077E /* getAccounts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,7 +816,7 @@
 				46B241672102004800A2E45C /* StockQuoteCell.swift in Sources */,
 				46F88F04210421710012077E /* Data+JSON.swift in Sources */,
 				46B2413421012AF700A2E45C /* InvestmentsViewController.swift in Sources */,
-				46F88EFA2103E2A70012077E /* InvestingTFSAViewController.swift in Sources */,
+				46F88EFA2103E2A70012077E /* WhyInvestingViewController.swift in Sources */,
 				46B2414D2101395B00A2E45C /* PromotionCell.swift in Sources */,
 				46B241542101475500A2E45C /* ListInsetSingleSectionController.swift in Sources */,
 				46B241452101351A00A2E45C /* EmbeddedCollectionViewCell.swift in Sources */,

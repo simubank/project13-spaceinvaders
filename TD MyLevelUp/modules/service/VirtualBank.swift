@@ -7,8 +7,9 @@ public let VirtualBankService = MoyaProvider<VirtualBank>(stubClosure: { _ in
 
 public enum VirtualBank {
     case customer(id: String)
-    case accounts
-    case transactionsFor(customerId: String)
+    case account
+    case accounts(user: String)
+    case transactionsFor(account: String)
 }
 
 extension VirtualBank: TargetType {
@@ -19,8 +20,10 @@ extension VirtualBank: TargetType {
     
     public var path: String {
         switch self {
-        case .accounts:
+        case .account:
            return "/api/accounts/self"
+        case .accounts(let user):
+           return "/api/customers/\(user)/accounts"
         case let .transactionsFor(id):
            return "/api/accounts/\(id)/transactions"
         case let .customer(id):
@@ -30,25 +33,27 @@ extension VirtualBank: TargetType {
     
     public var method: Moya.Method {
         switch self {
-        case .accounts, .transactionsFor, .customer:
+        case .account, .transactionsFor, .customer, .accounts:
             return .get
         }
     }
     
     public var sampleData: Data {
         switch self {
-        case .accounts:
+        case .account:
             return .json(named: "getAccountsSelf")
-        case let .transactionsFor(id):
+        case .accounts(_):
+            return .json(named: "getAccounts")
+        case .transactionsFor(_):
             return .json(named: "getCustomer")
-        case let .customer(id):
+        case .customer(_):
             return .json(named: "getCustomer")
         }
     }
     
     public var task: Task {
         switch self {
-        case .accounts, .transactionsFor, .customer:
+        case .account, .transactionsFor, .customer, .accounts:
             return .requestPlain
         }
     }

@@ -116,21 +116,17 @@ class AccountsViewController: UIViewController {
     }
     
     private func getAccountInfo() {
-        VirtualBankService.request(.accounts) { result in
+        VirtualBankService.request(.accounts(user: AccountManager.shared.id)) { result in
             switch result {
             case let .success(moyaResponse):
-                guard let response = moyaResponse.mapObject(VirtualBankResponse<Account>.self) else {
-                    return
-                }
-                guard let userAccount = response.result else { return }
-                self.account = userAccount
+                guard let response = moyaResponse.mapObject(VirtualBankResponse<Accounts>.self) else { return }
+                // FIXME : Use all accounts instead of first one
+                self.account = response.result?.bankAccounts?[0]
                 self.recommendedAccount = self.determineRecommendedAccount()
-                
             case let .failure(error):
                 print(error)
             }
         }
-        
     }
     
     private func determineRecommendedAccount() -> PersonalAccount? {

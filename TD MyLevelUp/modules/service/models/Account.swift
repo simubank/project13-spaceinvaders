@@ -18,23 +18,35 @@ public struct Accounts : Codable {
     let creditCardAccounts: [CreditCardAccount]?
 }
 
-open class Account : Codable {
+public protocol Account : Codable {
+    var type : String? { get }
+    var openDate : String? { get } // date and time account was opened
+    var id : String? { get } // unique identifier (GUID)
+    var balance : Double? { get } // account balance
+    var currency : String? { get } // currency of the balance
+    var number : String? { get } // just for self account
+}
+
+open class BankAccount : Codable, Account {
     public var type : String?
     public var openDate : String? // date and time account was opened
     public var id : String? // unique identifier (GUID)
     public var balance : Double? // account balance
     public var currency : String? // currency of the balance
     public var number : String? // just for self account
-}
-
-open class BankAccount : Account {
     public var branchNumber: String?
     public var maskedAccountNumber: String?
     public var iban : String? // international bank account number
     public var relatedCustomers: BankRelatedCustomers?
 }
 
-open class CreditCardAccount : Account {
+open class CreditCardAccount : Codable, Account {
+    public var type : String?
+    public var openDate : String? // date and time account was opened
+    public var id : String? // unique identifier (GUID)
+    public var balance : Double? // account balance
+    public var currency : String? // currency of the balance
+    public var number : String? // just for self account
     public var relatedCustomers: CreditRelatedCustomers?
     public var maskedNumber: String?
     public var cards: [Card]?

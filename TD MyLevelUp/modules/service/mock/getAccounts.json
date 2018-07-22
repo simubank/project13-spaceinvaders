@@ -1,0 +1,60 @@
+{
+"result": {
+"bankAccounts": [{
+"branchNumber": "326",
+"relatedCustomers": {
+"individual": [{
+"customerId": "1f9e0890-77b5-44ae-a987-03a0a6a1029a_6c8434d3-9d00-45d9-83d6-5c87cc97cdd8",
+"type": "Personal"
+}]
+},
+"maskedAccountNumber": "17***84",
+"type": "DDA",
+"openDate": "2018-02-01T00:00:00",
+"id": "1f9e0890-77b5-44ae-a987-03a0a6a1029a_27ccd2e1-adc7-4902-8cd0-b4baa8558480",
+"iban": null,
+"balance": 120304.20,
+"currency": "CAD"
+}, {
+"branchNumber": "326",
+"relatedCustomers": {
+"individual": [{
+"customerId": "1f9e0890-77b5-44ae-a987-03a0a6a1029a_6c8434d3-9d00-45d9-83d6-5c87cc97cdd8",
+"type": "Personal"
+}]
+},
+"maskedAccountNumber": "41***91",
+"type": "SDA",
+"openDate": "2018-02-01T00:00:00",
+"id": "1f9e0890-77b5-44ae-a987-03a0a6a1029a_60c1c98a-120d-48fe-875e-44df4525ca90",
+"iban": null,
+"balance": 12204.20,
+"currency": "CAD"
+}],
+"creditCardAccounts": [{
+"id": "1f9e0890-77b5-44ae-a987-03a0a6a1029a_b59fad0d-24ea-464c-a4cb-c2c1ee9702d9",
+"balance": 1220,
+"relatedCustomers": {
+"authorized": [{
+"customerId": "1f9e0890-77b5-44ae-a987-03a0a6a1029a_6c8434d3-9d00-45d9-83d6-5c87cc97cdd8",
+"type": "Personal"
+}]
+},
+"maskedNumber": "28*************84",
+"type": "VISA",
+"openDate": "2018-02-01T00:00:00",
+"cards": [{
+"id": "1f9e0890-77b5-44ae-a987-03a0a6a1029a_9ec21b28-93a0-4f3b-92cd-4e162ba957fe",
+"securityCode": "323",
+"maskedNumber": "42************02",
+"customerId": "1f9e0890-77b5-44ae-a987-03a0a6a1029a_6c8434d3-9d00-45d9-83d6-5c87cc97cdd8",
+"accountId": "1f9e0890-77b5-44ae-a987-03a0a6a1029a_b59fad0d-24ea-464c-a4cb-c2c1ee9702d9",
+"nameOnCard": "Galen Nevius"
+}],
+"currency": "CAD"
+}]
+},
+"errorMsg": null,
+"errorDetails": null,
+"statusCode": 200
+}
