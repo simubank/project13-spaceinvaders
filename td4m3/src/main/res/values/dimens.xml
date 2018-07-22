@@ -10,4 +10,5 @@
     <dimen name="card_divider_spacing">5dp</dimen>
 
     <dimen name="mortgage_title_padding">20dp</dimen>
+    <dimen name="button_mortgage_padding">30dp</dimen>
 </resources>

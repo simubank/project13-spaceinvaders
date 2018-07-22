@@ -11,6 +11,8 @@
 
     <color name="white">#FFFFFF</color>
     <color name="grey">#CABBBBBB</color>
+    <color name="error_bg">#FCB3D0</color>
+    <color name="eligible_bg">#ffffc7</color>
 
     <color name="colorFormMasterHeaderBackground">#DDDDDD</color>
     <color name="colorFormMasterHeaderText">#000000</color>
@@ -23,4 +25,6 @@
     <color name="colorFormMasterElementTextDisabled">#757575</color>
     <color name="colorFormMasterDivider">#AAAAAA</color>
     <color name="colorFormMasterElementToken">#f5f5f5</color>
+    <color name="black">#000000</color>
+    <color name="light_green">#e4f5e8</color>
 </resources>

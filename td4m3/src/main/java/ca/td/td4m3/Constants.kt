@@ -8,6 +8,8 @@ class Constants private constructor() {
         const val FREQUENCY_MONTHLY = "Monthly"
         const val FREQUENCY_WEEKLY = "Weekly"
         const val FREQUENCY_BI_WEEKLY = "Bi-Weekly"
+        const val WEEKS_IN_YEAR = 52
+        const val MONTHS_IN_YEAR = 12
         const val MIN_AMORTIZATION_PERIOD = 1
         const val MAX_AMORTIZATION_PERIOD = 30
         const val MIN_MORTGAGE_AMOUNT = 20000.00
