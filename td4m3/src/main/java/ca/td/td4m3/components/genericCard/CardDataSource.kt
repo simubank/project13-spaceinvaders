@@ -1,5 +1,6 @@
 package ca.td.td4m3.components.genericCard
 
+import android.view.View
 import com.ngam.rvabstractions.AbstractDataBindAdapter
 import com.ngam.rvabstractions.AbstractPresenter
 
@@ -10,4 +11,5 @@ data class CardDataSource<out Presenter: AbstractPresenter,
         out Adapter: AbstractDataBindAdapter>(
         val presenter: Presenter, // Mandatory
         val adapter: Adapter,  // Mandatory
-        val cardTitle: String? = null) // Optional, if not provided, will hard title view
+        val cardTitle: String? = null, // Optional, if not provided, will hard title view
+        val cardClickListener: View.OnClickListener = View.OnClickListener {}) // Optional

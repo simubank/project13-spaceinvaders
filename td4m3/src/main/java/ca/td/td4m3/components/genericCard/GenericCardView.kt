@@ -42,6 +42,7 @@ abstract class GenericCardView<Presenter: AbstractPresenter, Adapter: AbstractDa
         } else {
             cardTextView.visibility = View.VISIBLE
             cardTextView.text = dataSource.cardTitle
+            cardTextView.setOnClickListener(dataSource.cardClickListener)
         }
 
         cardListView = findViewById(R.id.cardListView)

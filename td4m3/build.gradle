@@ -27,6 +27,9 @@ dependencies {
     implementation 'com.github.TheRishabhB:RecyclerViewAbstractions:1.1'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
     implementation "com.thejuki:k-form-master:$kform_master_version"
+    implementation 'com.facebook.shimmer:shimmer:0.2.0'
+    implementation 'com.github.traex.expandablelayout:library:1.2.2'
+    implementation 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -35,6 +38,7 @@ dependencies {
     implementation "com.android.support:appcompat-v7:$app_compat_version"
     implementation "com.android.support:design:$app_compat_version"
     implementation "com.android.support:cardview-v7:$app_compat_version"
+    implementation "com.android.support:customtabs:$app_compat_version"
     implementation "com.android.support.constraint:constraint-layout:$constraint_layout_version"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
