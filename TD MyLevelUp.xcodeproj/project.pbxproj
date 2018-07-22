@@ -73,6 +73,10 @@
 		46B241652102003B00A2E45C /* TopGainersSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B241642102003B00A2E45C /* TopGainersSectionController.swift */; };
 		46B241672102004800A2E45C /* StockQuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B241662102004800A2E45C /* StockQuoteCell.swift */; };
 		46F88EFA2103E2A70012077E /* InvestingTFSAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88EF92103E2A70012077E /* InvestingTFSAViewController.swift */; };
+		46F88EFC210414B00012077E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F88EFB210414AF0012077E /* Images.xcassets */; };
+		46F88F00210420E80012077E /* getAccountsSelf.json in Resources */ = {isa = PBXBuildFile; fileRef = 46F88EFF210420E80012077E /* getAccountsSelf.json */; };
+		46F88F02210420FE0012077E /* getCustomer.json in Resources */ = {isa = PBXBuildFile; fileRef = 46F88F01210420FE0012077E /* getCustomer.json */; };
+		46F88F04210421710012077E /* Data+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F03210421710012077E /* Data+JSON.swift */; };
 		DC960470A15BFFBFD95B5201 /* Pods_TD_MyLevelUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2294332CE8B3D5822C541A /* Pods_TD_MyLevelUp.framework */; };
 /* End PBXBuildFile section */
 
@@ -146,6 +150,10 @@
 		46B241642102003B00A2E45C /* TopGainersSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGainersSectionController.swift; sourceTree = "<group>"; };
 		46B241662102004800A2E45C /* StockQuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockQuoteCell.swift; sourceTree = "<group>"; };
 		46F88EF92103E2A70012077E /* InvestingTFSAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestingTFSAViewController.swift; sourceTree = "<group>"; };
+		46F88EFB210414AF0012077E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		46F88EFF210420E80012077E /* getAccountsSelf.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getAccountsSelf.json; sourceTree = "<group>"; };
+		46F88F01210420FE0012077E /* getCustomer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getCustomer.json; sourceTree = "<group>"; };
+		46F88F03210421710012077E /* Data+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+JSON.swift"; sourceTree = "<group>"; };
 		6CB7F97A4F48472D955CE9D1 /* Pods-TD MyLevelUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TD MyLevelUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TD MyLevelUp/Pods-TD MyLevelUp.release.xcconfig"; sourceTree = "<group>"; };
 		CC2294332CE8B3D5822C541A /* Pods_TD_MyLevelUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TD_MyLevelUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -254,6 +262,7 @@
 		46B240CE210037B800A2E45C /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				46F88EFD21041BF80012077E /* core */,
 				46B241282101292F00A2E45C /* accounts */,
 				46B24125210128F100A2E45C /* mortgage */,
 				46B24122210128BB00A2E45C /* creditcard */,
@@ -363,6 +372,7 @@
 		46B240FE2100478200A2E45C /* service */ = {
 			isa = PBXGroup;
 			children = (
+				46F88EFE21041F4C0012077E /* mock */,
 				46B2413921012FC600A2E45C /* resources */,
 				46B24102210047B800A2E45C /* extensions */,
 				46B240FF2100479000A2E45C /* models */,
@@ -390,6 +400,7 @@
 			children = (
 				46B24103210047C600A2E45C /* String+Network.swift */,
 				46B2410721004B7700A2E45C /* Moya+Swift4.swift */,
+				46F88F03210421710012077E /* Data+JSON.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -570,6 +581,7 @@
 		46B2413B21012FD200A2E45C /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				46F88EFB210414AF0012077E /* Images.xcassets */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -621,6 +633,22 @@
 				46B241662102004800A2E45C /* StockQuoteCell.swift */,
 			);
 			path = cells;
+			sourceTree = "<group>";
+		};
+		46F88EFD21041BF80012077E /* core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		46F88EFE21041F4C0012077E /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				46F88EFF210420E80012077E /* getAccountsSelf.json */,
+				46F88F01210420FE0012077E /* getCustomer.json */,
+			);
+			path = mock;
 			sourceTree = "<group>";
 		};
 		E043103270B493B2EB16A05D /* Frameworks */ = {
@@ -695,6 +723,7 @@
 				46B241432101303B00A2E45C /* Images.xcassets in Resources */,
 				46B240F62100438200A2E45C /* HKGrotesk-Medium.otf in Resources */,
 				46B240F12100438200A2E45C /* HKGrotesk-BoldItalic.otf in Resources */,
+				46F88F00210420E80012077E /* getAccountsSelf.json in Resources */,
 				46B240C42100355800A2E45C /* Assets.xcassets in Resources */,
 				46B240F32100438200A2E45C /* HKGrotesk-MediumItalic.otf in Resources */,
 				46B241412101303100A2E45C /* Images.xcassets in Resources */,
@@ -702,6 +731,8 @@
 				46B240F02100438200A2E45C /* HKGrotesk-Regular.otf in Resources */,
 				46B240F52100438200A2E45C /* HKGrotesk-LightItalic.otf in Resources */,
 				46B2413F2101302600A2E45C /* Images.xcassets in Resources */,
+				46F88F02210420FE0012077E /* getCustomer.json in Resources */,
+				46F88EFC210414B00012077E /* Images.xcassets in Resources */,
 				46B240F42100438200A2E45C /* HKGrotesk-SemiBold.otf in Resources */,
 				46B240F92100438200A2E45C /* HKGrotesk-Bold.otf in Resources */,
 				161B6AD42102594A00713CFB /* Image.xcassets in Resources */,
@@ -746,6 +777,7 @@
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/Shimmer/Shimmer.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/XLActionController/XLActionController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -757,6 +789,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Shimmer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLActionController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -777,6 +810,7 @@
 				46B2410C21004BFE00A2E45C /* Branch.swift in Sources */,
 				46B240FD210044C200A2E45C /* NSObject+IGListKit.swift in Sources */,
 				46B241672102004800A2E45C /* StockQuoteCell.swift in Sources */,
+				46F88F04210421710012077E /* Data+JSON.swift in Sources */,
 				46B2413421012AF700A2E45C /* InvestmentsViewController.swift in Sources */,
 				46F88EFA2103E2A70012077E /* InvestingTFSAViewController.swift in Sources */,
 				46B2414D2101395B00A2E45C /* PromotionCell.swift in Sources */,

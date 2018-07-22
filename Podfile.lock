@@ -15,6 +15,9 @@ PODS:
   - Result (3.2.4)
   - Shimmer (1.0.2)
   - SnapKit (4.0.0)
+  - XLActionController/Core (4.0.1)
+  - XLActionController/Twitter (4.0.1):
+    - XLActionController/Core
 
 DEPENDENCIES:
   - EFCountingLabel
@@ -23,6 +26,7 @@ DEPENDENCIES:
   - Moya
   - Shimmer
   - SnapKit (~> 4.0.0)
+  - XLActionController/Twitter
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -34,6 +38,7 @@ SPEC REPOS:
     - Result
     - Shimmer
     - SnapKit
+    - XLActionController
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
@@ -44,7 +49,8 @@ SPEC CHECKSUMS:
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  XLActionController: 007868251c0eed70d649d06c1625259b73b3a600
 
-PODFILE CHECKSUM: 228d37b2190b5fbe6306c0a3875f8dac4bc5a745
+PODFILE CHECKSUM: b007f823b89ad0bf236d43b955a2d7eedc9354ee
 
 COCOAPODS: 1.5.3

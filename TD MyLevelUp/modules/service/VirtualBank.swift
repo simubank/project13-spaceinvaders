@@ -1,7 +1,9 @@
 import Moya
 import Foundation
 
-public let VirtualBankService = MoyaProvider<VirtualBank>(plugins: [NetworkLoggerPlugin()])
+public let VirtualBankService = MoyaProvider<VirtualBank>(stubClosure: { _ in
+    return AccountManager.shared.id == "" ? .delayed(seconds: 0.2) : .never
+})
 
 public enum VirtualBank {
     case customer(id: String)
@@ -34,7 +36,14 @@ extension VirtualBank: TargetType {
     }
     
     public var sampleData: Data {
-        return "".utf8Encoded
+        switch self {
+        case .accounts:
+            return .json(named: "getAccountsSelf")
+        case let .transactionsFor(id):
+            return .json(named: "getCustomer")
+        case let .customer(id):
+            return .json(named: "getCustomer")
+        }
     }
     
     public var task: Task {

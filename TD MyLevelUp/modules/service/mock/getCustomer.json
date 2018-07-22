@@ -1,0 +1,51 @@
+{
+    "result": [{
+               "id": "1f9e0890-77b5-44ae-a987-03a0a6a1029a_6c8434d3-9d00-45d9-83d6-5c87cc97cdd8",
+               "type": "Personal",
+               "givenName": "Rishi",
+               "otherName": null,
+               "surname": "Bhatanagar",
+               "age": 22,
+               "gender": "Male",
+               "birthDate": "1968-12-17T00:00:30.3491116-05:00",
+               "primaryOccupation": "developer",
+               "relationshipStatus": "single",
+               "habitationStatus": "livingparents",
+               "addresses": {
+               "principalResidence": {
+               "municipality": "Etobicoke",
+               "postalCode": "M8Z 3J9",
+               "streetName": "Meadowvale Dr",
+               "latitude": 43.6436073348,
+               "longitude": -79.5189959796,
+               "addressType": 100001,
+               "streetNumber": "121",
+               "wardName": "Etobicoke-Lakeshore (5)"
+               }
+               },
+               "schools": {},
+               "maskedRelatedBankAccounts": {
+               "individual": [{
+                              "branchNumber": "326",
+                              "maskedAccountNumber": "17***84",
+                              "accountId": "1f9e0890-77b5-44ae-a987-03a0a6a1029a_27ccd2e1-adc7-4902-8cd0-b4baa8558480"
+                              }, {
+                              "branchNumber": "326",
+                              "maskedAccountNumber": "41***91",
+                              "accountId": "1f9e0890-77b5-44ae-a987-03a0a6a1029a_60c1c98a-120d-48fe-875e-44df4525ca90"
+                              }]
+               },
+               "relatedBankAccounts": null,
+               "relatedCreditCardAccounts": null,
+               "maskedRelatedCreditCardAccounts": {
+               "authorized": [{
+                              "accountId": "1f9e0890-77b5-44ae-a987-03a0a6a1029a_b59fad0d-24ea-464c-a4cb-c2c1ee9702d9",
+                              "accountType": "VISA",
+                              "maskedAccountNumber": "28*************84"
+                              }]
+               }
+               }],
+    "errorMsg": null,
+    "errorDetails": null,
+    "statusCode": 200
+}

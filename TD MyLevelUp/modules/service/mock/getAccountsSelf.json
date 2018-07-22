@@ -1,0 +1,11 @@
+{
+    "result": {
+        "id": "1a97153c-77b0-42b7-bb10-6e22424428ea",
+        "balance": 100.0,
+        "currency": "CAD",
+        "number": "9302483"
+    },
+    "errorMsg": null,
+    "errorDetails": null,
+    "statusCode": 200
+}
