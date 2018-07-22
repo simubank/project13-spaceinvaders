@@ -91,6 +91,8 @@
 		46F88F1D210508070012077E /* InvestingSimulationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F1C210508070012077E /* InvestingSimulationPresenter.swift */; };
 		46F88F1F210513980012077E /* Date+LevelUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F1E210513980012077E /* Date+LevelUp.swift */; };
 		46F88F21210519F30012077E /* InvestingSimulationTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F20210519F30012077E /* InvestingSimulationTransaction.swift */; };
+		46F88F2321051C4B0012077E /* StockPurchaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F2221051C4B0012077E /* StockPurchaseCell.swift */; };
+		46F88F2521051CDA0012077E /* StockPurchaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F2421051CDA0012077E /* StockPurchaseController.swift */; };
 		DC960470A15BFFBFD95B5201 /* Pods_TD_MyLevelUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2294332CE8B3D5822C541A /* Pods_TD_MyLevelUp.framework */; };
 /* End PBXBuildFile section */
 
@@ -182,6 +184,8 @@
 		46F88F1C210508070012077E /* InvestingSimulationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestingSimulationPresenter.swift; sourceTree = "<group>"; };
 		46F88F1E210513980012077E /* Date+LevelUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+LevelUp.swift"; sourceTree = "<group>"; };
 		46F88F20210519F30012077E /* InvestingSimulationTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestingSimulationTransaction.swift; sourceTree = "<group>"; };
+		46F88F2221051C4B0012077E /* StockPurchaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPurchaseCell.swift; sourceTree = "<group>"; };
+		46F88F2421051CDA0012077E /* StockPurchaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPurchaseController.swift; sourceTree = "<group>"; };
 		6CB7F97A4F48472D955CE9D1 /* Pods-TD MyLevelUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TD MyLevelUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TD MyLevelUp/Pods-TD MyLevelUp.release.xcconfig"; sourceTree = "<group>"; };
 		CC2294332CE8B3D5822C541A /* Pods_TD_MyLevelUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TD_MyLevelUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -662,6 +666,7 @@
 			children = (
 				46B241642102003B00A2E45C /* TopGainersSectionController.swift */,
 				46F88F182104FECD0012077E /* SymbolSearchResultController.swift */,
+				46F88F2421051CDA0012077E /* StockPurchaseController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -671,6 +676,7 @@
 			children = (
 				46B241662102004800A2E45C /* StockQuoteCell.swift */,
 				46F88F162104FD0F0012077E /* SymbolSearchResultCell.swift */,
+				46F88F2221051C4B0012077E /* StockPurchaseCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -885,6 +891,7 @@
 				46B24147210135AD00A2E45C /* InvestingWidgetView.swift in Sources */,
 				46B240D621003D8200A2E45C /* UIColor+LevelUp.swift in Sources */,
 				46F88F0E2104E1CA0012077E /* YahooSearchSymbolRs.swift in Sources */,
+				46F88F2521051CDA0012077E /* StockPurchaseController.swift in Sources */,
 				46B2416121018B5600A2E45C /* AlphaVantage.swift in Sources */,
 				46B2411221004C7000A2E45C /* Transfer.swift in Sources */,
 				46B2411C2100C8FB00A2E45C /* TitleHeaderController.swift in Sources */,
@@ -912,6 +919,7 @@
 				46B2412A2101293700A2E45C /* AccountsWidgetModel.swift in Sources */,
 				46B24156210149C500A2E45C /* UICollectionView+Center.swift in Sources */,
 				161B6ACD2102575F00713CFB /* AccountsViewController.swift in Sources */,
+				46F88F2321051C4B0012077E /* StockPurchaseCell.swift in Sources */,
 				46B24104210047C600A2E45C /* String+Network.swift in Sources */,
 				46B2415D21015BFC00A2E45C /* InvestingIntent.swift in Sources */,
 				161B6ADD21027AC600713CFB /* AccountsWidgetPresenter.swift in Sources */,

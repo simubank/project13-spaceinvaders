@@ -81,7 +81,11 @@ public class InvestingSimulationPresenter {
                 guard let price = Double(quotePrice) else { continue }
                 let sharesToBuy = -expense.currencyAmount / price
                 numberOfShares = numberOfShares + sharesToBuy
-                trades.append(InvestingSimulationTransaction(stockSymbol: symbol, amount: sharesToBuy, price: price))
+                trades.append(InvestingSimulationTransaction(stockSymbol: symbol,
+                                                             expenseName: expense.description,
+                                                             amount: sharesToBuy,
+                                                             price: price,
+                                                             date: expenseDate.alphaVantageDate))
             }
         }
         let totalExpenses: Double = expenses.reduce(0.0) { $0 - $1.currencyAmount }

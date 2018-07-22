@@ -1,8 +1,10 @@
 import Foundation
 import MBProgressHUD
+import IGListKit
+
 public class InvestingSimulationViewController: BaseCollectionViewController {
     public let presenter = InvestingSimulationPresenter()
-    
+    var objectsForList: [ListDiffable] = []
     public override func viewDidLoad() {
         super.viewDidLoad()
         let controller = SearchSymbolViewController()
@@ -11,11 +13,20 @@ public class InvestingSimulationViewController: BaseCollectionViewController {
         presenter.view = self
         presenter.onViewReady()
     }
+    
+    public override func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+        return objectsForList
+    }
+    public override func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        return StockPurchaseController()
+    }
 }
 
 extension InvestingSimulationViewController: InvestingSimulationView {
     public func simulationDidFinishAnalzing(_ presenter: InvestingSimulationPresenter, trades: [InvestingSimulationTransaction]) {
         MBProgressHUD.hide(for: self.view, animated: true)
+        objectsForList = trades
+        adapter.performUpdates(animated: true, completion: nil)
     }
     
     public func simulation(_ presenter: InvestingSimulationPresenter, didUpdate transactions: [Transaction]) {

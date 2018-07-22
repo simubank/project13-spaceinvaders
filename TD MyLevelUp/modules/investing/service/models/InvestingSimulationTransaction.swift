@@ -3,13 +3,17 @@ import IGListKit
 
 public class InvestingSimulationTransaction {
     public let stockSymbol: String
+    public let expenseName: String?
     public let amount: Double
     public let price: Double
+    public let date: String
     
-    public init(stockSymbol: String, amount: Double, price: Double) {
+    public init(stockSymbol: String, expenseName: String?, amount: Double, price: Double, date: String) {
         self.stockSymbol = stockSymbol
+        self.expenseName = expenseName
         self.amount = amount
         self.price = price
+        self.date = date
     }
 }
 
