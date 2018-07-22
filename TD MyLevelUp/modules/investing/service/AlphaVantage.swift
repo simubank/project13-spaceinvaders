@@ -36,6 +36,7 @@ extension AlphaVantage: TargetType {
         case let .historicalPrices(symbol):
             var params: [String : AnyObject] = [:]
             params["symbol"] = symbol as AnyObject
+            params["outputsize"] = "full" as AnyObject
             params["function"] = "TIME_SERIES_DAILY" as AnyObject
             params["apikey"] = "TS988KUY986K34W5" as AnyObject
             return .requestParameters(parameters: params, encoding: URLEncoding.queryString)

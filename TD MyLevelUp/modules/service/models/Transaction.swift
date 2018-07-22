@@ -4,7 +4,7 @@ public struct Transaction : Codable {
     let accountID : String?
     let appID : String?
     let categoryTags : TransactionCategoryTags?
-    let currencyAmount : Double?
+    let currencyAmount : Double
     let customerID : String?
     let description : String?
     let documentType : String?
@@ -28,6 +28,13 @@ public struct Transaction : Codable {
     let postDate : String?
     let source : String?
     let type : String?
+    
+    var date: Date? {
+        guard let postDate = postDate else { return nil }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        return dateFormatter.date(from: postDate)
+    }
 }
 
 public struct TransactionCategoryTags : Codable {

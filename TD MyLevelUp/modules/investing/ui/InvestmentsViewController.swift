@@ -8,10 +8,6 @@ public class InvestmentViewController: BaseCollectionViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .background
-        
-        AlphaVantageService.request(.historicalPrices(symbol: "MSFT")) { result in
-            // TODO
-        }
     }
     
     public override func objects(for listAdapter: ListAdapter) -> [ListDiffable] {

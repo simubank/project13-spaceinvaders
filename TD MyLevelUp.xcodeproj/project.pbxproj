@@ -87,6 +87,10 @@
 		46F88F152104F61F0012077E /* SearchSymbolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F142104F61F0012077E /* SearchSymbolViewModel.swift */; };
 		46F88F172104FD0F0012077E /* SymbolSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F162104FD0F0012077E /* SymbolSearchResultCell.swift */; };
 		46F88F192104FECD0012077E /* SymbolSearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F182104FECD0012077E /* SymbolSearchResultController.swift */; };
+		46F88F1B210505200012077E /* InvestingSimulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F1A210505200012077E /* InvestingSimulationViewController.swift */; };
+		46F88F1D210508070012077E /* InvestingSimulationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F1C210508070012077E /* InvestingSimulationPresenter.swift */; };
+		46F88F1F210513980012077E /* Date+LevelUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F1E210513980012077E /* Date+LevelUp.swift */; };
+		46F88F21210519F30012077E /* InvestingSimulationTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F20210519F30012077E /* InvestingSimulationTransaction.swift */; };
 		DC960470A15BFFBFD95B5201 /* Pods_TD_MyLevelUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2294332CE8B3D5822C541A /* Pods_TD_MyLevelUp.framework */; };
 /* End PBXBuildFile section */
 
@@ -174,6 +178,10 @@
 		46F88F142104F61F0012077E /* SearchSymbolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSymbolViewModel.swift; sourceTree = "<group>"; };
 		46F88F162104FD0F0012077E /* SymbolSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolSearchResultCell.swift; sourceTree = "<group>"; };
 		46F88F182104FECD0012077E /* SymbolSearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolSearchResultController.swift; sourceTree = "<group>"; };
+		46F88F1A210505200012077E /* InvestingSimulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestingSimulationViewController.swift; sourceTree = "<group>"; };
+		46F88F1C210508070012077E /* InvestingSimulationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestingSimulationPresenter.swift; sourceTree = "<group>"; };
+		46F88F1E210513980012077E /* Date+LevelUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+LevelUp.swift"; sourceTree = "<group>"; };
+		46F88F20210519F30012077E /* InvestingSimulationTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestingSimulationTransaction.swift; sourceTree = "<group>"; };
 		6CB7F97A4F48472D955CE9D1 /* Pods-TD MyLevelUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TD MyLevelUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TD MyLevelUp/Pods-TD MyLevelUp.release.xcconfig"; sourceTree = "<group>"; };
 		CC2294332CE8B3D5822C541A /* Pods_TD_MyLevelUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TD_MyLevelUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -339,6 +347,7 @@
 				46B241192100C89A00A2E45C /* String+Size.swift */,
 				46B24155210149C500A2E45C /* UICollectionView+Center.swift */,
 				46F88F0F2104E6BD0012077E /* SnapKit+SafeArea.swift */,
+				46F88F1E210513980012077E /* Date+LevelUp.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -551,6 +560,7 @@
 				46B24146210135AD00A2E45C /* InvestingWidgetView.swift */,
 				46F88EF92103E2A70012077E /* WhyInvestingViewController.swift */,
 				46F88F112104F4880012077E /* SearchSymbolViewController.swift */,
+				46F88F1A210505200012077E /* InvestingSimulationViewController.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -633,6 +643,7 @@
 				46B2415121013D7600A2E45C /* InvestingPromotionItem.swift */,
 				46B2415C21015BFC00A2E45C /* InvestingIntent.swift */,
 				46F88F0D2104E1CA0012077E /* YahooSearchSymbolRs.swift */,
+				46F88F20210519F30012077E /* InvestingSimulationTransaction.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -641,6 +652,7 @@
 			isa = PBXGroup;
 			children = (
 				46B2415A21015AB700A2E45C /* InvestingWidgetPresenter.swift */,
+				46F88F1C210508070012077E /* InvestingSimulationPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -813,6 +825,7 @@
 				"${BUILT_PRODUCTS_DIR}/EFCountingLabel/EFCountingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -828,6 +841,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EFCountingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -864,6 +878,7 @@
 				46F88F152104F61F0012077E /* SearchSymbolViewModel.swift in Sources */,
 				46B241542101475500A2E45C /* ListInsetSingleSectionController.swift in Sources */,
 				46F88F122104F4880012077E /* SearchSymbolViewController.swift in Sources */,
+				46F88F1F210513980012077E /* Date+LevelUp.swift in Sources */,
 				46B241452101351A00A2E45C /* EmbeddedCollectionViewCell.swift in Sources */,
 				46B2415221013D7600A2E45C /* InvestingPromotionItem.swift in Sources */,
 				46B241012100479F00A2E45C /* VirtualBank.swift in Sources */,
@@ -882,6 +897,8 @@
 				46B240D821003E2200A2E45C /* UIConstants.swift in Sources */,
 				46B240BF2100355500A2E45C /* DashboardViewController.swift in Sources */,
 				46B2410621004AFE00A2E45C /* VirtualBankResponse.swift in Sources */,
+				46F88F1B210505200012077E /* InvestingSimulationViewController.swift in Sources */,
+				46F88F21210519F30012077E /* InvestingSimulationTransaction.swift in Sources */,
 				46B2411021004C5300A2E45C /* Transaction.swift in Sources */,
 				46B241182100C81E00A2E45C /* TitleHeaderCell.swift in Sources */,
 				46B2414F210139E700A2E45C /* PromotionSectionController.swift in Sources */,
@@ -901,6 +918,7 @@
 				46B241212101283E00A2E45C /* InvestingWidgetModel.swift in Sources */,
 				46B2414A2101381700A2E45C /* DashboardWidgetView.swift in Sources */,
 				46B2410E21004C2A00A2E45C /* Customer.swift in Sources */,
+				46F88F1D210508070012077E /* InvestingSimulationPresenter.swift in Sources */,
 				161B6AE32103835000713CFB /* PersonalAccounts.swift in Sources */,
 				46B240FB2100439300A2E45C /* UIFont+LevelUp.swift in Sources */,
 				161B6ACB210256C300713CFB /* AccountsWidgetView.swift in Sources */,
