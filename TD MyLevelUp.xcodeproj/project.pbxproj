@@ -85,6 +85,8 @@
 		46F88F102104E6BD0012077E /* SnapKit+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F0F2104E6BD0012077E /* SnapKit+SafeArea.swift */; };
 		46F88F122104F4880012077E /* SearchSymbolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F112104F4880012077E /* SearchSymbolViewController.swift */; };
 		46F88F152104F61F0012077E /* SearchSymbolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F142104F61F0012077E /* SearchSymbolViewModel.swift */; };
+		46F88F172104FD0F0012077E /* SymbolSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F162104FD0F0012077E /* SymbolSearchResultCell.swift */; };
+		46F88F192104FECD0012077E /* SymbolSearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F182104FECD0012077E /* SymbolSearchResultController.swift */; };
 		DC960470A15BFFBFD95B5201 /* Pods_TD_MyLevelUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2294332CE8B3D5822C541A /* Pods_TD_MyLevelUp.framework */; };
 /* End PBXBuildFile section */
 
@@ -170,6 +172,8 @@
 		46F88F0F2104E6BD0012077E /* SnapKit+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SnapKit+SafeArea.swift"; sourceTree = "<group>"; };
 		46F88F112104F4880012077E /* SearchSymbolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSymbolViewController.swift; sourceTree = "<group>"; };
 		46F88F142104F61F0012077E /* SearchSymbolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSymbolViewModel.swift; sourceTree = "<group>"; };
+		46F88F162104FD0F0012077E /* SymbolSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolSearchResultCell.swift; sourceTree = "<group>"; };
+		46F88F182104FECD0012077E /* SymbolSearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolSearchResultController.swift; sourceTree = "<group>"; };
 		6CB7F97A4F48472D955CE9D1 /* Pods-TD MyLevelUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TD MyLevelUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TD MyLevelUp/Pods-TD MyLevelUp.release.xcconfig"; sourceTree = "<group>"; };
 		CC2294332CE8B3D5822C541A /* Pods_TD_MyLevelUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TD_MyLevelUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -645,6 +649,7 @@
 			isa = PBXGroup;
 			children = (
 				46B241642102003B00A2E45C /* TopGainersSectionController.swift */,
+				46F88F182104FECD0012077E /* SymbolSearchResultController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -653,6 +658,7 @@
 			isa = PBXGroup;
 			children = (
 				46B241662102004800A2E45C /* StockQuoteCell.swift */,
+				46F88F162104FD0F0012077E /* SymbolSearchResultCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -848,6 +854,7 @@
 				46B240D221003D2100A2E45C /* BaseCollectionViewController.swift in Sources */,
 				46B240E32100400900A2E45C /* TDShadowable.swift in Sources */,
 				46B2410C21004BFE00A2E45C /* Branch.swift in Sources */,
+				46F88F192104FECD0012077E /* SymbolSearchResultController.swift in Sources */,
 				46B240FD210044C200A2E45C /* NSObject+IGListKit.swift in Sources */,
 				46B241672102004800A2E45C /* StockQuoteCell.swift in Sources */,
 				46F88F04210421710012077E /* Data+JSON.swift in Sources */,
@@ -879,6 +886,7 @@
 				46B241182100C81E00A2E45C /* TitleHeaderCell.swift in Sources */,
 				46B2414F210139E700A2E45C /* PromotionSectionController.swift in Sources */,
 				46B2415F2101866A00A2E45C /* FixedPromotionSectionController.swift in Sources */,
+				46F88F172104FD0F0012077E /* SymbolSearchResultCell.swift in Sources */,
 				46B2410821004B7700A2E45C /* Moya+Swift4.swift in Sources */,
 				46B241652102003B00A2E45C /* TopGainersSectionController.swift in Sources */,
 				46B240DD21003F4E00A2E45C /* DashboardWidgetCell.swift in Sources */,
@@ -1039,7 +1047,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZY7497MHJE;
 				INFOPLIST_FILE = "TD MyLevelUp/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "it.gopher.tdlevelup.TD-MyLevelUp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1055,7 +1066,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZY7497MHJE;
 				INFOPLIST_FILE = "TD MyLevelUp/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "it.gopher.tdlevelup.TD-MyLevelUp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

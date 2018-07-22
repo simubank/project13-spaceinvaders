@@ -2,10 +2,17 @@ import Foundation
 import Foundation
 import UIKit
 import RxSwift
+import IGListKit
+
+public protocol SearchSymbolDelegate {
+    func search(viewcontroller: SearchSymbolViewController, didSelect stock: YahooStock)
+}
 
 public class SearchSymbolViewController: BaseCollectionViewController {
     private let disposeBag = DisposeBag()
     private let viewModel: SearchViewModel = SearchViewModel(service: YahooService)
+    
+    var delegate: SearchSymbolDelegate?
     
     public lazy var searchSymbolLabel: UILabel = {
         let label = UILabel()
@@ -24,8 +31,10 @@ public class SearchSymbolViewController: BaseCollectionViewController {
     }()
     
     public override var customTopHeight: Double {
-        return 60
+        return 200
     }
+    
+    private var searchresults: [ListDiffable] = []
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +56,15 @@ public class SearchSymbolViewController: BaseCollectionViewController {
         
         viewModel.results
             .subscribe{ result in
-               print(result)
+               self.searchresults = result.element ?? []
+                self.adapter.performUpdates(animated: true, completion: nil)
             }.disposed(by: disposeBag)
+    }
+    
+    public override func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+        return searchresults
+    }
+    public override func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        return SymbolSearchResultController()
     }
 }
