@@ -82,6 +82,9 @@
 		46F88F082104D8CA0012077E /* YahooAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F072104D8CA0012077E /* YahooAPI.swift */; };
 		46F88F0A2104E15D0012077E /* getSymbolSearch.json in Resources */ = {isa = PBXBuildFile; fileRef = 46F88F092104E15D0012077E /* getSymbolSearch.json */; };
 		46F88F0E2104E1CA0012077E /* YahooSearchSymbolRs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F0D2104E1CA0012077E /* YahooSearchSymbolRs.swift */; };
+		46F88F102104E6BD0012077E /* SnapKit+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F0F2104E6BD0012077E /* SnapKit+SafeArea.swift */; };
+		46F88F122104F4880012077E /* SearchSymbolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F112104F4880012077E /* SearchSymbolViewController.swift */; };
+		46F88F152104F61F0012077E /* SearchSymbolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88F142104F61F0012077E /* SearchSymbolViewModel.swift */; };
 		DC960470A15BFFBFD95B5201 /* Pods_TD_MyLevelUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2294332CE8B3D5822C541A /* Pods_TD_MyLevelUp.framework */; };
 /* End PBXBuildFile section */
 
@@ -164,6 +167,9 @@
 		46F88F072104D8CA0012077E /* YahooAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahooAPI.swift; sourceTree = "<group>"; };
 		46F88F092104E15D0012077E /* getSymbolSearch.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getSymbolSearch.json; sourceTree = "<group>"; };
 		46F88F0D2104E1CA0012077E /* YahooSearchSymbolRs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YahooSearchSymbolRs.swift; sourceTree = "<group>"; };
+		46F88F0F2104E6BD0012077E /* SnapKit+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SnapKit+SafeArea.swift"; sourceTree = "<group>"; };
+		46F88F112104F4880012077E /* SearchSymbolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSymbolViewController.swift; sourceTree = "<group>"; };
+		46F88F142104F61F0012077E /* SearchSymbolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSymbolViewModel.swift; sourceTree = "<group>"; };
 		6CB7F97A4F48472D955CE9D1 /* Pods-TD MyLevelUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TD MyLevelUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TD MyLevelUp/Pods-TD MyLevelUp.release.xcconfig"; sourceTree = "<group>"; };
 		CC2294332CE8B3D5822C541A /* Pods_TD_MyLevelUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TD_MyLevelUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -328,6 +334,7 @@
 				46B240FC210044C200A2E45C /* NSObject+IGListKit.swift */,
 				46B241192100C89A00A2E45C /* String+Size.swift */,
 				46B24155210149C500A2E45C /* UICollectionView+Center.swift */,
+				46F88F0F2104E6BD0012077E /* SnapKit+SafeArea.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -458,6 +465,7 @@
 		46B2411F2101282800A2E45C /* investing */ = {
 			isa = PBXGroup;
 			children = (
+				46F88F132104F60F0012077E /* viewmodel */,
 				46B2415921015AAC00A2E45C /* presenter */,
 				46B2413821012FC000A2E45C /* resources */,
 				46B2413221012AE600A2E45C /* service */,
@@ -538,6 +546,7 @@
 				46B2413321012AF700A2E45C /* InvestmentsViewController.swift */,
 				46B24146210135AD00A2E45C /* InvestingWidgetView.swift */,
 				46F88EF92103E2A70012077E /* WhyInvestingViewController.swift */,
+				46F88F112104F4880012077E /* SearchSymbolViewController.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -666,6 +675,14 @@
 			path = mock;
 			sourceTree = "<group>";
 		};
+		46F88F132104F60F0012077E /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				46F88F142104F61F0012077E /* SearchSymbolViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
 		E043103270B493B2EB16A05D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -792,6 +809,9 @@
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Shimmer/Shimmer.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/XLActionController/XLActionController.framework",
@@ -804,6 +824,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Shimmer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLActionController.framework",
@@ -831,7 +854,9 @@
 				46B2413421012AF700A2E45C /* InvestmentsViewController.swift in Sources */,
 				46F88EFA2103E2A70012077E /* WhyInvestingViewController.swift in Sources */,
 				46B2414D2101395B00A2E45C /* PromotionCell.swift in Sources */,
+				46F88F152104F61F0012077E /* SearchSymbolViewModel.swift in Sources */,
 				46B241542101475500A2E45C /* ListInsetSingleSectionController.swift in Sources */,
+				46F88F122104F4880012077E /* SearchSymbolViewController.swift in Sources */,
 				46B241452101351A00A2E45C /* EmbeddedCollectionViewCell.swift in Sources */,
 				46B2415221013D7600A2E45C /* InvestingPromotionItem.swift in Sources */,
 				46B241012100479F00A2E45C /* VirtualBank.swift in Sources */,
@@ -872,6 +897,7 @@
 				46B240FB2100439300A2E45C /* UIFont+LevelUp.swift in Sources */,
 				161B6ACB210256C300713CFB /* AccountsWidgetView.swift in Sources */,
 				161F9D352104BEE0005B485F /* AccountCell.swift in Sources */,
+				46F88F102104E6BD0012077E /* SnapKit+SafeArea.swift in Sources */,
 				46B240BD2100355500A2E45C /* AppDelegate.swift in Sources */,
 				46B2411E2101252900A2E45C /* AccountManager.swift in Sources */,
 			);
@@ -1013,10 +1039,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZY7497MHJE;
 				INFOPLIST_FILE = "TD MyLevelUp/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "it.gopher.tdlevelup.TD-MyLevelUp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1032,10 +1055,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZY7497MHJE;
 				INFOPLIST_FILE = "TD MyLevelUp/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "it.gopher.tdlevelup.TD-MyLevelUp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -1,4 +1,5 @@
 import Foundation
+import IGListKit
 
 public class YahooSearchSymbolRs: Codable {
     public let payload: YahooSearchSymbolPayload
@@ -36,5 +37,17 @@ public class YahooStock: Codable {
     @available(*, deprecated, message: "Do not use.")
     init() {
         fatalError("Swift 4.1")
+    }
+}
+
+extension YahooStock: ListDiffable {
+    public func diffIdentifier() -> NSObjectProtocol {
+        return symbol as NSObjectProtocol
+    }
+    
+    public func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        guard self !== object else { return true }
+        guard let object = object as? YahooStock else { return false }
+        return object.symbol == symbol && object.name == name && object.exch == exch
     }
 }

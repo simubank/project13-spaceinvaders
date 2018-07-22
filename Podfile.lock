@@ -7,12 +7,19 @@ PODS:
   - IGListKit/Default (3.4.0):
     - IGListKit/Diffing
   - IGListKit/Diffing (3.4.0)
-  - Moya (11.0.2):
-    - Moya/Core (= 11.0.2)
   - Moya/Core (11.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
+  - Moya/RxSwift (11.0.2):
+    - Moya/Core
+    - RxSwift (~> 4.0)
   - Result (3.2.4)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxOptional (3.5.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.2.0)
   - Shimmer (1.0.2)
   - SnapKit (4.0.0)
   - XLActionController/Core (4.0.1)
@@ -23,7 +30,10 @@ DEPENDENCIES:
   - EFCountingLabel
   - Hero (= 1.0.1)
   - IGListKit
-  - Moya
+  - Moya/RxSwift (~> 11.0)
+  - RxCocoa
+  - RxOptional
+  - RxSwift
   - Shimmer
   - SnapKit (~> 4.0.0)
   - XLActionController/Twitter
@@ -36,6 +46,9 @@ SPEC REPOS:
     - IGListKit
     - Moya
     - Result
+    - RxCocoa
+    - RxOptional
+    - RxSwift
     - Shimmer
     - SnapKit
     - XLActionController
@@ -47,10 +60,13 @@ SPEC CHECKSUMS:
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  RxOptional: bd32ff8ca9df4177683d56ffeb618a9d4d5d5cad
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   XLActionController: 007868251c0eed70d649d06c1625259b73b3a600
 
-PODFILE CHECKSUM: b007f823b89ad0bf236d43b955a2d7eedc9354ee
+PODFILE CHECKSUM: d09719ad2fae414e7b68902d50faa66de0be418d
 
 COCOAPODS: 1.5.3

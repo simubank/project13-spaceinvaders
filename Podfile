@@ -9,8 +9,11 @@ target 'TD MyLevelUp' do
   pod 'SnapKit', '~> 4.0.0' # Used for Laying out views.
   pod 'Hero', '1.0.1'
   pod 'IGListKit'
-  pod 'Moya'
+  pod 'Moya/RxSwift', '~> 11.0'
   pod 'Shimmer'
   pod 'EFCountingLabel'
   pod 'XLActionController/Twitter'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxOptional'
 end

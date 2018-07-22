@@ -38,7 +38,7 @@ class PromotionCell: TDBaseCell {
     lazy var promotionLabel: UILabel = {
         let view = UILabel()
         view.textColor = .white
-        view.font = .bold(withSize: 22.0)
+        view.font = .heavy(withSize: 22.0)
         view.text = "Hey Rishi! We noticed you can benefit from XYZ Investment Product."
         view.numberOfLines = 0
         view.textAlignment = .center

@@ -48,6 +48,11 @@ open class BaseCollectionViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .background
         view.addSubview(collectionView)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(
+            title: "",
+            style: .plain,
+            target: nil,
+            action: nil)
         collectionView.snp.makeConstraints { make in
             make.top.equalTo(hasNavBar ? kDefaultNavHeight : customTopHeight)
             make.bottom.equalTo(0)
