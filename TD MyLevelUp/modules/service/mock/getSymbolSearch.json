@@ -1,0 +1,76 @@
+{
+    "ResultSet": {
+        "Query": "TD",
+        "Result": [{
+                   "symbol": "TD",
+                   "name": "The Toronto-Dominion Bank",
+                   "exch": "NYQ",
+                   "type": "S",
+                   "exchDisp": "NYSE",
+                   "typeDisp": "Equity"
+                   }, {
+                   "symbol": "TDOC",
+                   "name": "Teladoc, Inc.",
+                   "exch": "NYS",
+                   "type": "S",
+                   "exchDisp": "NYSE",
+                   "typeDisp": "Equity"
+                   }, {
+                   "symbol": "AMTD",
+                   "name": "TD Ameritrade Holding Corporation",
+                   "exch": "NYQ",
+                   "type": "S",
+                   "exchDisp": "NYSE",
+                   "typeDisp": "Equity"
+                   }, {
+                   "symbol": "TDC",
+                   "name": "Teradata Corporation",
+                   "exch": "NYQ",
+                   "type": "S",
+                   "exchDisp": "NYSE",
+                   "typeDisp": "Equity"
+                   }, {
+                   "symbol": "TDG",
+                   "name": "TransDigm Group Incorporated",
+                   "exch": "NYQ",
+                   "type": "S",
+                   "exchDisp": "NYSE",
+                   "typeDisp": "Equity"
+                   }, {
+                   "symbol": "TDS",
+                   "name": "Telephone and Data Systems, Inc.",
+                   "exch": "NYQ",
+                   "type": "S",
+                   "exchDisp": "NYSE",
+                   "typeDisp": "Equity"
+                   }, {
+                   "symbol": "TD.TO",
+                   "name": "The Toronto-Dominion Bank",
+                   "exch": "YHD",
+                   "type": "S",
+                   "exchDisp": "Industry",
+                   "typeDisp": "Equity"
+                   }, {
+                   "symbol": "TDW",
+                   "name": "Tidewater Inc.",
+                   "exch": "NYQ",
+                   "type": "S",
+                   "exchDisp": "NYSE",
+                   "typeDisp": "Equity"
+                   }, {
+                   "symbol": "TDY",
+                   "name": "Teledyne Technologies Incorporated",
+                   "exch": "NYQ",
+                   "type": "S",
+                   "exchDisp": "NYSE",
+                   "typeDisp": "Equity"
+                   }, {
+                   "symbol": "PETZ",
+                   "name": "TDH Holdings, Inc.",
+                   "exch": "NGM",
+                   "type": "S",
+                   "exchDisp": "NASDAQ",
+                   "typeDisp": "Equity"
+                   }]
+    }
+}
