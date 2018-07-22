@@ -28,7 +28,6 @@
     <string name="mortgage_payment_result">$%1$s / Monthly</string>
     <string name="mortgage_eligible">Congratulations! You can afford this mortgage based on your account history!</string>
     <string name="mortgage_not_eligible">Unfortunately, you are not eligible for this mortgage</string>
-</resources>
 
     // CC
     <string name="cc_error_toast">There was an error getting your accounts.</string>

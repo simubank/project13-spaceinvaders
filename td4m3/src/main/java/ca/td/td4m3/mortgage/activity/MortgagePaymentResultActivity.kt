@@ -41,7 +41,7 @@ class MortgagePaymentResultActivity : FragmentActivity() {
 
         eligibilityTextView = findViewById(R.id.eligibility_text_view)
         eligibilityTextView.apply {
-            if (!isCustomerEligible) {
+            if (isCustomerEligible) {
                 this.text = getString(R.string.mortgage_eligible)
                 this.background = getDrawable(R.color.eligible_bg)
             } else {
