@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/information_cell_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/cardTopInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/credit_card_image_view"
+            android:src="@drawable/cash_back_infinite_visa_card_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/credit_card_card_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/credit_card_image_view"
+            android:textSize="@dimen/text_20_sp"
+            android:textColor="@color/td_green"
+            android:paddingStart="@dimen/card_divider_spacing"
+            android:paddingEnd="@dimen/card_divider_spacing"
+            tools:text="TD Cash Back Infinite Visa Card" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardTopInformation"
+        android:paddingStart="@dimen/padding_10"
+        android:paddingEnd="@dimen/padding_10"
+        android:textSize="@dimen/text_20_sp"
+        android:textColor="@android:color/black"
+        tools:text="Limited time offer when you apply online by August 27, 2018. Conditions apply."/>
+
+</RelativeLayout>

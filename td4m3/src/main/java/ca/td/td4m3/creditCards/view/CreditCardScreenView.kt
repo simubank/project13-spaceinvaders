@@ -1,8 +1,8 @@
-package ca.td.td4m3.dashboard.creditCard.contract
+package ca.td.td4m3.creditCards.view
 
 import com.td.virtualbank.VirtualBankAccount
 
-interface CreditCardView {
+interface CreditCardScreenView {
     fun reloadView()
 
     fun requestAccounts()

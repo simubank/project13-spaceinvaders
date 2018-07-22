@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/credit_card_loaded_parent_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/text_15_sp"
+    android:paddingEnd="@dimen/text_15_sp">
+
+    <TextView
+        android:id="@+id/nameDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/td_green"
+        android:textSize="@dimen/text_20_sp"
+        tools:text="Hi Amanda!"/>
+
+    <RelativeLayout
+        android:id="@+id/spendingDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameDetails"
+        android:layout_centerVertical="true">
+        <TextView
+            android:id="@+id/monthlySpendingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_30_sp"
+            android:textColor="@color/td_green"
+            tools:text="Your Monthly Spending So Far:"/>
+
+        <TextView
+            android:id="@+id/monthlySpendingNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/monthlySpendingText"
+            android:paddingTop="@dimen/card_divider_spacing"
+            android:textColor="@color/td_green"
+            android:textSize="40sp"
+            tools:text="$500"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

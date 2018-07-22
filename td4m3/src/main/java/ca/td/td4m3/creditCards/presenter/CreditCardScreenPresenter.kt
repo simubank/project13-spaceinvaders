@@ -1,26 +1,13 @@
-package ca.td.td4m3.dashboard.creditCard.presenter
+package ca.td.td4m3.creditCards.presenter
 
-import ca.td.td4m3.dashboard.creditCard.contract.CreditCardView
+import ca.td.td4m3.creditCards.view.CreditCardScreenView
 import com.android.volley.VolleyError
 import com.ngam.rvabstractions.AbstractPresenter
-import com.td.virtualbank.VirtualBankAccount
-import com.td.virtualbank.VirtualBankGetCustomerAccountsRequest
-import com.td.virtualbank.VirtualBankGetTransactionsRequest
-import com.td.virtualbank.VirtualBankTransaction
-import java.util.*
+import com.td.virtualbank.*
 
-class CreditCardPresenter(val view: CreditCardView): AbstractPresenter() {
-    enum class CreditCardState {
-        FULL_ERROR,
-        PARTIAL_ERROR,
-        SHIMMER,
-        LOADED
-    }
-
+class CreditCardScreenPresenter(val view: CreditCardScreenView): AbstractPresenter() {
     private var accountTransactionsMap: HashMap<VirtualBankAccount, ArrayList<VirtualBankTransaction>> = HashMap()
-    private var vendorsMap: HashMap<String, Int> = HashMap()
-    private var currentState: CreditCardState = CreditCardState.SHIMMER
-    private var numCCAccounts: Int = 0
+    private var shouldShowShimmer: Boolean = true
 
     override fun onViewReady() {
         // Cannot request just CC because requesting transactions requires different object
@@ -32,10 +19,8 @@ class CreditCardPresenter(val view: CreditCardView): AbstractPresenter() {
             override fun onSuccess(var1: ArrayList<VirtualBankAccount>) {
                 val accountList: ArrayList<VirtualBankAccount> = var1
                 val ccAccountList: ArrayList<VirtualBankAccount> = getCreditCardAccounts(accountList)
-                numCCAccounts = ccAccountList.size
                 if (ccAccountList.isEmpty()) {
                     // No CC accounts or transactions. Can only show product data
-                    currentState = CreditCardState.PARTIAL_ERROR
                     return
                 }
 
@@ -46,7 +31,8 @@ class CreditCardPresenter(val view: CreditCardView): AbstractPresenter() {
             }
 
             override fun onError(p0: VolleyError?) {
-                currentState = CreditCardState.FULL_ERROR
+                // Assume user has no accounts
+                shouldShowShimmer = false
                 view.reloadView()
             }
         }
@@ -64,44 +50,21 @@ class CreditCardPresenter(val view: CreditCardView): AbstractPresenter() {
     }
 
     fun getTransactionsHandler(account: VirtualBankAccount): VirtualBankGetTransactionsRequest {
-        currentState = CreditCardState.LOADED
+        shouldShowShimmer = false
         return object: VirtualBankGetTransactionsRequest() {
             override fun onSuccess(var1: ArrayList<VirtualBankTransaction>) {
                 accountTransactionsMap[account] = var1
-                if (accountTransactionsMap.keys.size == numCCAccounts) {
-                    currentState = CreditCardState.LOADED
-                    view.reloadView()
-                }
+                view.reloadView()
             }
 
             override fun onError(p0: VolleyError?) {
                 // Assume user has no transactions or cannot get
-                currentState = CreditCardState.FULL_ERROR
                 view.reloadView()
             }
         }
     }
 
-    fun getCardState(): CreditCardState {
-        return currentState
-    }
-
-    fun calculateSpending(): Double {
-        var totalSpending = 0.0
-        for (account in accountTransactionsMap.keys) {
-            for (transaction in accountTransactionsMap[account].orEmpty()) {
-                totalSpending += + transaction.currencyAmount
-                vendorsMap[transaction.description] = (vendorsMap[transaction.description] ?: 0) + 1
-            }
-        }
-        return totalSpending
-    }
-
-    fun getMostPopularVendor(): String? {
-        if (vendorsMap.keys.isEmpty()) {
-            return null
-        }
-        vendorsMap.toSortedMap()
-        return ""
+    fun shouldShowShimmer(): Boolean {
+        return shouldShowShimmer
     }
 }
