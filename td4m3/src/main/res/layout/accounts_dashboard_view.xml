@@ -2,14 +2,17 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp">
 
     <TextView
         android:id="@+id/accountsRowId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="This is the best row ever"
-        android:textColor="@color/td_green"/>
+        android:textColor="@color/td_green"
+        android:textSize="@dimen/text_30_sp"/>
 
 
 </LinearLayout>

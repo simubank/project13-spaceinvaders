@@ -14,5 +14,7 @@ class Constants private constructor() {
         const val MAX_AMORTIZATION_PERIOD = 30
         const val MIN_MORTGAGE_AMOUNT = 20000.00
         const val MAX_MORTGAGE_AMOUNT = 9000000.00
+        const val ALAYNA_DARNICK_ID: String = "1f9e0890-77b5-44ae-a987-03a0a6a1029a_fb5ebf49-9d39-4e36-86c0-c623ff6a39d6"
+        const val RUE_CHRISTOFFERSE_ID: String = "1f9e0890-77b5-44ae-a987-03a0a6a1029a_85cc124a-f46d-4ffc-83d7-bbc7039ea94e"
     }
 }
