@@ -44,11 +44,10 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
         return tableView
     }()
     
-    public lazy var accountBalancesTableViewFooter: UIView = {
-        var view = UIView()
-        
-        accountBalancesTableView.tableFooterView = view
-        return view
+    public lazy var accountRecommendationView: UIView = {
+        var recView = UIView()
+        view.addSubview(recView)
+        return recView
     }()
     
     public lazy var recommendedAccountLabel: UILabel = {
@@ -56,7 +55,7 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
         label.textColor = .black
         label.font = .medium(withSize: 15.0)
         label.numberOfLines = 0
-        accountBalancesTableViewFooter.addSubview(label)
+        view.addSubview(label)
         return label
     }()
     
@@ -67,7 +66,7 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
         button.setTitle("Learn More", for: .normal)
         button.addTarget(self, action: #selector(handleButtonClick), for: .touchUpInside)
         button.backgroundColor = .primary
-        accountBalancesTableViewFooter.addSubview(button)
+        view.addSubview(button)
         return button
     }()
     
@@ -96,11 +95,11 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
             $0.top.equalTo(accountsHeaderLabel).offset(50)
             $0.left.equalTo(0)
             $0.right.equalTo(0)
-            $0.bottom.equalTo(0)
+            $0.height.greaterThanOrEqualTo(200)
         }
         
         recommendedAccountLabel.snp.makeConstraints {
-            $0.top.equalTo(5)
+            $0.top.equalTo(accountBalancesTableView.snp.bottom).offset(30)
             $0.left.equalTo(accountsHeaderLabel)
             $0.right.equalTo(-8)
         }
