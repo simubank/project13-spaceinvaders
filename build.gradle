@@ -5,7 +5,7 @@ buildscript {
     ext.app_compat_version = '27.1.1'
     ext.gradle_version = '3.1.3'
     ext.constraint_layout_version = '1.1.2'
-    ext.kform_master_version = '4.5.0'
+    ext.kform_master_version = '4.5.1'
     repositories {
         google()
         jcenter()

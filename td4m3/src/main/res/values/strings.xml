@@ -21,6 +21,14 @@
     <string name="mortgage_amortization_hint">e.g 25 years</string>
     <string name="mortgage_amortization_disclaimer">Amortization period must be at least 1 year and at most 30.</string>
     <string name="mortgage_payment_frequency">Payment frequency</string>
+    <string name="calculate_payments_string">Calculate payments</string>
+    <string name="mortgage_maximum_interest_title">10% is the maximum interest rate!</string>
+    <string name="mortgage_payment_results_title">Payment Results</string>
+    <string name="mortgage_payment_amount">Payment Amount:</string>
+    <string name="mortgage_payment_result">$%1$s / Monthly</string>
+    <string name="mortgage_eligible">Congratulations! You can afford this mortgage based on your account history!</string>
+    <string name="mortgage_not_eligible">Unfortunately, you are not eligible for this mortgage</string>
+</resources>
 
     // CC
     <string name="cc_error_toast">There was an error getting your accounts.</string>

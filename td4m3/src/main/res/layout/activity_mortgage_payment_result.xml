@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mortgage_results_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/mortgage_title_padding"
+        android:text="@string/mortgage_payment_results_title"
+        android:textColor="@color/td_green"
+        android:textSize="@dimen/text_20_sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/payment_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/mortgage_title_padding"
+            android:text="@string/mortgage_payment_amount"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_20_sp" />
+
+        <TextView
+            android:id="@+id/monthly_payments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/mortgage_title_padding"
+            android:background="@color/light_green"
+            android:padding="@dimen/mortgage_title_padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_30_sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/eligibility_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/mortgage_title_padding"
+        android:textColor="@color/td_dark_green"
+        android:textSize="@dimen/text_30_sp" />
+</LinearLayout>

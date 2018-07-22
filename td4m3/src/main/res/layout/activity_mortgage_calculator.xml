@@ -24,4 +24,14 @@
         android:id="@+id/frequency_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/calculate_payment_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/button_mortgage_padding"
+        android:background="@color/grey"
+        android:enabled="false"
+        android:text="@string/calculate_payments_string"
+        android:textColor="@color/white" />
 </LinearLayout>
