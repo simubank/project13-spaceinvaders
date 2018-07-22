@@ -6,7 +6,7 @@ public class AccountsWidgetModel: NSObject, DashboardWidgetModel {
     
     public let title: String = "Accounts"
     
-    public let contentView: UIView
+    public let contentView: DashboardWidgetView
     
     public let presenter: AccountsWidgetPresenter
     

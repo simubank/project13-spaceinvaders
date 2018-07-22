@@ -6,7 +6,7 @@ public class CreditCardWidgetModel: NSObject, DashboardWidgetModel {
     
     public let title: String = "Credit Cards"
     
-    public let contentView: UIView = UIView()
+    public let contentView: DashboardWidgetView = DashboardWidgetView()
     
     public func openWidget(with viewcontroller: UIViewController) {
         // TODO

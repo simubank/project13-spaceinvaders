@@ -6,7 +6,7 @@ public class MortgageWidgetModel: NSObject, DashboardWidgetModel {
     
     public let title: String = "Mortgage"
     
-    public let contentView: UIView = UIView()
+    public let contentView: DashboardWidgetView = DashboardWidgetView()
     
     public func openWidget(with viewcontroller: UIViewController) {
         // TODO

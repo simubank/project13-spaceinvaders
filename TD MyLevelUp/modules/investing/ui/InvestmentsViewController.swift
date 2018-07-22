@@ -18,7 +18,7 @@ public class InvestmentViewController: BaseCollectionViewController {
         guard let intents = intents else { return [] }
         var objects: [InvestingPromotionItem] = []
         for intent in intents {
-            objects.append(InvestingPromotionItem(message: intent.messageSnippet, image: UIImage(named: "investing_banner_\(intents.index{ $0 === intent} ?? 0)"), buttonText: intent.buttonText))
+            objects.append(InvestingPromotionItem(intent: intent, image: UIImage(named: "investing_banner_\(intents.index{ $0 === intent} ?? 0)")))
         }
         return objects
     }

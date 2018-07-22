@@ -7,7 +7,7 @@ public protocol DashboardWidgetModel {
     var title: String { get }
     
     /// The content view for the widget
-    var contentView: UIView { get }
+    var contentView: DashboardWidgetView { get }
     
     /// The icon for the widget
     var icon: UIImage? { get }
@@ -34,6 +34,7 @@ public class DashboardWidgetController: ListSectionController {
             fatalError("Could not dequeue DashboardWidgetCell")
         }
         cell.widgetIconImageView.image = model?.icon
+        model?.contentView.viewcontroller = viewController
         cell.widgetContent = model?.contentView
         cell.titleLabel.text = model?.title
         return cell

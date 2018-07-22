@@ -6,7 +6,7 @@ public class InvestingWidgetModel: NSObject, DashboardWidgetModel {
     
     public let title: String = "Investing"
     
-    public let contentView: UIView
+    public let contentView: DashboardWidgetView
     
     public let presenter: InvestingWidgetPresenter
     

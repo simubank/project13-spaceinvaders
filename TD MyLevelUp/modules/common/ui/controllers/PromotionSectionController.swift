@@ -6,6 +6,7 @@ public protocol PromotionItem {
     var backgroundImage: UIImage? { get }
     var promotionText: String { get }
     var buttonText: String? { get }
+    func controllerDidSelectItem(_ controller: PromotionSectionController, viewController: UIViewController?)
 }
 
 open class PromotionSectionController: ListSectionController {
@@ -31,6 +32,6 @@ open class PromotionSectionController: ListSectionController {
     }
     
     open override func didSelectItem(at index: Int) {
-        
+        item?.controllerDidSelectItem(self, viewController: viewController)
     }
 }

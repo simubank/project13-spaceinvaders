@@ -8,9 +8,16 @@ public class InvestingWidgetView: DashboardWidgetView, InvestingWidgetViewContra
     private var indexOfCellBeforeDragging = 0
     
     /// The Adapter used for the IGListKit Collection View.
-    public lazy var adapter: ListAdapter = {
-        return ListAdapter(updater: ListAdapterUpdater(), viewController: viewcontroller)
-    }()
+    public var adapter: ListAdapter?
+    
+    override public var viewcontroller: UIViewController! {
+        didSet {
+            adapter = ListAdapter(updater: ListAdapterUpdater(), viewController: viewcontroller)
+            adapter?.dataSource = self
+            adapter?.collectionView = collectionView
+            adapter?.scrollViewDelegate = self
+        }
+    }
     
     lazy var collectionViewFlowLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
@@ -57,15 +64,11 @@ public class InvestingWidgetView: DashboardWidgetView, InvestingWidgetViewContra
             $0.centerX.equalToSuperview()
             $0.bottom.equalToSuperview()
         }
-        
-        adapter.collectionView = collectionView
-        adapter.dataSource = self
-        adapter.scrollViewDelegate = self
     }
 
     public func updatePromotionalIntents(_ items: [InvestingIntent]) {
         self.intents = items
-        adapter.performUpdates(animated: true, completion: nil)
+        adapter?.performUpdates(animated: true, completion: nil)
     }
 }
 
@@ -84,7 +87,8 @@ extension InvestingWidgetView: ListAdapterDataSource {
     public func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         var objects: [ListDiffable] = []
         for intent in intents {
-            objects.append(InvestingPromotionItem(message: intent.messageSnippet, image: UIImage(named: "investing_banner_\((intents.index{ $0 === intent} ?? 0) % 6)"), buttonText: intent.buttonText))
+            objects.append(InvestingPromotionItem(intent: intent,
+                                                  image: UIImage(named: "investing_banner_\((intents.index{ $0 === intent} ?? 0) % 6)")))
         }
         return objects + ["Test" as ListDiffable]
     }

@@ -72,6 +72,7 @@
 		46B2416121018B5600A2E45C /* AlphaVantage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2416021018B5600A2E45C /* AlphaVantage.swift */; };
 		46B241652102003B00A2E45C /* TopGainersSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B241642102003B00A2E45C /* TopGainersSectionController.swift */; };
 		46B241672102004800A2E45C /* StockQuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B241662102004800A2E45C /* StockQuoteCell.swift */; };
+		46F88EFA2103E2A70012077E /* InvestingTFSAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88EF92103E2A70012077E /* InvestingTFSAViewController.swift */; };
 		DC960470A15BFFBFD95B5201 /* Pods_TD_MyLevelUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2294332CE8B3D5822C541A /* Pods_TD_MyLevelUp.framework */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +145,7 @@
 		46B2416021018B5600A2E45C /* AlphaVantage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaVantage.swift; sourceTree = "<group>"; };
 		46B241642102003B00A2E45C /* TopGainersSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGainersSectionController.swift; sourceTree = "<group>"; };
 		46B241662102004800A2E45C /* StockQuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockQuoteCell.swift; sourceTree = "<group>"; };
+		46F88EF92103E2A70012077E /* InvestingTFSAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestingTFSAViewController.swift; sourceTree = "<group>"; };
 		6CB7F97A4F48472D955CE9D1 /* Pods-TD MyLevelUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TD MyLevelUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TD MyLevelUp/Pods-TD MyLevelUp.release.xcconfig"; sourceTree = "<group>"; };
 		CC2294332CE8B3D5822C541A /* Pods_TD_MyLevelUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TD_MyLevelUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -513,6 +515,7 @@
 				46B241622101FFF500A2E45C /* controllers */,
 				46B2413321012AF700A2E45C /* InvestmentsViewController.swift */,
 				46B24146210135AD00A2E45C /* InvestingWidgetView.swift */,
+				46F88EF92103E2A70012077E /* InvestingTFSAViewController.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -775,6 +778,7 @@
 				46B240FD210044C200A2E45C /* NSObject+IGListKit.swift in Sources */,
 				46B241672102004800A2E45C /* StockQuoteCell.swift in Sources */,
 				46B2413421012AF700A2E45C /* InvestmentsViewController.swift in Sources */,
+				46F88EFA2103E2A70012077E /* InvestingTFSAViewController.swift in Sources */,
 				46B2414D2101395B00A2E45C /* PromotionCell.swift in Sources */,
 				46B241542101475500A2E45C /* ListInsetSingleSectionController.swift in Sources */,
 				46B241452101351A00A2E45C /* EmbeddedCollectionViewCell.swift in Sources */,

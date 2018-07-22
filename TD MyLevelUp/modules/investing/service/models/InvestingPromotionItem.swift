@@ -2,15 +2,24 @@ import Foundation
 import UIKit
 
 public class InvestingPromotionItem: NSObject, PromotionItem {
+    public let intent: InvestingIntent
+    
     public let backgroundImage: UIImage?
     
-    public let promotionText: String
+    public var promotionText: String {
+        return intent.messageSnippet
+    }
     
-    public let buttonText: String?
+    public var buttonText: String? {
+        return intent.buttonText
+    }
     
-    public init(message: String, image: UIImage?, buttonText: String) {
-        self.promotionText = message
+    public init(intent: InvestingIntent, image: UIImage?) {
+        self.intent = intent
         self.backgroundImage = image
-        self.buttonText = buttonText
+    }
+    
+    public func controllerDidSelectItem(_ controller: PromotionSectionController, viewController: UIViewController?) {
+        intent.openIntent(viewController: viewController)
     }
 }
