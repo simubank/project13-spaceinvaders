@@ -23,7 +23,6 @@ public class AccountsWidgetPresenter {
             switch result {
             case let .success(moyaResponse):
                 guard let response = moyaResponse.mapObject(VirtualBankResponse<Accounts>.self) else { return }
-                // FIXME : Use all accounts instead of first one
                 self.account = response.result?.bankAccounts?[0]
             case let .failure(error):
                 print(error)

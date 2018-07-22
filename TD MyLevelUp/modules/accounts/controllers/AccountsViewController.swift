@@ -2,16 +2,9 @@ import Foundation
 import UIKit
 import SnapKit
 
-class AccountsViewController: UIViewController {
+class AccountsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var account: Account? {
-        didSet {
-            guard let userAccount = account else { return }
-            guard let balance = userAccount.balance else { return }
-            guard let currency = userAccount.currency else { return }
-            accountBalanceLabel.text = "$\(balance) \(currency)"
-        }
-    }
+    var accounts = [Account]()
     
     var recommendedAccount: PersonalAccount? {
         didSet {
@@ -30,7 +23,7 @@ class AccountsViewController: UIViewController {
     
     public lazy var accountsHeaderLabel: UILabel = {
         let label = UILabel()
-        label.text = "Account Balance"
+        label.text = "Account Balances"
         label.textColor = .black
         label.font = .heavy(withSize: 40.0)
         view.addSubview(label)
@@ -45,13 +38,17 @@ class AccountsViewController: UIViewController {
         return label
     }()
     
-    public lazy var recommendationsHeaderLabel: UILabel = {
-        let label = UILabel()
-        label.text = "What we recommend"
-        label.textColor = .black
-        label.font = .bold(withSize: 30.0)
-        view.addSubview(label)
-        return label
+    public lazy var accountBalancesTableView: UITableView = {
+        var tableView = UITableView()
+        view.addSubview(tableView)
+        return tableView
+    }()
+    
+    public lazy var accountBalancesTableViewFooter: UIView = {
+        var view = UIView()
+        
+        accountBalancesTableView.tableFooterView = view
+        return view
     }()
     
     public lazy var recommendedAccountLabel: UILabel = {
@@ -59,7 +56,7 @@ class AccountsViewController: UIViewController {
         label.textColor = .black
         label.font = .medium(withSize: 15.0)
         label.numberOfLines = 0
-        view.addSubview(label)
+        accountBalancesTableViewFooter.addSubview(label)
         return label
     }()
     
@@ -70,7 +67,7 @@ class AccountsViewController: UIViewController {
         button.setTitle("Learn More", for: .normal)
         button.addTarget(self, action: #selector(handleButtonClick), for: .touchUpInside)
         button.backgroundColor = .primary
-        view.addSubview(button)
+        accountBalancesTableViewFooter.addSubview(button)
         return button
     }()
     
@@ -78,8 +75,8 @@ class AccountsViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Your Accounts"
-        setupView()
         getAccountInfo()
+        setupView()
     }
     
     public func setupView() {
@@ -90,25 +87,26 @@ class AccountsViewController: UIViewController {
             $0.left.equalTo(20)
         }
         
-        accountBalanceLabel.snp.makeConstraints {
-            $0.top.equalTo(accountsHeaderLabel).offset(60)
-            $0.left.equalTo(accountsHeaderLabel)
-        }
-        
-        recommendationsHeaderLabel.snp.makeConstraints {
-            $0.top.equalTo(accountBalanceLabel).offset(60)
-            $0.left.equalTo(accountsHeaderLabel)
+        accountBalancesTableView.delegate = self
+        accountBalancesTableView.dataSource = self
+        accountBalancesTableView.rowHeight = UITableViewAutomaticDimension
+        accountBalancesTableView.estimatedRowHeight = UITableViewAutomaticDimension
+        accountBalancesTableView.register(AccountCell.self, forCellReuseIdentifier: "AccountCell")
+        accountBalancesTableView.snp.makeConstraints {
+            $0.top.equalTo(accountsHeaderLabel).offset(50)
+            $0.left.equalTo(0)
+            $0.right.equalTo(0)
+            $0.bottom.equalTo(0)
         }
         
         recommendedAccountLabel.snp.makeConstraints {
-            $0.top.equalTo(recommendationsHeaderLabel).offset(50)
+            $0.top.equalTo(5)
             $0.left.equalTo(accountsHeaderLabel)
             $0.right.equalTo(-8)
         }
-        
+
         learnMoreButton.snp.makeConstraints {
             $0.top.equalTo(recommendedAccountLabel).offset(70)
-            $0.centerX.equalToSuperview()
             $0.left.equalTo(15)
             $0.right.equalTo(-15)
             $0.height.equalTo(60)
@@ -120,9 +118,11 @@ class AccountsViewController: UIViewController {
             switch result {
             case let .success(moyaResponse):
                 guard let response = moyaResponse.mapObject(VirtualBankResponse<Accounts>.self) else { return }
-                // FIXME : Use all accounts instead of first one
-                self.account = response.result?.bankAccounts?[0]
+               
+                guard let accounts = response.result?.bankAccounts else { return }
+                self.accounts = accounts
                 self.recommendedAccount = self.determineRecommendedAccount()
+                self.accountBalancesTableView.reloadData()
             case let .failure(error):
                 print(error)
             }
@@ -131,9 +131,10 @@ class AccountsViewController: UIViewController {
     
     private func determineRecommendedAccount() -> PersonalAccount? {
         
-        guard let accountBalance = account?.balance else { return nil }
+        let accountBalances = accounts.map{ $0.balance ?? 0.00 }
+        guard let maxAccountBalance = accountBalances.max() else { return nil }
         
-        switch accountBalance {
+        switch maxAccountBalance {
         case 2000..<3000:
             return PersonalAccounts.minimumChequing
         case 3000..<4000:
@@ -151,5 +152,25 @@ class AccountsViewController: UIViewController {
     @objc func handleButtonClick() {
         guard let moreInfoURL = recommendedAccount?.moreInfoURL else { return }
         UIApplication.shared.open(moreInfoURL, options: [:], completionHandler: nil)
+    }
+}
+
+extension AccountsViewController {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return accounts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = AccountCell(style: UITableViewCellStyle.default, reuseIdentifier: "AccountCell")
+        
+        cell.type.text = accounts[indexPath.row].type ?? ""
+        cell.balance.text = "$\(accounts[indexPath.row].balance ?? 0.00) \(accounts[indexPath.row].currency ?? "")"
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
     }
 }
