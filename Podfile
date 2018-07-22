@@ -17,4 +17,6 @@ target 'TD MyLevelUp' do
   pod 'RxCocoa'
   pod 'RxOptional'
   pod 'MBProgressHUD'
+  pod 'Eureka'
+  pod 'SwiftValidator', :git => 'https://github.com/SwiftValidatorCommunity/SwiftValidator.git', :branch => 'master'
 end

@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.7.2)
   - EFCountingLabel (4.0.1)
+  - Eureka (4.2.0)
   - Hero (1.0.1)
   - IGListKit (3.4.0):
     - IGListKit/Default (= 3.4.0)
@@ -23,12 +24,14 @@ PODS:
   - RxSwift (4.2.0)
   - Shimmer (1.0.2)
   - SnapKit (4.0.0)
+  - SwiftValidator (4.0.0)
   - XLActionController/Core (4.0.1)
   - XLActionController/Twitter (4.0.1):
     - XLActionController/Core
 
 DEPENDENCIES:
   - EFCountingLabel
+  - Eureka
   - Hero (= 1.0.1)
   - IGListKit
   - MBProgressHUD
@@ -38,12 +41,14 @@ DEPENDENCIES:
   - RxSwift
   - Shimmer
   - SnapKit (~> 4.0.0)
+  - SwiftValidator (from `https://github.com/SwiftValidatorCommunity/SwiftValidator.git`, branch `master`)
   - XLActionController/Twitter
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - EFCountingLabel
+    - Eureka
     - Hero
     - IGListKit
     - MBProgressHUD
@@ -56,9 +61,20 @@ SPEC REPOS:
     - SnapKit
     - XLActionController
 
+EXTERNAL SOURCES:
+  SwiftValidator:
+    :branch: master
+    :git: https://github.com/SwiftValidatorCommunity/SwiftValidator.git
+
+CHECKOUT OPTIONS:
+  SwiftValidator:
+    :commit: ba27b0e501bf542b5c1a97bed8f706d12fb2d4f4
+    :git: https://github.com/SwiftValidatorCommunity/SwiftValidator.git
+
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   EFCountingLabel: 1beb6707761ad00b97efc8bde5c3fceaa7cb9eec
+  Eureka: 0748c7bbb2560130e43c7bfa83e99c98854a1f42
   Hero: cee286821578e170d8c0c9c9cda7897357401112
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
@@ -69,8 +85,9 @@ SPEC CHECKSUMS:
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
   XLActionController: 007868251c0eed70d649d06c1625259b73b3a600
 
-PODFILE CHECKSUM: a58f0d289d0784da9ef10af7c9c60bc6db520a39
+PODFILE CHECKSUM: 8c006044e19c88bd60286e5621b42e3bcb392e79
 
 COCOAPODS: 1.5.3
