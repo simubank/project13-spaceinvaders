@@ -82,6 +82,10 @@
 		46C6FEAC21066A4B00AC8856 /* getTransactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 46C6FEAB21066A4B00AC8856 /* getTransactions.json */; };
 		46C6FEAE21066BD600AC8856 /* CreditCardWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEAD21066BD600AC8856 /* CreditCardWidgetView.swift */; };
 		46C6FEB121066CE100AC8856 /* CreditCardAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEB021066CE100AC8856 /* CreditCardAccount.swift */; };
+		46C6FEB421066DD300AC8856 /* CreditCardWidgetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEB321066DD300AC8856 /* CreditCardWidgetPresenter.swift */; };
+		46C6FEB821066FC300AC8856 /* CreditCardSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEB721066FC300AC8856 /* CreditCardSummaryCell.swift */; };
+		46C6FEBA21066FDF00AC8856 /* CreditCardSummaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEB921066FDF00AC8856 /* CreditCardSummaryController.swift */; };
+		46C6FEBC2106708100AC8856 /* LevelUp+IGListKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEBB2106708100AC8856 /* LevelUp+IGListKit.swift */; };
 		46F88EFA2103E2A70012077E /* WhyInvestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88EF92103E2A70012077E /* WhyInvestingViewController.swift */; };
 		46F88EFC210414B00012077E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F88EFB210414AF0012077E /* Images.xcassets */; };
 		46F88F00210420E80012077E /* getAccountsSelf.json in Resources */ = {isa = PBXBuildFile; fileRef = 46F88EFF210420E80012077E /* getAccountsSelf.json */; };
@@ -185,6 +189,10 @@
 		46C6FEAB21066A4B00AC8856 /* getTransactions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getTransactions.json; sourceTree = "<group>"; };
 		46C6FEAD21066BD600AC8856 /* CreditCardWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardWidgetView.swift; sourceTree = "<group>"; };
 		46C6FEB021066CE100AC8856 /* CreditCardAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardAccount.swift; sourceTree = "<group>"; };
+		46C6FEB321066DD300AC8856 /* CreditCardWidgetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardWidgetPresenter.swift; sourceTree = "<group>"; };
+		46C6FEB721066FC300AC8856 /* CreditCardSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardSummaryCell.swift; sourceTree = "<group>"; };
+		46C6FEB921066FDF00AC8856 /* CreditCardSummaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardSummaryController.swift; sourceTree = "<group>"; };
+		46C6FEBB2106708100AC8856 /* LevelUp+IGListKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LevelUp+IGListKit.swift"; sourceTree = "<group>"; };
 		46F88EF92103E2A70012077E /* WhyInvestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyInvestingViewController.swift; sourceTree = "<group>"; };
 		46F88EFB210414AF0012077E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		46F88EFF210420E80012077E /* getAccountsSelf.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getAccountsSelf.json; sourceTree = "<group>"; };
@@ -374,6 +382,7 @@
 				46F88F1E210513980012077E /* Date+LevelUp.swift */,
 				46C6FEA121064AEB00AC8856 /* Dictionary+JSON.swift */,
 				46C6FEA92106663600AC8856 /* Double+Round.swift */,
+				46C6FEBB2106708100AC8856 /* LevelUp+IGListKit.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -517,6 +526,7 @@
 		46B24122210128BB00A2E45C /* creditcard */ = {
 			isa = PBXGroup;
 			children = (
+				46C6FEB221066DC300AC8856 /* presenter */,
 				46B2413721012FBC00A2E45C /* resources */,
 				46B2413021012ADE00A2E45C /* ui */,
 				46B2412F21012ADA00A2E45C /* service */,
@@ -574,6 +584,8 @@
 		46B2413021012ADE00A2E45C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				46C6FEB621066FB900AC8856 /* controllers */,
+				46C6FEB521066FB500AC8856 /* cells */,
 				46C6FEAD21066BD600AC8856 /* CreditCardWidgetView.swift */,
 			);
 			path = ui;
@@ -716,6 +728,30 @@
 				46C6FEB021066CE100AC8856 /* CreditCardAccount.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		46C6FEB221066DC300AC8856 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				46C6FEB321066DD300AC8856 /* CreditCardWidgetPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		46C6FEB521066FB500AC8856 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				46C6FEB721066FC300AC8856 /* CreditCardSummaryCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		46C6FEB621066FB900AC8856 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				46C6FEB921066FDF00AC8856 /* CreditCardSummaryController.swift */,
+			);
+			path = controllers;
 			sourceTree = "<group>";
 		};
 		46F88EFD21041BF80012077E /* core */ = {
@@ -914,6 +950,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46C6FEBA21066FDF00AC8856 /* CreditCardSummaryController.swift in Sources */,
 				46B24124210128C600A2E45C /* CreditCardWidgetModel.swift in Sources */,
 				161B6ADF21029A3800713CFB /* PersonalAccount.swift in Sources */,
 				46B240D221003D2100A2E45C /* BaseCollectionViewController.swift in Sources */,
@@ -963,6 +1000,7 @@
 				46B2414F210139E700A2E45C /* PromotionSectionController.swift in Sources */,
 				46B2415F2101866A00A2E45C /* FixedPromotionSectionController.swift in Sources */,
 				46F88F172104FD0F0012077E /* SymbolSearchResultCell.swift in Sources */,
+				46C6FEB821066FC300AC8856 /* CreditCardSummaryCell.swift in Sources */,
 				46B2410821004B7700A2E45C /* Moya+Swift4.swift in Sources */,
 				46B241652102003B00A2E45C /* TopGainersSectionController.swift in Sources */,
 				46B240DD21003F4E00A2E45C /* DashboardWidgetCell.swift in Sources */,
@@ -970,11 +1008,13 @@
 				46B2415B21015AB700A2E45C /* InvestingWidgetPresenter.swift in Sources */,
 				46B2412A2101293700A2E45C /* AccountsWidgetModel.swift in Sources */,
 				46B24156210149C500A2E45C /* UICollectionView+Center.swift in Sources */,
+				46C6FEBC2106708100AC8856 /* LevelUp+IGListKit.swift in Sources */,
 				46C6FEA221064AEB00AC8856 /* Dictionary+JSON.swift in Sources */,
 				161B6ACD2102575F00713CFB /* AccountsViewController.swift in Sources */,
 				46F88F2321051C4B0012077E /* StockPurchaseCell.swift in Sources */,
 				46B24104210047C600A2E45C /* String+Network.swift in Sources */,
 				46B2415D21015BFC00A2E45C /* InvestingIntent.swift in Sources */,
+				46C6FEB421066DD300AC8856 /* CreditCardWidgetPresenter.swift in Sources */,
 				161B6ADD21027AC600713CFB /* AccountsWidgetPresenter.swift in Sources */,
 				46B241212101283E00A2E45C /* InvestingWidgetModel.swift in Sources */,
 				46B2414A2101381700A2E45C /* DashboardWidgetView.swift in Sources */,

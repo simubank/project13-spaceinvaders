@@ -3,7 +3,7 @@ import UIKit
 import IGListKit
 import SnapKit
 
-public class CreditCardWidgetView: DashboardWidgetView {
+public class CreditCardWidgetView: DashboardWidgetView, CreditCardWidgetViewContract {
     /// The Adapter used for the IGListKit Collection View.
     public var adapter: ListAdapter?
     
@@ -34,8 +34,8 @@ public class CreditCardWidgetView: DashboardWidgetView {
     /// Collection view that fills the controller.
     public lazy var collectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
-        view.backgroundColor = .black
         view.alwaysBounceVertical = false
+        view.backgroundColor = .background
         view.alwaysBounceHorizontal = true
         view.showsHorizontalScrollIndicator = false
         view.isPagingEnabled = true
@@ -43,7 +43,7 @@ public class CreditCardWidgetView: DashboardWidgetView {
         return view
     }()
     
-    var intents: [CreditCardIntent] = [] {
+    var intents: [CreditCardAccount] = [] {
         didSet {
             pageControl.numberOfPages = intents.count
             pageControl.currentPage = 0
@@ -62,9 +62,9 @@ public class CreditCardWidgetView: DashboardWidgetView {
             $0.bottom.equalToSuperview()
         }
     }
-    
-    public func updatePromotionalIntents(_ items: [CreditCardIntent]) {
-        self.intents = items
+
+    public func creditCard(_ presenter: CreditCardWidgetPresenter, didRecieve accounts: [CreditCardAccount]) {
+        intents = accounts
         adapter?.performUpdates(animated: true, completion: nil)
     }
 }
@@ -82,16 +82,11 @@ extension CreditCardWidgetView: UIScrollViewDelegate {
 
 extension CreditCardWidgetView: ListAdapterDataSource {
     public func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        var objects: [ListDiffable] = []
-//        for intent in intents {
-//            objects.append(InvestingPromotionItem(intent: intent,
-//                                                  image: UIImage(named: "investing_banner_\((intents.index{ $0 === intent} ?? 0) % 6)")))
-//        }
-        return objects
+        return intents
     }
     
     public func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        return PromotionSectionController()
+        return CreditCardSummaryController()
     }
     
     public func emptyView(for listAdapter: ListAdapter) -> UIView? {

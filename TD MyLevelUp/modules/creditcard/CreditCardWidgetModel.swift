@@ -6,9 +6,19 @@ public class CreditCardWidgetModel: NSObject, DashboardWidgetModel {
     
     public let title: String = "Credit Cards"
     
-    public let contentView: DashboardWidgetView = CreditCardWidgetView()
+    public let contentView: DashboardWidgetView
+    
+    public let presenter: CreditCardWidgetPresenter
+    
+    public override init() {
+        presenter = CreditCardWidgetPresenter()
+        let view = CreditCardWidgetView()
+        presenter.view = view
+        contentView = view
+        super.init()
+    }
     
     public func openWidget(with viewcontroller: UIViewController) {
-        // TODO
+        
     }
 }

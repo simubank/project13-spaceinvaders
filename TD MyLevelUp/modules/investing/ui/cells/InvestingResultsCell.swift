@@ -35,7 +35,6 @@ public class InvestingResultsCell: TDBaseCell {
     lazy var totalExpensesValue: UILabel = {
         let view = UILabel()
         view.textColor = .red
-        view.text = "$1230"
         view.numberOfLines = 0
         view.font = .bold(withSize: 18)
         self.contentView.addSubview(view)
@@ -45,7 +44,6 @@ public class InvestingResultsCell: TDBaseCell {
     lazy var potentialEarningsValue: UILabel = {
         let view = UILabel()
         view.textColor = .primary
-        view.text = "$1300"
         view.numberOfLines = 0
         view.font = .bold(withSize: 18)
         self.contentView.addSubview(view)
@@ -55,7 +53,6 @@ public class InvestingResultsCell: TDBaseCell {
     lazy var growthValue: UILabel = {
         let view = UILabel()
         view.textColor = .primary
-        view.text = "$500"
         view.numberOfLines = 0
         view.font = .bold(withSize: 18)
         self.contentView.addSubview(view)
