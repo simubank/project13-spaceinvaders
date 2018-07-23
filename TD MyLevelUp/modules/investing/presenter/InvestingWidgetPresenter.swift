@@ -4,10 +4,7 @@ public protocol InvestingWidgetViewContract {
     func updatePromotionalIntents(_ items: [InvestingIntent])
 }
 public class InvestingWidgetPresenter {
-    public var intents: [InvestingIntent] = [WhyInvestingIntent(message: "We noticed you are spending quite heavily this month, see how investing instead of spending can grow your wealth"),
-                                             InvestingTFSAIntent(message: "New year means an extra $5000 in your TFSA. See how you can benefit from adding $7033 to max your contribution.", buttonText: "I want to invest"),
-                                             InvestingRRSPIntent(message: "You still have $12350 to contribute to your RRSP!", buttonText: "Find out more"),
-                                             InvestingRESPIntent(message: "It's that time in life... You need to start saving for your child's education. See how an RESP can help you.", buttonText: "I'm interested")]
+    public var intents: [InvestingIntent]
     
     public var view: InvestingWidgetViewContract? {
         didSet {
@@ -16,7 +13,7 @@ public class InvestingWidgetPresenter {
     }
     
     public init() {
-//        intents = []
+        intents = []
         VirtualBankService.request(.accounts(user: AccountManager.shared.id)) { result in
             switch result {
             case let .success(moyaResponse):
@@ -29,25 +26,7 @@ public class InvestingWidgetPresenter {
                             switch result {
                             case let .success(moyaResponse):
                                 guard let response = moyaResponse.mapObject(VirtualBankResponse<[Transaction]>.self) else { return }
-                                // TODO
-//                                self.intents.append(InvestingRESPIntent(message: "It's that time in life... You need to start saving for your child's education. See how an RESP can help you.", buttonText: "I'm interested"))
-                            case let .failure(error):
-                                print(error)
-                            }
-                            networkCalls.leave()
-                        }
-                    }
-                }
-            
-                if let accounts = response.result?.creditCardAccounts {
-                    for account in accounts {
-                        networkCalls.enter()
-                        VirtualBankService.request(.transactionsFor(account: account.id ?? "")) { result in
-                            switch result {
-                            case let .success(moyaResponse):
-                                guard let response = moyaResponse.mapObject(VirtualBankResponse<[Transaction]>.self) else { return }
-                                // TODO
-//                                self.intents.append(InvestingRESPIntent(message: "It's that time in life... You need to start saving for your child's education. See how an RESP can help you.", buttonText: "I'm interested"))
+//                                self.intents.append(WhyInvestingIntent(message: "We noticed you are spending quite heavily this month, see how investing instead of spending can grow your wealth"))
                             case let .failure(error):
                                 print(error)
                             }
@@ -56,6 +35,24 @@ public class InvestingWidgetPresenter {
                     }
                 }
                 
+                if let accounts = response.result?.creditCardAccounts {
+                    for account in accounts {
+                        networkCalls.enter()
+                        VirtualBankService.request(.transactionsFor(account: account.id ?? "")) { result in
+                            switch result {
+                            case let .success(moyaResponse):
+                                guard let response = moyaResponse.mapObject(VirtualBankResponse<[Transaction]>.self) else { return }
+                                // TODO
+                            //                                self.intents.append(InvestingRESPIntent(message: "It's that time in life... You need to start saving for your child's education. See how an RESP can help you.", buttonText: "I'm interested"))
+                            case let .failure(error):
+                                print(error)
+                            }
+                            networkCalls.leave()
+                        }
+                    }
+                }
+                
+                self.intents.append(WhyInvestingIntent(message: "We noticed you are spending quite heavily this month, see how investing instead of spending can grow your wealth"))
                 self.onHandleAccounts(bankAccounts: response.result?.bankAccounts, creditCardAccounts: response.result?.creditCardAccounts)
                 networkCalls.notify(queue: DispatchQueue.main, execute: {
                     self.view?.updatePromotionalIntents(self.intents)
@@ -69,6 +66,9 @@ public class InvestingWidgetPresenter {
     private func onHandleAccounts(bankAccounts: [BankAccount]?, creditCardAccounts: [CreditCardAccount]?) {
         var totalBankBalance: Double = 0
         
+        intents.append(contentsOf: [                                 InvestingTFSAIntent(message: "New year means an extra $5000 in your TFSA. See how you can benefit from adding $7033 to max your contribution.", buttonText: "I want to invest"),
+                                                                     InvestingRRSPIntent(message: "You still have $12350 to contribute to your RRSP!", buttonText: "Find out more"),
+                                                                     InvestingRESPIntent(message: "It's that time in life... You need to start saving for your child's education. See how an RESP can help you.", buttonText: "I'm interested")])
         if let accounts = bankAccounts {
             for account in accounts {
                 totalBankBalance = totalBankBalance + (account.balance ?? 0)

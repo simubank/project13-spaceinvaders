@@ -45,7 +45,7 @@ public class InvestingRRSPIntent: InvestingIntent {
 
 public class WhyInvestingIntent: InvestingIntent {
     public override func openIntent(viewController: UIViewController?) {
-        viewController?.navigationController?.pushViewController(WhyInvestingViewController(), animated: true)
+        viewController?.navigationController?.pushViewController(InvestingSimulationViewController(), animated: true)
     }
 }
 

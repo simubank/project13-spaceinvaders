@@ -76,6 +76,12 @@
 		46C6FEA021063B9F00AC8856 /* CandleStickChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FE9F21063B9F00AC8856 /* CandleStickChartController.swift */; };
 		46C6FEA221064AEB00AC8856 /* Dictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEA121064AEB00AC8856 /* Dictionary+JSON.swift */; };
 		46C6FEA421064B9500AC8856 /* StockQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEA321064B9500AC8856 /* StockQuote.swift */; };
+		46C6FEA621065C3600AC8856 /* InvestingResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEA521065C3600AC8856 /* InvestingResultsCell.swift */; };
+		46C6FEA821065C5A00AC8856 /* InvestingResutlsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEA721065C5A00AC8856 /* InvestingResutlsController.swift */; };
+		46C6FEAA2106663600AC8856 /* Double+Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEA92106663600AC8856 /* Double+Round.swift */; };
+		46C6FEAC21066A4B00AC8856 /* getTransactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 46C6FEAB21066A4B00AC8856 /* getTransactions.json */; };
+		46C6FEAE21066BD600AC8856 /* CreditCardWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEAD21066BD600AC8856 /* CreditCardWidgetView.swift */; };
+		46C6FEB121066CE100AC8856 /* CreditCardAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEB021066CE100AC8856 /* CreditCardAccount.swift */; };
 		46F88EFA2103E2A70012077E /* WhyInvestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88EF92103E2A70012077E /* WhyInvestingViewController.swift */; };
 		46F88EFC210414B00012077E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F88EFB210414AF0012077E /* Images.xcassets */; };
 		46F88F00210420E80012077E /* getAccountsSelf.json in Resources */ = {isa = PBXBuildFile; fileRef = 46F88EFF210420E80012077E /* getAccountsSelf.json */; };
@@ -173,6 +179,12 @@
 		46C6FE9F21063B9F00AC8856 /* CandleStickChartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleStickChartController.swift; sourceTree = "<group>"; };
 		46C6FEA121064AEB00AC8856 /* Dictionary+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+JSON.swift"; sourceTree = "<group>"; };
 		46C6FEA321064B9500AC8856 /* StockQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockQuote.swift; sourceTree = "<group>"; };
+		46C6FEA521065C3600AC8856 /* InvestingResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestingResultsCell.swift; sourceTree = "<group>"; };
+		46C6FEA721065C5A00AC8856 /* InvestingResutlsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestingResutlsController.swift; sourceTree = "<group>"; };
+		46C6FEA92106663600AC8856 /* Double+Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Round.swift"; sourceTree = "<group>"; };
+		46C6FEAB21066A4B00AC8856 /* getTransactions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getTransactions.json; sourceTree = "<group>"; };
+		46C6FEAD21066BD600AC8856 /* CreditCardWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardWidgetView.swift; sourceTree = "<group>"; };
+		46C6FEB021066CE100AC8856 /* CreditCardAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardAccount.swift; sourceTree = "<group>"; };
 		46F88EF92103E2A70012077E /* WhyInvestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyInvestingViewController.swift; sourceTree = "<group>"; };
 		46F88EFB210414AF0012077E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		46F88EFF210420E80012077E /* getAccountsSelf.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getAccountsSelf.json; sourceTree = "<group>"; };
@@ -361,6 +373,7 @@
 				46F88F0F2104E6BD0012077E /* SnapKit+SafeArea.swift */,
 				46F88F1E210513980012077E /* Date+LevelUp.swift */,
 				46C6FEA121064AEB00AC8856 /* Dictionary+JSON.swift */,
+				46C6FEA92106663600AC8856 /* Double+Round.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -553,6 +566,7 @@
 		46B2412F21012ADA00A2E45C /* service */ = {
 			isa = PBXGroup;
 			children = (
+				46C6FEAF21066CD300AC8856 /* models */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -560,6 +574,7 @@
 		46B2413021012ADE00A2E45C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				46C6FEAD21066BD600AC8856 /* CreditCardWidgetView.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -678,6 +693,7 @@
 				46F88F182104FECD0012077E /* SymbolSearchResultController.swift */,
 				46F88F2421051CDA0012077E /* StockPurchaseController.swift */,
 				46C6FE9F21063B9F00AC8856 /* CandleStickChartController.swift */,
+				46C6FEA721065C5A00AC8856 /* InvestingResutlsController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -689,8 +705,17 @@
 				46F88F162104FD0F0012077E /* SymbolSearchResultCell.swift */,
 				46F88F2221051C4B0012077E /* StockPurchaseCell.swift */,
 				46F88F3021060D660012077E /* CandleStickChartCell.swift */,
+				46C6FEA521065C3600AC8856 /* InvestingResultsCell.swift */,
 			);
 			path = cells;
+			sourceTree = "<group>";
+		};
+		46C6FEAF21066CD300AC8856 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				46C6FEB021066CE100AC8856 /* CreditCardAccount.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		46F88EFD21041BF80012077E /* core */ = {
@@ -707,6 +732,7 @@
 				46F88F01210420FE0012077E /* getCustomer.json */,
 				46F88F05210425BE0012077E /* getAccounts.json */,
 				46F88F092104E15D0012077E /* getSymbolSearch.json */,
+				46C6FEAB21066A4B00AC8856 /* getTransactions.json */,
 			);
 			path = mock;
 			sourceTree = "<group>";
@@ -790,6 +816,7 @@
 				46B240C72100355800A2E45C /* LaunchScreen.storyboard in Resources */,
 				46B241432101303B00A2E45C /* Images.xcassets in Resources */,
 				46B240F62100438200A2E45C /* HKGrotesk-Medium.otf in Resources */,
+				46C6FEAC21066A4B00AC8856 /* getTransactions.json in Resources */,
 				46B240F12100438200A2E45C /* HKGrotesk-BoldItalic.otf in Resources */,
 				46F88F00210420E80012077E /* getAccountsSelf.json in Resources */,
 				46B240C42100355800A2E45C /* Assets.xcassets in Resources */,
@@ -895,6 +922,8 @@
 				46F88F192104FECD0012077E /* SymbolSearchResultController.swift in Sources */,
 				46B240FD210044C200A2E45C /* NSObject+IGListKit.swift in Sources */,
 				46B241672102004800A2E45C /* StockQuoteCell.swift in Sources */,
+				46C6FEA621065C3600AC8856 /* InvestingResultsCell.swift in Sources */,
+				46C6FEAE21066BD600AC8856 /* CreditCardWidgetView.swift in Sources */,
 				46F88F04210421710012077E /* Data+JSON.swift in Sources */,
 				46B2413421012AF700A2E45C /* InvestmentsViewController.swift in Sources */,
 				46F88EFA2103E2A70012077E /* WhyInvestingViewController.swift in Sources */,
@@ -905,6 +934,7 @@
 				46F88F1F210513980012077E /* Date+LevelUp.swift in Sources */,
 				46B241452101351A00A2E45C /* EmbeddedCollectionViewCell.swift in Sources */,
 				46B2415221013D7600A2E45C /* InvestingPromotionItem.swift in Sources */,
+				46C6FEAA2106663600AC8856 /* Double+Round.swift in Sources */,
 				46B241012100479F00A2E45C /* VirtualBank.swift in Sources */,
 				46B24147210135AD00A2E45C /* InvestingWidgetView.swift in Sources */,
 				46B240D621003D8200A2E45C /* UIColor+LevelUp.swift in Sources */,
@@ -920,6 +950,7 @@
 				46B2411A2100C89A00A2E45C /* String+Size.swift in Sources */,
 				46B2415821014ACA00A2E45C /* CenterCollectionViewFlowLayout.swift in Sources */,
 				46B240D821003E2200A2E45C /* UIConstants.swift in Sources */,
+				46C6FEB121066CE100AC8856 /* CreditCardAccount.swift in Sources */,
 				46C6FEA021063B9F00AC8856 /* CandleStickChartController.swift in Sources */,
 				46B240BF2100355500A2E45C /* DashboardViewController.swift in Sources */,
 				46B2410621004AFE00A2E45C /* VirtualBankResponse.swift in Sources */,
@@ -955,6 +986,7 @@
 				161F9D352104BEE0005B485F /* AccountCell.swift in Sources */,
 				46F88F102104E6BD0012077E /* SnapKit+SafeArea.swift in Sources */,
 				46B240BD2100355500A2E45C /* AppDelegate.swift in Sources */,
+				46C6FEA821065C5A00AC8856 /* InvestingResutlsController.swift in Sources */,
 				46B2411E2101252900A2E45C /* AccountManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

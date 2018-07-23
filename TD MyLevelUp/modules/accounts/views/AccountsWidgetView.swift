@@ -18,7 +18,7 @@ class AccountsWidgetView: DashboardWidgetView, AccountsWidgetViewContract {
     public lazy var accountsWidgetHeaderLabel: UILabel = {
         let label = UILabel()
         label.text = "Balances"
-        label.font = .heavy(withSize: 40.0)
+        label.font = .heavy(withSize: 30.0)
         addSubview(label)
         return label
     }()

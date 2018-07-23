@@ -6,7 +6,8 @@ public protocol InvestingSimulationView {
     func simulation(_ presenter: InvestingSimulationPresenter, didUpdate transactions: [Transaction])
     func simulationDidFinishAnalzing(_ presenter: InvestingSimulationPresenter,
                                      trades: [InvestingSimulationTransaction],
-                                     historicalData: [CandleChartDataEntry])
+                                     historicalData: [CandleChartDataEntry],
+                                     summary: InvestingResultSummary)
 }
 
 public class InvestingSimulationPresenter {
@@ -65,15 +66,17 @@ public class InvestingSimulationPresenter {
             switch result {
             case let .success(moyaResponse):
                 guard let response = try? moyaResponse.mapJSON() as? Dictionary<String, Any>,
-                    let historicalData = response?["Time Series (Daily)"] as? Dictionary<String, Any> else { return }
-                self.analyzeResults(historicalData: historicalData, symbol: symbol)
+                    let historicalData = response?["Time Series (Daily)"] as? Dictionary<String, Any>,
+                    let metaData = response?["Meta Data"] as? Dictionary<String, String>,
+                    let lastUpdate = metaData["3. Last Refreshed"] else { return }
+                self.analyzeResults(historicalData: historicalData, symbol: symbol, lastUpdated: String(lastUpdate.split(separator: " ")[0]))
             case let .failure(error):
                 print(error)
             }
         }
     }
     
-    public func analyzeResults(historicalData: Dictionary<String, Any>, symbol: String) {
+    public func analyzeResults(historicalData: Dictionary<String, Any>, symbol: String, lastUpdated: String) {
         var numberOfShares: Double = 0.0
         let expenses = transactions.filter { $0.currencyAmount < 0 }
         var trades: [InvestingSimulationTransaction] = []
@@ -111,9 +114,19 @@ public class InvestingSimulationPresenter {
         let totalExpenses: Double = expenses.reduce(0.0) { $0 - $1.currencyAmount }
         print("$\(totalExpenses)")
         print("$\(numberOfShares)")
-        print("$\(numberOfShares * 361.0500)")
-        self.view?.simulationDidFinishAnalzing(self,
-                                               trades: trades,
-                                               historicalData: stockQuote)
+        if let stockDict = historicalData[lastUpdated] as? Dictionary<String, Any>, let data = stockDict.jsonData {
+            do {
+                let model = try JSONDecoder().decode(StockQuote.self, from: data)
+                let close = Double(model.close) ?? 0
+                print("$\(numberOfShares * close)")
+                let summary = InvestingResultSummary(totalExpenses: totalExpenses, totalShares: numberOfShares, sharePrice: close, totalInvestment: numberOfShares * close)
+                self.view?.simulationDidFinishAnalzing(self,
+                                                       trades: trades,
+                                                       historicalData: stockQuote,
+                                                       summary: summary)
+            } catch {
+                print(error)
+            }
+        }
     }
 }

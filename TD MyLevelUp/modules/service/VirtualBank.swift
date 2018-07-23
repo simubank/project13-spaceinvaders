@@ -45,7 +45,7 @@ extension VirtualBank: TargetType {
         case .accounts(_):
             return .json(named: "getAccounts")
         case .transactionsFor(_):
-            return .json(named: "getCustomer")
+            return .json(named: "getTransactions")
         case .customer(_):
             return .json(named: "getCustomer")
         }

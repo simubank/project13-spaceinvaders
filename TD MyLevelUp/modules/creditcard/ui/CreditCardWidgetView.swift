@@ -3,7 +3,7 @@ import UIKit
 import IGListKit
 import SnapKit
 
-public class InvestingWidgetView: DashboardWidgetView, InvestingWidgetViewContract {
+public class CreditCardWidgetView: DashboardWidgetView {
     /// The Adapter used for the IGListKit Collection View.
     public var adapter: ListAdapter?
     
@@ -43,7 +43,7 @@ public class InvestingWidgetView: DashboardWidgetView, InvestingWidgetViewContra
         return view
     }()
     
-    var intents: [InvestingIntent] = [] {
+    var intents: [CreditCardIntent] = [] {
         didSet {
             pageControl.numberOfPages = intents.count
             pageControl.currentPage = 0
@@ -62,14 +62,14 @@ public class InvestingWidgetView: DashboardWidgetView, InvestingWidgetViewContra
             $0.bottom.equalToSuperview()
         }
     }
-
-    public func updatePromotionalIntents(_ items: [InvestingIntent]) {
+    
+    public func updatePromotionalIntents(_ items: [CreditCardIntent]) {
         self.intents = items
         adapter?.performUpdates(animated: true, completion: nil)
     }
 }
 
-extension InvestingWidgetView: UIScrollViewDelegate {
+extension CreditCardWidgetView: UIScrollViewDelegate {
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let x = scrollView.contentOffset.x
         let w = scrollView.bounds.size.width
@@ -80,13 +80,13 @@ extension InvestingWidgetView: UIScrollViewDelegate {
     }
 }
 
-extension InvestingWidgetView: ListAdapterDataSource {
+extension CreditCardWidgetView: ListAdapterDataSource {
     public func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         var objects: [ListDiffable] = []
-        for intent in intents {
-            objects.append(InvestingPromotionItem(intent: intent,
-                                                  image: UIImage(named: "investing_banner_\((intents.index{ $0 === intent} ?? 0) % 6)")))
-        }
+//        for intent in intents {
+//            objects.append(InvestingPromotionItem(intent: intent,
+//                                                  image: UIImage(named: "investing_banner_\((intents.index{ $0 === intent} ?? 0) % 6)")))
+//        }
         return objects
     }
     

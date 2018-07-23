@@ -24,6 +24,8 @@ public class InvestingSimulationViewController: BaseCollectionViewController {
     public override func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         if object is CandleStickChartModel {
             return CandleStickChartController()
+        } else if object is InvestingResultSummary {
+            return InvestingResutlsController()
         } else if object is String {
             return TitleHeaderController()
         } else {
@@ -33,13 +35,14 @@ public class InvestingSimulationViewController: BaseCollectionViewController {
 }
 
 extension InvestingSimulationViewController: InvestingSimulationView {
-    public func simulationDidFinishAnalzing(_ presenter: InvestingSimulationPresenter, trades: [InvestingSimulationTransaction], historicalData: [CandleChartDataEntry]) {
+    public func simulationDidFinishAnalzing(_ presenter: InvestingSimulationPresenter, trades: [InvestingSimulationTransaction], historicalData: [CandleChartDataEntry], summary: InvestingResultSummary) {
         MBProgressHUD.hide(for: self.view, animated: true)
-        objectsForList = ["Results" as ListDiffable]
-        + ["Historical Prices of \(trades[0].stockSymbol)" as ListDiffable]
-        + [CandleStickChartModel(stockName: trades[0].stockSymbol, data: historicalData) as ListDiffable]
-        + ["Trades to be made" as ListDiffable]
-        + trades
+        objectsForList.append("Results" as ListDiffable)
+        objectsForList.append(summary as ListDiffable)
+        objectsForList.append("Historical Prices of \(trades[0].stockSymbol)" as ListDiffable)
+        objectsForList.append(CandleStickChartModel(stockName: trades[0].stockSymbol, data: historicalData) as ListDiffable)
+        objectsForList.append("Trades to be made" as ListDiffable)
+        objectsForList.append(contentsOf: trades)
         adapter.performUpdates(animated: true, completion: nil)
     }
     
