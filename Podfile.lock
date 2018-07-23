@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.7.2)
+  - Charts (3.1.1):
+    - Charts/Core (= 3.1.1)
+  - Charts/Core (3.1.1)
   - EFCountingLabel (4.0.1)
   - Eureka (4.2.0)
   - Hero (1.0.1)
@@ -30,6 +33,7 @@ PODS:
     - XLActionController/Core
 
 DEPENDENCIES:
+  - Charts
   - EFCountingLabel
   - Eureka
   - Hero (= 1.0.1)
@@ -47,6 +51,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Charts
     - EFCountingLabel
     - Eureka
     - Hero
@@ -73,6 +78,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
   EFCountingLabel: 1beb6707761ad00b97efc8bde5c3fceaa7cb9eec
   Eureka: 0748c7bbb2560130e43c7bfa83e99c98854a1f42
   Hero: cee286821578e170d8c0c9c9cda7897357401112
@@ -88,6 +94,6 @@ SPEC CHECKSUMS:
   SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
   XLActionController: 007868251c0eed70d649d06c1625259b73b3a600
 
-PODFILE CHECKSUM: 8c006044e19c88bd60286e5621b42e3bcb392e79
+PODFILE CHECKSUM: 0dbe3fdb74ef1468b726c5c58ea9dfc9413c4c1b
 
 COCOAPODS: 1.5.3

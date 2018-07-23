@@ -1,12 +1,15 @@
 import Foundation
 import MBProgressHUD
 import IGListKit
+import Charts
 
 public class InvestingSimulationViewController: BaseCollectionViewController {
     public let presenter = InvestingSimulationPresenter()
     var objectsForList: [ListDiffable] = []
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Investing Simulation"
         let controller = SearchSymbolViewController()
         controller.delegate = self
         present(controller, animated: true, completion: nil)
@@ -17,15 +20,26 @@ public class InvestingSimulationViewController: BaseCollectionViewController {
     public override func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return objectsForList
     }
+    
     public override func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        return StockPurchaseController()
+        if object is CandleStickChartModel {
+            return CandleStickChartController()
+        } else if object is String {
+            return TitleHeaderController()
+        } else {
+            return StockPurchaseController()
+        }
     }
 }
 
 extension InvestingSimulationViewController: InvestingSimulationView {
-    public func simulationDidFinishAnalzing(_ presenter: InvestingSimulationPresenter, trades: [InvestingSimulationTransaction]) {
+    public func simulationDidFinishAnalzing(_ presenter: InvestingSimulationPresenter, trades: [InvestingSimulationTransaction], historicalData: [CandleChartDataEntry]) {
         MBProgressHUD.hide(for: self.view, animated: true)
-        objectsForList = trades
+        objectsForList = ["Results" as ListDiffable]
+        + ["Historical Prices of \(trades[0].stockSymbol)" as ListDiffable]
+        + [CandleStickChartModel(stockName: trades[0].stockSymbol, data: historicalData) as ListDiffable]
+        + ["Trades to be made" as ListDiffable]
+        + trades
         adapter.performUpdates(animated: true, completion: nil)
     }
     

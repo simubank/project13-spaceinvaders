@@ -8,7 +8,7 @@ class TitleHeaderCell: TDBaseCell {
         let view = UILabel()
         view.textColor = .textColor
         view.numberOfLines = 0
-        view.font = .bold(withSize: 26)
+        view.font = .heavy(withSize: 24)
         self.contentView.addSubview(view)
         return view
     }()

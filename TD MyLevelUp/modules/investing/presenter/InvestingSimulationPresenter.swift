@@ -1,9 +1,12 @@
 import Foundation
 import MBProgressHUD
+import Charts
 
 public protocol InvestingSimulationView {
     func simulation(_ presenter: InvestingSimulationPresenter, didUpdate transactions: [Transaction])
-    func simulationDidFinishAnalzing(_ presenter: InvestingSimulationPresenter, trades: [InvestingSimulationTransaction])
+    func simulationDidFinishAnalzing(_ presenter: InvestingSimulationPresenter,
+                                     trades: [InvestingSimulationTransaction],
+                                     historicalData: [CandleChartDataEntry])
 }
 
 public class InvestingSimulationPresenter {
@@ -88,10 +91,29 @@ public class InvestingSimulationPresenter {
                                                              date: expenseDate.alphaVantageDate))
             }
         }
+        var stockQuote: [CandleChartDataEntry] = []
+        var i = 0
+        let dates = historicalData.keys.map { Date.fromAlphaVantage(string: $0) ?? Date() }
+        for date in dates.sorted().suffix(30) {
+            guard let stockDict = historicalData[date.alphaVantageDate] as? Dictionary<String, Any>, let data = stockDict.jsonData else { continue }
+            do {
+                let model = try JSONDecoder().decode(StockQuote.self, from: data)
+                let high = Double(model.high) ?? 0
+                let low = Double(model.low) ?? 0
+                let open = Double(model.open) ?? 0
+                let close = Double(model.close) ?? 0
+                stockQuote.append(CandleChartDataEntry(x: Double(i), shadowH: high, shadowL: low, open: open, close: close))
+            } catch {
+                print(error)
+            }
+            i = i + 1
+        }
         let totalExpenses: Double = expenses.reduce(0.0) { $0 - $1.currencyAmount }
         print("$\(totalExpenses)")
         print("$\(numberOfShares)")
         print("$\(numberOfShares * 361.0500)")
-        self.view?.simulationDidFinishAnalzing(self, trades: trades)
+        self.view?.simulationDidFinishAnalzing(self,
+                                               trades: trades,
+                                               historicalData: stockQuote)
     }
 }
