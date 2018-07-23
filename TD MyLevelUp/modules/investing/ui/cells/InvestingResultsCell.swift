@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import EFCountingLabel
 
 public class InvestingResultsCell: TDBaseCell {
     lazy var totalExpensesLabel: UILabel = {
@@ -32,27 +33,30 @@ public class InvestingResultsCell: TDBaseCell {
         return view
     }()
     
-    lazy var totalExpensesValue: UILabel = {
-        let view = UILabel()
+    lazy var totalExpensesValue: EFCountingLabel = {
+        let view = EFCountingLabel()
         view.textColor = .red
         view.numberOfLines = 0
+        view.format = "$%.2f"
         view.font = .bold(withSize: 18)
         self.contentView.addSubview(view)
         return view
     }()
     
-    lazy var potentialEarningsValue: UILabel = {
-        let view = UILabel()
+    lazy var potentialEarningsValue: EFCountingLabel = {
+        let view = EFCountingLabel()
         view.textColor = .primary
         view.numberOfLines = 0
+        view.format = "$%.2f"
         view.font = .bold(withSize: 18)
         self.contentView.addSubview(view)
         return view
     }()
     
-    lazy var growthValue: UILabel = {
-        let view = UILabel()
+    lazy var growthValue: EFCountingLabel = {
+        let view = EFCountingLabel()
         view.textColor = .primary
+        view.format = "$%.2f"
         view.numberOfLines = 0
         view.font = .bold(withSize: 18)
         self.contentView.addSubview(view)
@@ -84,5 +88,12 @@ public class InvestingResultsCell: TDBaseCell {
             $0.top.equalTo(potentialEarningsValue.snp.bottom).offset(10)
             $0.right.equalTo(-kDefaultPadding)
         }
+    }
+    
+    public override func prepareForReuse() {
+        super.prepareForReuse()
+        totalExpensesValue.text = "$0.00"
+        potentialEarningsValue.text = "$0.00"
+        growthValue.text = "$0.00"
     }
 }

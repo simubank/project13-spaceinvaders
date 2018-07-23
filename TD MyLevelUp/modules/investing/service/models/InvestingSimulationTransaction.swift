@@ -1,7 +1,7 @@
 import Foundation
 import IGListKit
 
-public class InvestingSimulationTransaction {
+public class InvestingSimulationTransaction: NSObject {
     public let stockSymbol: String
     public let expenseName: String?
     public let amount: Double
@@ -14,17 +14,5 @@ public class InvestingSimulationTransaction {
         self.amount = amount
         self.price = price
         self.date = date
-    }
-}
-
-extension InvestingSimulationTransaction: ListDiffable {
-    public func diffIdentifier() -> NSObjectProtocol {
-        return "\(stockSymbol)\(amount)\(price)" as NSObjectProtocol
-    }
-    
-    public func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
-        guard self !== object else { return true }
-        guard let object = object as? InvestingSimulationTransaction else { return false }
-        return object.stockSymbol == stockSymbol && object.amount == amount && object.price == price
     }
 }

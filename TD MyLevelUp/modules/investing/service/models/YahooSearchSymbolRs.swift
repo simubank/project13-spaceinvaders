@@ -42,7 +42,7 @@ public class YahooStock: Codable {
 
 extension YahooStock: ListDiffable {
     public func diffIdentifier() -> NSObjectProtocol {
-        return symbol as NSObjectProtocol
+        return "\(symbol)\(name)\(exch)\(arc4random)" as NSObjectProtocol
     }
     
     public func isEqual(toDiffableObject object: ListDiffable?) -> Bool {

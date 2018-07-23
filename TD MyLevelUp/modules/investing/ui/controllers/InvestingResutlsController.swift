@@ -25,9 +25,9 @@ public class InvestingResutlsController: ListSectionController {
                                                                 for: self, at: index) as? InvestingResultsCell, let model = model else {
             fatalError()
         }
-        cell.totalExpensesValue.text = "$\(model.totalExpenses)"
-        cell.potentialEarningsValue.text = "$\(model.totalInvestment)"
-        cell.growthValue.text = "$\(model.totalInvestment - model.totalExpenses)"
+        cell.totalExpensesValue.countFrom(0, to: CGFloat(model.totalExpenses), withDuration: 0.6)
+        cell.potentialEarningsValue.countFrom(0, to: CGFloat(model.totalInvestment), withDuration: 0.6)
+        cell.growthValue.countFrom(0, to: CGFloat(model.totalInvestment - model.totalExpenses), withDuration: 0.6)
         return cell
     }
     

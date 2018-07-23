@@ -20,10 +20,18 @@ public class CreditCardDetailsViewController: BaseCollectionViewController {
     }
     
     public override func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        return [TransactionListHolder(transactions: transactions)]
+        var objects: [ListDiffable] = []
+        objects.append(account)
+        if !transactions.isEmpty {
+            objects.append(TransactionListHolder(transactions: transactions))
+        }
+        return objects
     }
     
     public override func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        if object is CreditCardAccount {
+            return CreditCardSummaryController(shouldNavigate: false)
+        }
         return TransactionController()
     }
 }

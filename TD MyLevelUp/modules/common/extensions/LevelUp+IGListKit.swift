@@ -2,7 +2,7 @@ import IGListKit
 
 extension CreditCardAccount: ListDiffable {
     public func diffIdentifier() -> NSObjectProtocol {
-        return id as NSObjectProtocol
+        return "\(id)\(arc4random))" as NSObjectProtocol
     }
     
     public func isEqual(toDiffableObject object: ListDiffable?) -> Bool {

@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import EFCountingLabel
 
 public class CreditCardSummaryCell: TDBaseCell {
     
@@ -30,10 +31,11 @@ public class CreditCardSummaryCell: TDBaseCell {
         return view
     }()
     
-    lazy var balanceLabel: UILabel = {
-        let view = UILabel()
+    lazy var balanceLabel: EFCountingLabel = {
+        let view = EFCountingLabel()
         view.textColor = .primary
-        view.text = "$1230"
+        view.format = "$%.2f"
+        view.text = "$0.0"
         view.numberOfLines = 0
         view.font = .bold(withSize: 18)
         self.whiteBackground.addSubview(view)
@@ -77,5 +79,9 @@ public class CreditCardSummaryCell: TDBaseCell {
             $0.top.equalTo(kDefaultPadding)
             $0.right.equalTo(-kDefaultPadding)
         }
+    }
+    public override func prepareForReuse() {
+        balanceLabel.text = "$0.00"
+        creditCardNameLabel.text = ""
     }
 }

@@ -25,7 +25,7 @@ public class TransactionController: ListSectionController {
             guard let cell = collectionContext?.dequeueReusableCell(of: TitleHeaderCell.self, for: self, at: index) as? TitleHeaderCell else {
                 fatalError()
             }
-            cell.titleLabel.text = "Transactions"
+            cell.titleLabel.text = "Transactions (\(model?.transactions.count ?? 0))"
             return cell
         } else {
             guard let cell = collectionContext?.dequeueReusableCell(of: TransactionCell.self, for: self, at: index) as? TransactionCell else {
@@ -33,7 +33,7 @@ public class TransactionController: ListSectionController {
             }
             guard let model = model else { return cell }
             let transaction = model.transactions[index + 1]
-            cell.nameLabel.text = transaction.description
+            cell.nameLabel.text = transaction.description ?? "N/A"
             cell.balanceLabel.text = "$\(transaction.postBalance ?? 0)"
             return cell
         }
