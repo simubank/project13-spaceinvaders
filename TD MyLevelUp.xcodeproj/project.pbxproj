@@ -86,6 +86,9 @@
 		46C6FEB821066FC300AC8856 /* CreditCardSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEB721066FC300AC8856 /* CreditCardSummaryCell.swift */; };
 		46C6FEBA21066FDF00AC8856 /* CreditCardSummaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEB921066FDF00AC8856 /* CreditCardSummaryController.swift */; };
 		46C6FEBC2106708100AC8856 /* LevelUp+IGListKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEBB2106708100AC8856 /* LevelUp+IGListKit.swift */; };
+		46C6FEBE2106765900AC8856 /* TransactionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEBD2106765900AC8856 /* TransactionsController.swift */; };
+		46C6FEC02106768000AC8856 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEBF2106768000AC8856 /* TransactionCell.swift */; };
+		46C6FEC22106794200AC8856 /* CreditCardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEC12106794200AC8856 /* CreditCardDetailsViewController.swift */; };
 		46F88EFA2103E2A70012077E /* WhyInvestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88EF92103E2A70012077E /* WhyInvestingViewController.swift */; };
 		46F88EFC210414B00012077E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F88EFB210414AF0012077E /* Images.xcassets */; };
 		46F88F00210420E80012077E /* getAccountsSelf.json in Resources */ = {isa = PBXBuildFile; fileRef = 46F88EFF210420E80012077E /* getAccountsSelf.json */; };
@@ -193,6 +196,9 @@
 		46C6FEB721066FC300AC8856 /* CreditCardSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardSummaryCell.swift; sourceTree = "<group>"; };
 		46C6FEB921066FDF00AC8856 /* CreditCardSummaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardSummaryController.swift; sourceTree = "<group>"; };
 		46C6FEBB2106708100AC8856 /* LevelUp+IGListKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LevelUp+IGListKit.swift"; sourceTree = "<group>"; };
+		46C6FEBD2106765900AC8856 /* TransactionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsController.swift; sourceTree = "<group>"; };
+		46C6FEBF2106768000AC8856 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		46C6FEC12106794200AC8856 /* CreditCardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardDetailsViewController.swift; sourceTree = "<group>"; };
 		46F88EF92103E2A70012077E /* WhyInvestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyInvestingViewController.swift; sourceTree = "<group>"; };
 		46F88EFB210414AF0012077E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		46F88EFF210420E80012077E /* getAccountsSelf.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getAccountsSelf.json; sourceTree = "<group>"; };
@@ -478,6 +484,7 @@
 				46B241172100C81E00A2E45C /* TitleHeaderCell.swift */,
 				46B241442101351A00A2E45C /* EmbeddedCollectionViewCell.swift */,
 				46B2414C2101395B00A2E45C /* PromotionCell.swift */,
+				46C6FEBF2106768000AC8856 /* TransactionCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -506,6 +513,7 @@
 				46B2414E210139E700A2E45C /* PromotionSectionController.swift */,
 				46B241532101475500A2E45C /* ListInsetSingleSectionController.swift */,
 				46B2415E2101866A00A2E45C /* FixedPromotionSectionController.swift */,
+				46C6FEBD2106765900AC8856 /* TransactionsController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -587,6 +595,7 @@
 				46C6FEB621066FB900AC8856 /* controllers */,
 				46C6FEB521066FB500AC8856 /* cells */,
 				46C6FEAD21066BD600AC8856 /* CreditCardWidgetView.swift */,
+				46C6FEC12106794200AC8856 /* CreditCardDetailsViewController.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -960,6 +969,7 @@
 				46B240FD210044C200A2E45C /* NSObject+IGListKit.swift in Sources */,
 				46B241672102004800A2E45C /* StockQuoteCell.swift in Sources */,
 				46C6FEA621065C3600AC8856 /* InvestingResultsCell.swift in Sources */,
+				46C6FEBE2106765900AC8856 /* TransactionsController.swift in Sources */,
 				46C6FEAE21066BD600AC8856 /* CreditCardWidgetView.swift in Sources */,
 				46F88F04210421710012077E /* Data+JSON.swift in Sources */,
 				46B2413421012AF700A2E45C /* InvestmentsViewController.swift in Sources */,
@@ -987,6 +997,7 @@
 				46B2411A2100C89A00A2E45C /* String+Size.swift in Sources */,
 				46B2415821014ACA00A2E45C /* CenterCollectionViewFlowLayout.swift in Sources */,
 				46B240D821003E2200A2E45C /* UIConstants.swift in Sources */,
+				46C6FEC02106768000AC8856 /* TransactionCell.swift in Sources */,
 				46C6FEB121066CE100AC8856 /* CreditCardAccount.swift in Sources */,
 				46C6FEA021063B9F00AC8856 /* CandleStickChartController.swift in Sources */,
 				46B240BF2100355500A2E45C /* DashboardViewController.swift in Sources */,
@@ -1020,6 +1031,7 @@
 				46B2414A2101381700A2E45C /* DashboardWidgetView.swift in Sources */,
 				46B2410E21004C2A00A2E45C /* Customer.swift in Sources */,
 				46F88F1D210508070012077E /* InvestingSimulationPresenter.swift in Sources */,
+				46C6FEC22106794200AC8856 /* CreditCardDetailsViewController.swift in Sources */,
 				161B6AE32103835000713CFB /* PersonalAccounts.swift in Sources */,
 				46B240FB2100439300A2E45C /* UIFont+LevelUp.swift in Sources */,
 				161B6ACB210256C300713CFB /* AccountsWidgetView.swift in Sources */,
