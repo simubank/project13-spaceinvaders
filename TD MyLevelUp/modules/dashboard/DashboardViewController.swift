@@ -8,7 +8,12 @@ class DashboardViewController: BaseCollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "TD MyLevelUp"
-        
+        self.updateUser(id: "")
+        let testUIBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(DashboardViewController.tappedSettings))
+        self.navigationItem.rightBarButtonItem  = testUIBarButtonItem
+    }
+    
+    @objc public func tappedSettings() {
         let actionController = TwitterActionController()
         actionController.addAction(Action(ActionData(title: "Galen Nevius", subtitle: "49 - Male - Sharing Rent", image: UIImage(named: "male_icon")!), style: .default, handler: { action in
             self.updateUser(id: "1f9e0890-77b5-44ae-a987-03a0a6a1029a_6c8434d3-9d00-45d9-83d6-5c87cc97cdd8")
@@ -52,8 +57,8 @@ class DashboardViewController: BaseCollectionViewController {
         guard let name = name else { return [] }
         return ["Welcome \(name)!" as ListDiffable] + [AccountsWidgetModel(),
                  CreditCardWidgetModel(),
-                 InvestingWidgetModel(),
-                 MortgageWidgetModel()] as [ListDiffable]
+                 MortgageWidgetModel(),
+                 InvestingWidgetModel()] as [ListDiffable]
     }
     
     override func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {

@@ -89,6 +89,7 @@
 		46C6FEBE2106765900AC8856 /* TransactionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEBD2106765900AC8856 /* TransactionsController.swift */; };
 		46C6FEC02106768000AC8856 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEBF2106768000AC8856 /* TransactionCell.swift */; };
 		46C6FEC22106794200AC8856 /* CreditCardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEC12106794200AC8856 /* CreditCardDetailsViewController.swift */; };
+		46C6FEC421067CDF00AC8856 /* SeeMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C6FEC321067CDF00AC8856 /* SeeMoreCell.swift */; };
 		46F88EFA2103E2A70012077E /* WhyInvestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F88EF92103E2A70012077E /* WhyInvestingViewController.swift */; };
 		46F88EFC210414B00012077E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F88EFB210414AF0012077E /* Images.xcassets */; };
 		46F88F00210420E80012077E /* getAccountsSelf.json in Resources */ = {isa = PBXBuildFile; fileRef = 46F88EFF210420E80012077E /* getAccountsSelf.json */; };
@@ -199,6 +200,7 @@
 		46C6FEBD2106765900AC8856 /* TransactionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsController.swift; sourceTree = "<group>"; };
 		46C6FEBF2106768000AC8856 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		46C6FEC12106794200AC8856 /* CreditCardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardDetailsViewController.swift; sourceTree = "<group>"; };
+		46C6FEC321067CDF00AC8856 /* SeeMoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreCell.swift; sourceTree = "<group>"; };
 		46F88EF92103E2A70012077E /* WhyInvestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyInvestingViewController.swift; sourceTree = "<group>"; };
 		46F88EFB210414AF0012077E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		46F88EFF210420E80012077E /* getAccountsSelf.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getAccountsSelf.json; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 				46B241442101351A00A2E45C /* EmbeddedCollectionViewCell.swift */,
 				46B2414C2101395B00A2E45C /* PromotionCell.swift */,
 				46C6FEBF2106768000AC8856 /* TransactionCell.swift */,
+				46C6FEC321067CDF00AC8856 /* SeeMoreCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -1021,6 +1024,7 @@
 				46B24156210149C500A2E45C /* UICollectionView+Center.swift in Sources */,
 				46C6FEBC2106708100AC8856 /* LevelUp+IGListKit.swift in Sources */,
 				46C6FEA221064AEB00AC8856 /* Dictionary+JSON.swift in Sources */,
+				46C6FEC421067CDF00AC8856 /* SeeMoreCell.swift in Sources */,
 				161B6ACD2102575F00713CFB /* AccountsViewController.swift in Sources */,
 				46F88F2321051C4B0012077E /* StockPurchaseCell.swift in Sources */,
 				46B24104210047C600A2E45C /* String+Network.swift in Sources */,
