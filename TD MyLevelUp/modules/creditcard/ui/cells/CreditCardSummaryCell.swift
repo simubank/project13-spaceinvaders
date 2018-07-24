@@ -51,7 +51,23 @@ public class CreditCardSummaryCell: TDBaseCell {
         return view
     }()
     
+    lazy var tdcouch: UIImageView = {
+        let view = UIImageView()
+        view.image = UIImage(named: "td_couch")
+        view.contentMode = .scaleAspectFill
+        view.clipsToBounds = true
+        self.contentView.addSubview(view)
+        return view
+    }()
+    
     public override func prepareViews() {
+        tdcouch.snp.makeConstraints {
+            $0.left.equalToSuperview()
+            $0.right.equalToSuperview()
+            $0.top.equalToSuperview()
+            $0.bottom.equalToSuperview()
+        }
+        
         gradient.snp.makeConstraints {
             $0.left.equalToSuperview()
             $0.right.equalToSuperview()

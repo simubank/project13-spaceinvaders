@@ -19,7 +19,7 @@ public class DashboardWidgetCell: TDBaseCell {
     
     lazy var titleLabel: UILabel = {
         let view = UILabel()
-        view.font = .bold(withSize: 14.0)
+        view.font = .heavy(withSize: 18.0)
         view.textColor = .textColor
         whiteBackground.addSubview(view)
         return view
@@ -37,7 +37,7 @@ public class DashboardWidgetCell: TDBaseCell {
             guard let content = widgetContent else { return }
             whiteBackground.addSubview(content)
             content.snp.makeConstraints {
-                $0.top.equalTo(40)
+                $0.top.equalTo(50)
                 $0.bottom.equalToSuperview()
                 $0.left.equalToSuperview()
                 $0.right.equalToSuperview()
