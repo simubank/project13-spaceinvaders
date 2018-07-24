@@ -18,7 +18,7 @@ public class CreditHealthController: ListSectionController {
     
     open override func sizeForItem(at index: Int) -> CGSize {
         guard let collectionContext = collectionContext else { return CGSize.zero}
-        return CGSize(width: collectionContext.containerSize.width, height: index == 0 ? 60 : 120)
+        return CGSize(width: collectionContext.containerSize.width, height: index == 0 ? 60 : 180)
     }
     
     public override func numberOfItems() -> Int {

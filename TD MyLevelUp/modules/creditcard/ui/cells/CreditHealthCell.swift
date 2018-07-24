@@ -14,8 +14,8 @@ public class CreditHealthCell: TDBaseCell {
     public override func prepareViews() {
         chartView.snp.makeConstraints {
             $0.center.equalToSuperview()
-            $0.height.equalTo(225)
-            $0.width.equalTo(225)
+            $0.height.equalTo(300)
+            $0.width.equalTo(300)
         }
     }
     
