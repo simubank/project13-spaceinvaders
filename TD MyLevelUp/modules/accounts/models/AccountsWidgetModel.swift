@@ -4,7 +4,7 @@ import UIKit
 public class AccountsWidgetModel: NSObject, DashboardWidgetModel {
     public var icon: UIImage? = UIImage(named: "accounts_icon_small")
     
-    public let title: String = "Accounts"
+    public let title: String = "Banking Accounts"
     
     public let contentView: DashboardWidgetView
     
@@ -20,5 +20,9 @@ public class AccountsWidgetModel: NSObject, DashboardWidgetModel {
         presenter.view = view
         contentView = view
         super.init()
+    }
+    
+    public var preferredHeight: CGFloat {
+        return 230.0
     }
 }

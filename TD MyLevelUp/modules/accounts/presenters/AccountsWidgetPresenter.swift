@@ -1,20 +1,20 @@
 import Foundation
 
 public protocol AccountsWidgetViewContract {
-    func updateAccountBalance(account: Account?)
+    func updateAccounts(_ accounts: [Account])
 }
 
 public class AccountsWidgetPresenter {
     
-    var account: Account? {
+    var accounts: [Account]? {
         didSet {
-            view?.updateAccountBalance(account: account)
+            view?.updateAccounts(accounts ?? [])
         }
     }
     
     public var view: AccountsWidgetViewContract? {
         didSet {
-            view?.updateAccountBalance(account: account)
+            view?.updateAccounts(accounts ?? [])
         }
     }
     
@@ -23,7 +23,7 @@ public class AccountsWidgetPresenter {
             switch result {
             case let .success(moyaResponse):
                 guard let response = moyaResponse.mapObject(VirtualBankResponse<Accounts>.self) else { return }
-                self.account = response.result?.bankAccounts?[0]
+                self.accounts = response.result?.bankAccounts ?? []
             case let .failure(error):
                 print(error)
             }

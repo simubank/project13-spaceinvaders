@@ -20,6 +20,8 @@
 		46A6C7FA2106B033003C2215 /* TDCreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C7F92106B033003C2215 /* TDCreditCard.swift */; };
 		46A6C7FC2106C334003C2215 /* CreditHealthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C7FB2106C334003C2215 /* CreditHealthCell.swift */; };
 		46A6C7FE2106D265003C2215 /* CardRecommendationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C7FD2106D265003C2215 /* CardRecommendationController.swift */; };
+		46A6C8002106DF2D003C2215 /* BankingAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C7FF2106DF2C003C2215 /* BankingAccountCell.swift */; };
+		46A6C8022106DF7E003C2215 /* BankAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C8012106DF7E003C2215 /* BankAccountController.swift */; };
 		46B240BD2100355500A2E45C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B240BC2100355500A2E45C /* AppDelegate.swift */; };
 		46B240BF2100355500A2E45C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B240BE2100355500A2E45C /* DashboardViewController.swift */; };
 		46B240C42100355800A2E45C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B240C32100355800A2E45C /* Assets.xcassets */; };
@@ -135,6 +137,8 @@
 		46A6C7F92106B033003C2215 /* TDCreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDCreditCard.swift; sourceTree = "<group>"; };
 		46A6C7FB2106C334003C2215 /* CreditHealthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditHealthCell.swift; sourceTree = "<group>"; };
 		46A6C7FD2106D265003C2215 /* CardRecommendationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRecommendationController.swift; sourceTree = "<group>"; };
+		46A6C7FF2106DF2C003C2215 /* BankingAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingAccountCell.swift; sourceTree = "<group>"; };
+		46A6C8012106DF7E003C2215 /* BankAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountController.swift; sourceTree = "<group>"; };
 		46B240B92100355500A2E45C /* TD MyLevelUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TD MyLevelUp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B240BC2100355500A2E45C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46B240BE2100355500A2E45C /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -770,6 +774,7 @@
 				46C6FEB721066FC300AC8856 /* CreditCardSummaryCell.swift */,
 				46A6C7F72106881F003C2215 /* CreditCardRecommendationCell.swift */,
 				46A6C7FB2106C334003C2215 /* CreditHealthCell.swift */,
+				46A6C7FF2106DF2C003C2215 /* BankingAccountCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -780,6 +785,7 @@
 				46C6FEB921066FDF00AC8856 /* CreditCardSummaryController.swift */,
 				46A6C7F3210687FA003C2215 /* CreditCardHealthController.swift */,
 				46A6C7F521068810003C2215 /* CreditCardRecommendationController.swift */,
+				46A6C8012106DF7E003C2215 /* BankAccountController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -1003,6 +1009,7 @@
 				46B241542101475500A2E45C /* ListInsetSingleSectionController.swift in Sources */,
 				46F88F122104F4880012077E /* SearchSymbolViewController.swift in Sources */,
 				46F88F1F210513980012077E /* Date+LevelUp.swift in Sources */,
+				46A6C8002106DF2D003C2215 /* BankingAccountCell.swift in Sources */,
 				46B241452101351A00A2E45C /* EmbeddedCollectionViewCell.swift in Sources */,
 				46B2415221013D7600A2E45C /* InvestingPromotionItem.swift in Sources */,
 				46C6FEAA2106663600AC8856 /* Double+Round.swift in Sources */,
@@ -1064,6 +1071,7 @@
 				46B240FB2100439300A2E45C /* UIFont+LevelUp.swift in Sources */,
 				161B6ACB210256C300713CFB /* AccountsWidgetView.swift in Sources */,
 				161F9D352104BEE0005B485F /* AccountCell.swift in Sources */,
+				46A6C8022106DF7E003C2215 /* BankAccountController.swift in Sources */,
 				46F88F102104E6BD0012077E /* SnapKit+SafeArea.swift in Sources */,
 				46B240BD2100355500A2E45C /* AppDelegate.swift in Sources */,
 				46C6FEA821065C5A00AC8856 /* InvestingResutlsController.swift in Sources */,
