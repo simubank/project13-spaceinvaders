@@ -12,10 +12,11 @@ public class CreditHealthCell: TDBaseCell {
     }()
     
     public override func prepareViews() {
+        contentView.clipsToBounds = true
         chartView.snp.makeConstraints {
             $0.center.equalToSuperview()
-            $0.height.equalTo(300)
-            $0.width.equalTo(300)
+            $0.height.equalTo(290)
+            $0.width.equalTo(290)
         }
     }
     
