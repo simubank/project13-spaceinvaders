@@ -74,6 +74,10 @@ open class BaseCollectionViewController: UIViewController {
         }
     }
     
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     open func reloadPage(finishedLoading: (() -> Void)?) {
         // TO BE OVERRIDEN BY SUBCLASS
         finishedLoading?()

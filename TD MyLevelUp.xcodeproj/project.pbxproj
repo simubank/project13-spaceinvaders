@@ -18,6 +18,7 @@
 		46A6C7F621068810003C2215 /* CreditCardRecommendationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C7F521068810003C2215 /* CreditCardRecommendationController.swift */; };
 		46A6C7F82106881F003C2215 /* CreditCardRecommendationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C7F72106881F003C2215 /* CreditCardRecommendationCell.swift */; };
 		46A6C7FA2106B033003C2215 /* TDCreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C7F92106B033003C2215 /* TDCreditCard.swift */; };
+		46A6C7FC2106C334003C2215 /* CreditHealthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C7FB2106C334003C2215 /* CreditHealthCell.swift */; };
 		46B240BD2100355500A2E45C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B240BC2100355500A2E45C /* AppDelegate.swift */; };
 		46B240BF2100355500A2E45C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B240BE2100355500A2E45C /* DashboardViewController.swift */; };
 		46B240C42100355800A2E45C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B240C32100355800A2E45C /* Assets.xcassets */; };
@@ -131,6 +132,7 @@
 		46A6C7F521068810003C2215 /* CreditCardRecommendationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardRecommendationController.swift; sourceTree = "<group>"; };
 		46A6C7F72106881F003C2215 /* CreditCardRecommendationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardRecommendationCell.swift; sourceTree = "<group>"; };
 		46A6C7F92106B033003C2215 /* TDCreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDCreditCard.swift; sourceTree = "<group>"; };
+		46A6C7FB2106C334003C2215 /* CreditHealthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditHealthCell.swift; sourceTree = "<group>"; };
 		46B240B92100355500A2E45C /* TD MyLevelUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TD MyLevelUp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B240BC2100355500A2E45C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46B240BE2100355500A2E45C /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -764,6 +766,7 @@
 			children = (
 				46C6FEB721066FC300AC8856 /* CreditCardSummaryCell.swift */,
 				46A6C7F72106881F003C2215 /* CreditCardRecommendationCell.swift */,
+				46A6C7FB2106C334003C2215 /* CreditHealthCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -974,6 +977,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46A6C7FC2106C334003C2215 /* CreditHealthCell.swift in Sources */,
 				46C6FEBA21066FDF00AC8856 /* CreditCardSummaryController.swift in Sources */,
 				46B24124210128C600A2E45C /* CreditCardWidgetModel.swift in Sources */,
 				161B6ADF21029A3800713CFB /* PersonalAccount.swift in Sources */,

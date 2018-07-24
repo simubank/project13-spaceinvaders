@@ -40,6 +40,9 @@ public class CreditCardDetailsViewController: BaseCollectionViewController {
     public override func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         var objects: [ListDiffable] = []
         objects.append(account)
+        if !transactions.isEmpty {
+            objects.append(CreditHealthModel(transactions: transactions))
+        }
         if let totalBalanceNetworth = totalBalanceNetworth, totalBalanceNetworth > 60000 {
             objects.append(CreditCardRecommendation(recommendation: TDCreditCard.cashBackInfinite))
         } else {
@@ -54,6 +57,8 @@ public class CreditCardDetailsViewController: BaseCollectionViewController {
     public override func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         if object is CreditCardAccount {
             return CreditCardSummaryController(shouldNavigate: false)
+        } else if object is CreditHealthModel {
+            return CreditHealthController()
         } else if object is CreditCardRecommendation {
             return CreditCardRecommendationController()
         }
