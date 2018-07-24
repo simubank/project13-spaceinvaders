@@ -7,6 +7,7 @@ public class CreditCardDetailsViewController: BaseCollectionViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Credit Card Details"
         VirtualBankService.request(.transactionsFor(account: account.id)) { result in
             switch result {
             case let .success(moyaResponse):
@@ -22,6 +23,7 @@ public class CreditCardDetailsViewController: BaseCollectionViewController {
     public override func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         var objects: [ListDiffable] = []
         objects.append(account)
+        objects.append(CreditCardRecommendation())
         if !transactions.isEmpty {
             objects.append(TransactionListHolder(transactions: transactions))
         }
@@ -31,6 +33,8 @@ public class CreditCardDetailsViewController: BaseCollectionViewController {
     public override func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         if object is CreditCardAccount {
             return CreditCardSummaryController(shouldNavigate: false)
+        } else if object is CreditCardRecommendation {
+            return CreditCardRecommendationController()
         }
         return TransactionController()
     }

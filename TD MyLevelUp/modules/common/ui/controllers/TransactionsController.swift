@@ -32,7 +32,7 @@ public class TransactionController: ListSectionController {
                 fatalError()
             }
             guard let model = model else { return cell }
-            let transaction = model.transactions[index + 1]
+            let transaction = model.transactions[index - 1]
             cell.nameLabel.text = transaction.description ?? "N/A"
             cell.balanceLabel.text = "$\(transaction.postBalance ?? 0)"
             return cell
