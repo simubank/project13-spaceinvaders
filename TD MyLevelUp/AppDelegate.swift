@@ -11,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController(rootViewController: DashboardViewController())
         navigationController.navigationBar.addTdShadow(opacity: 0.4, height: 5)
         navigationController.isHeroEnabled = true
-        UINavigationBar.appearance().barTintColor = .primary
+        UINavigationBar.appearance().barTintColor = .primaryLight
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         self.window?.rootViewController = navigationController
