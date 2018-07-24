@@ -5,6 +5,7 @@ public class CreditCardDetailsViewController: BaseCollectionViewController {
     public var account: CreditCardAccount!
     public var transactions: [Transaction] = []
     public var totalBalanceNetworth: Double?
+    private var isStudent: Bool = false
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,22 @@ public class CreditCardDetailsViewController: BaseCollectionViewController {
             }
         }
         
+        VirtualBankService.request(.customer(id: AccountManager.shared.id)) { result in
+            switch result {
+            case let .success(moyaResponse):
+                guard let response = moyaResponse.mapObject(VirtualBankResponse<[Customer]>.self) else {
+                    return
+                }
+                let occupation: String = response.result?[0].primaryOccupation ?? ""
+                if occupation == "college" || occupation == "highschool" || occupation == "masters" {
+                    self.isStudent = true
+                }
+                self.adapter.performUpdates(animated: true, completion: nil)
+            case let .failure(error):
+                print(error)
+            }
+        }
+        
     }
     
     public override func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
@@ -43,11 +60,28 @@ public class CreditCardDetailsViewController: BaseCollectionViewController {
         if !transactions.isEmpty {
             objects.append(CreditHealthModel(transactions: transactions))
         }
+        var listOfCards: [TDCreditCard] = []
         if let totalBalanceNetworth = totalBalanceNetworth, totalBalanceNetworth > 60000 {
-            objects.append(CreditCardRecommendation(recommendations: [TDCreditCard.cashBackInfinite, TDCreditCard.usDollarCard]))
+//            objects.append(CreditCardRecommendation(recommendations: [.cashBackInfinite, .firstClassTravel]))
+            listOfCards.append(.cashBackInfinite)
+            listOfCards.append(.firstClassTravel)
+            listOfCards.append(.aeroplanVisaPlatinum)
+            listOfCards.append(.aeroplanVisaInfinitePrivilege)
         } else {
-            objects.append(CreditCardRecommendation(recommendations: [TDCreditCard.cashBackVisa]))
+//            objects.append(CreditCardRecommendation(recommendations: [.cashBackVisa, .platinumTravel]))
+            listOfCards.append(.cashBackVisa)
+            listOfCards.append(.platinumTravel)
+            listOfCards.append(.aeroplanVisa)
         }
+        
+        if isStudent {
+            listOfCards.append(.cashBackVisa)
+            listOfCards.append(.platinumTravel)
+            listOfCards.append(.rewardsVisa)
+            listOfCards.append(.flexRateVisa)
+        }
+        
+        objects.append(CreditCardRecommendation(recommendations: listOfCards))
         if !transactions.isEmpty {
             objects.append(TransactionListHolder(transactions: transactions))
         }

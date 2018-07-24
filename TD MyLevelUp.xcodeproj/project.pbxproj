@@ -15,6 +15,7 @@
 		161B6AE32103835000713CFB /* PersonalAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161B6AE22103835000713CFB /* PersonalAccounts.swift */; };
 		161F9D352104BEE0005B485F /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161F9D342104BEE0005B485F /* AccountCell.swift */; };
 		4698E1652107569500419713 /* OnClickButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698E1642107569500419713 /* OnClickButton.swift */; };
+		4698E167210761D700419713 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698E166210761D700419713 /* Toast.swift */; };
 		46A6C7F4210687FA003C2215 /* CreditCardHealthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C7F3210687FA003C2215 /* CreditCardHealthController.swift */; };
 		46A6C7F621068810003C2215 /* CreditCardRecommendationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C7F521068810003C2215 /* CreditCardRecommendationController.swift */; };
 		46A6C7F82106881F003C2215 /* CreditCardRecommendationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C7F72106881F003C2215 /* CreditCardRecommendationCell.swift */; };
@@ -133,6 +134,7 @@
 		161F9D342104BEE0005B485F /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		3C9598CB0185B11536D9D305 /* Pods-TD MyLevelUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TD MyLevelUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TD MyLevelUp/Pods-TD MyLevelUp.debug.xcconfig"; sourceTree = "<group>"; };
 		4698E1642107569500419713 /* OnClickButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnClickButton.swift; sourceTree = "<group>"; };
+		4698E166210761D700419713 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		46A6C7F3210687FA003C2215 /* CreditCardHealthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardHealthController.swift; sourceTree = "<group>"; };
 		46A6C7F521068810003C2215 /* CreditCardRecommendationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardRecommendationController.swift; sourceTree = "<group>"; };
 		46A6C7F72106881F003C2215 /* CreditCardRecommendationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardRecommendationCell.swift; sourceTree = "<group>"; };
@@ -704,6 +706,7 @@
 			children = (
 				46B2415721014ACA00A2E45C /* CenterCollectionViewFlowLayout.swift */,
 				4698E1642107569500419713 /* OnClickButton.swift */,
+				4698E166210761D700419713 /* Toast.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -1010,6 +1013,7 @@
 				46F88EFA2103E2A70012077E /* WhyInvestingViewController.swift in Sources */,
 				46B2414D2101395B00A2E45C /* PromotionCell.swift in Sources */,
 				46F88F152104F61F0012077E /* SearchSymbolViewModel.swift in Sources */,
+				4698E167210761D700419713 /* Toast.swift in Sources */,
 				46B241542101475500A2E45C /* ListInsetSingleSectionController.swift in Sources */,
 				46F88F122104F4880012077E /* SearchSymbolViewController.swift in Sources */,
 				46F88F1F210513980012077E /* Date+LevelUp.swift in Sources */,
