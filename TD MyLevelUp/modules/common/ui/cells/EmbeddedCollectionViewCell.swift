@@ -14,7 +14,7 @@ import UIKit
 import IGListKit
 
 /// A Cell with an embedded Horizontal Collection View.
-public class EmbeddedCollectionViewCell: UICollectionViewCell {
+public class EmbeddedCollectionViewCell: TDBaseCell {
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -23,13 +23,30 @@ public class EmbeddedCollectionViewCell: UICollectionViewCell {
         view.backgroundColor = .background
         view.alwaysBounceVertical = false
         view.alwaysBounceHorizontal = true
+        view.isPagingEnabled = true
         view.showsHorizontalScrollIndicator = false
         self.contentView.addSubview(view)
         return view
     }()
     
-    override public func layoutSubviews() {
-        super.layoutSubviews()
-        collectionView.frame = contentView.frame
+    lazy var pageControl: UIPageControl = {
+        let view = UIPageControl()
+        view.pageIndicatorTintColor = UIColor.primaryLight.withAlphaComponent(0.3)
+        view.currentPageIndicatorTintColor = .primaryLight
+        self.contentView.addSubview(view)
+        return view
+    }()
+    public override func prepareViews() {
+        collectionView.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.bottom.equalToSuperview()
+            $0.left.equalToSuperview()
+            $0.right.equalToSuperview()
+        }
+        pageControl.snp.makeConstraints {
+            $0.width.equalToSuperview()
+            $0.bottom.equalTo(8)
+            $0.centerX.equalToSuperview()
+        }
     }
 }

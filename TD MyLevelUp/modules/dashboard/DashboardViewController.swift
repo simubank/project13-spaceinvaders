@@ -57,7 +57,7 @@ class DashboardViewController: BaseCollectionViewController {
         guard let name = name else { return [] }
         return ["Welcome \(name)!" as ListDiffable] + [AccountsWidgetModel(),
                  CreditCardWidgetModel(),
-                 MortgageWidgetModel(),
+//                 MortgageWidgetModel(),
                  InvestingWidgetModel()] as [ListDiffable]
     }
     

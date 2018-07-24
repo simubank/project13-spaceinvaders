@@ -1,17 +1,24 @@
 import Foundation
 import IGListKit
-import SafariServices
 
 public class CreditCardRecommendation: NSObject {
-    public let recommendation: TDCreditCard
+    public let recommendations: [TDCreditCard]
     
-    public init(recommendation: TDCreditCard) {
-        self.recommendation = recommendation
+    public init(recommendations: [TDCreditCard]) {
+        self.recommendations = recommendations
     }
 }
 
-public class CreditCardRecommendationController: ListSectionController, SFSafariViewControllerDelegate {
+public class CreditCardRecommendationController: ListSectionController {
+    lazy var adapter: ListAdapter = {
+        let adapter = ListAdapter(updater: ListAdapterUpdater(),
+                                  viewController: self.viewController)
+        adapter.dataSource = self
+        return adapter
+    }()
+    
     open var model: CreditCardRecommendation?
+    open var pageControls: UIPageControl?
     
     open override func sizeForItem(at index: Int) -> CGSize {
         guard let collectionContext = collectionContext else { return CGSize.zero}
@@ -31,24 +38,43 @@ public class CreditCardRecommendationController: ListSectionController, SFSafari
             return cell
         }
         guard let cell = collectionContext?
-            .dequeueReusableCell(of: CreditCardRecommendationCell.self, for: self, at: index) as? CreditCardRecommendationCell,
-        let model = model else { fatalError()}
-        cell.accountBalanceLabel.text = "Based on your transactions, income and credit. We recommend the \(model.recommendation.rawValue)."
-        cell.cardImageView.image = UIImage(named: model.recommendation.rawValue)
+            .dequeueReusableCell(of: EmbeddedCollectionViewCell.self, for: self, at: index) as? EmbeddedCollectionViewCell else { fatalError()}
+        pageControls = cell.pageControl
+        pageControls?.currentPage = 0
+        pageControls?.numberOfPages = model?.recommendations.count ?? 0
+        adapter.collectionView = cell.collectionView
+        adapter.scrollViewDelegate = self
         return cell
     }
     
     public override func didUpdate(to object: Any) {
         model = object as? CreditCardRecommendation
     }
-    public override func didSelectItem(at index: Int) {
-        guard let model = model else { return }
-        let controller = SFSafariViewController(url: URL(string: model.recommendation.url)!)
-        controller.delegate = self
-        viewController?.present(controller, animated: true, completion: nil)
+}
+
+extension CreditCardRecommendationController: UIScrollViewDelegate {
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        guard let model = model?.recommendations else { return }
+        let x = scrollView.contentOffset.x
+        let w = scrollView.bounds.size.width
+        let currentPage = Int(ceil(x/w))
+        if currentPage >= 0 && currentPage < model.count {
+            pageControls?.currentPage = currentPage
+        }
+    }
+}
+
+extension CreditCardRecommendationController: ListAdapterDataSource {
+    public func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+        guard let model = model else { return [] }
+        return [model]
     }
     
-    public func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        controller.dismiss(animated: true, completion: nil)
+    public func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        return CardRecommendationController()
+    }
+    
+    public func emptyView(for listAdapter: ListAdapter) -> UIView? {
+        return nil
     }
 }

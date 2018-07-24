@@ -19,6 +19,7 @@
 		46A6C7F82106881F003C2215 /* CreditCardRecommendationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C7F72106881F003C2215 /* CreditCardRecommendationCell.swift */; };
 		46A6C7FA2106B033003C2215 /* TDCreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C7F92106B033003C2215 /* TDCreditCard.swift */; };
 		46A6C7FC2106C334003C2215 /* CreditHealthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C7FB2106C334003C2215 /* CreditHealthCell.swift */; };
+		46A6C7FE2106D265003C2215 /* CardRecommendationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C7FD2106D265003C2215 /* CardRecommendationController.swift */; };
 		46B240BD2100355500A2E45C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B240BC2100355500A2E45C /* AppDelegate.swift */; };
 		46B240BF2100355500A2E45C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B240BE2100355500A2E45C /* DashboardViewController.swift */; };
 		46B240C42100355800A2E45C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B240C32100355800A2E45C /* Assets.xcassets */; };
@@ -133,6 +134,7 @@
 		46A6C7F72106881F003C2215 /* CreditCardRecommendationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardRecommendationCell.swift; sourceTree = "<group>"; };
 		46A6C7F92106B033003C2215 /* TDCreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDCreditCard.swift; sourceTree = "<group>"; };
 		46A6C7FB2106C334003C2215 /* CreditHealthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditHealthCell.swift; sourceTree = "<group>"; };
+		46A6C7FD2106D265003C2215 /* CardRecommendationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRecommendationController.swift; sourceTree = "<group>"; };
 		46B240B92100355500A2E45C /* TD MyLevelUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TD MyLevelUp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B240BC2100355500A2E45C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46B240BE2100355500A2E45C /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -728,6 +730,7 @@
 				46F88F2421051CDA0012077E /* StockPurchaseController.swift */,
 				46C6FE9F21063B9F00AC8856 /* CandleStickChartController.swift */,
 				46C6FEA721065C5A00AC8856 /* InvestingResutlsController.swift */,
+				46A6C7FD2106D265003C2215 /* CardRecommendationController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -985,6 +988,7 @@
 				46B240E32100400900A2E45C /* TDShadowable.swift in Sources */,
 				46B2410C21004BFE00A2E45C /* Branch.swift in Sources */,
 				46F88F192104FECD0012077E /* SymbolSearchResultController.swift in Sources */,
+				46A6C7FE2106D265003C2215 /* CardRecommendationController.swift in Sources */,
 				46B240FD210044C200A2E45C /* NSObject+IGListKit.swift in Sources */,
 				46B241672102004800A2E45C /* StockQuoteCell.swift in Sources */,
 				46C6FEA621065C3600AC8856 /* InvestingResultsCell.swift in Sources */,

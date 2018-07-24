@@ -44,9 +44,9 @@ public class CreditCardDetailsViewController: BaseCollectionViewController {
             objects.append(CreditHealthModel(transactions: transactions))
         }
         if let totalBalanceNetworth = totalBalanceNetworth, totalBalanceNetworth > 60000 {
-            objects.append(CreditCardRecommendation(recommendation: TDCreditCard.cashBackInfinite))
+            objects.append(CreditCardRecommendation(recommendations: [TDCreditCard.cashBackInfinite, TDCreditCard.usDollarCard]))
         } else {
-            objects.append(CreditCardRecommendation(recommendation: TDCreditCard.cashBackVisa))
+            objects.append(CreditCardRecommendation(recommendations: [TDCreditCard.cashBackVisa]))
         }
         if !transactions.isEmpty {
             objects.append(TransactionListHolder(transactions: transactions))
