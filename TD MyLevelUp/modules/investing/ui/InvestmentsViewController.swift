@@ -7,6 +7,7 @@ public class InvestmentViewController: BaseCollectionViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Investing"
         collectionView.backgroundColor = .background
     }
     

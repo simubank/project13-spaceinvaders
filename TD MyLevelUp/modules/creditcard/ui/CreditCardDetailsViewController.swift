@@ -4,6 +4,7 @@ import IGListKit
 public class CreditCardDetailsViewController: BaseCollectionViewController {
     public var account: CreditCardAccount!
     public var transactions: [Transaction] = []
+    public var totalBalanceNetworth: Double?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,12 +19,32 @@ public class CreditCardDetailsViewController: BaseCollectionViewController {
                 print(error)
             }
         }
+        VirtualBankService.request(.accounts(user: AccountManager.shared.id)) { result in
+            switch result {
+            case let .success(moyaResponse):
+                guard let response = moyaResponse.mapObject(VirtualBankResponse<Accounts>.self) else { return }
+                if let accounts = response.result?.bankAccounts {
+                    self.totalBalanceNetworth = 0
+                    for account in accounts {
+                        self.totalBalanceNetworth = (self.totalBalanceNetworth ?? 0) + (account.balance ?? 0)
+                    }
+                    self.adapter.performUpdates(animated: true, completion: nil)
+                }
+            case let .failure(error):
+                print(error)
+            }
+        }
+        
     }
     
     public override func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         var objects: [ListDiffable] = []
         objects.append(account)
-        objects.append(CreditCardRecommendation())
+        if let totalBalanceNetworth = totalBalanceNetworth, totalBalanceNetworth > 60000 {
+            objects.append(CreditCardRecommendation(recommendation: TDCreditCard.cashBackInfinite))
+        } else {
+            objects.append(CreditCardRecommendation(recommendation: TDCreditCard.cashBackVisa))
+        }
         if !transactions.isEmpty {
             objects.append(TransactionListHolder(transactions: transactions))
         }

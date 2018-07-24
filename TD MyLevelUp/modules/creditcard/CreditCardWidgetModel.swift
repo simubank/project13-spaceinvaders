@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 public class CreditCardWidgetModel: NSObject, DashboardWidgetModel {
-    public var icon: UIImage? = UIImage()
+    public var icon: UIImage? = UIImage(named: "credit_card_icon")
     
     public let title: String = "Credit Cards"
     

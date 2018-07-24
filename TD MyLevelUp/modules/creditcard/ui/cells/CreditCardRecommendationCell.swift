@@ -9,7 +9,6 @@ public class CreditCardRecommendationCell: TDBaseCell {
         label.textColor = .black
         label.font = .standard(withSize: 12.0)
         label.numberOfLines = 0
-        label.text = "Based on your transactions, income and credit. We recommend the TD Cash Back Infinite Card."
         contentView.addSubview(label)
         return label
     }()
@@ -55,7 +54,5 @@ public class CreditCardRecommendationCell: TDBaseCell {
             $0.width.equalTo(60 * 1.586)
             $0.height.equalTo(60)
         }
-        
-        
     }
 }
