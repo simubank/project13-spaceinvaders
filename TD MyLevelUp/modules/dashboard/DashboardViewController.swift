@@ -9,7 +9,7 @@ class DashboardViewController: BaseCollectionViewController {
         super.viewDidLoad()
         title = "TD MyLevelUp"
         self.updateUser(id: "")
-        let testUIBarButtonItem = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(DashboardViewController.tappedSettings))
+        let testUIBarButtonItem = UIBarButtonItem(image: UIImage(named: "gear_icon"), style: .plain, target: self, action: #selector(DashboardViewController.tappedSettings))
         self.navigationItem.rightBarButtonItem  = testUIBarButtonItem
     }
     
