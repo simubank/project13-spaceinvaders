@@ -14,6 +14,7 @@
 		161B6ADF21029A3800713CFB /* PersonalAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161B6ADE21029A3800713CFB /* PersonalAccount.swift */; };
 		161B6AE32103835000713CFB /* PersonalAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161B6AE22103835000713CFB /* PersonalAccounts.swift */; };
 		161F9D352104BEE0005B485F /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161F9D342104BEE0005B485F /* AccountCell.swift */; };
+		4698E1652107569500419713 /* OnClickButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4698E1642107569500419713 /* OnClickButton.swift */; };
 		46A6C7F4210687FA003C2215 /* CreditCardHealthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C7F3210687FA003C2215 /* CreditCardHealthController.swift */; };
 		46A6C7F621068810003C2215 /* CreditCardRecommendationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C7F521068810003C2215 /* CreditCardRecommendationController.swift */; };
 		46A6C7F82106881F003C2215 /* CreditCardRecommendationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6C7F72106881F003C2215 /* CreditCardRecommendationCell.swift */; };
@@ -131,6 +132,7 @@
 		161B6AE22103835000713CFB /* PersonalAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccounts.swift; sourceTree = "<group>"; };
 		161F9D342104BEE0005B485F /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		3C9598CB0185B11536D9D305 /* Pods-TD MyLevelUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TD MyLevelUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TD MyLevelUp/Pods-TD MyLevelUp.debug.xcconfig"; sourceTree = "<group>"; };
+		4698E1642107569500419713 /* OnClickButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnClickButton.swift; sourceTree = "<group>"; };
 		46A6C7F3210687FA003C2215 /* CreditCardHealthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardHealthController.swift; sourceTree = "<group>"; };
 		46A6C7F521068810003C2215 /* CreditCardRecommendationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardRecommendationController.swift; sourceTree = "<group>"; };
 		46A6C7F72106881F003C2215 /* CreditCardRecommendationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardRecommendationCell.swift; sourceTree = "<group>"; };
@@ -701,6 +703,7 @@
 			isa = PBXGroup;
 			children = (
 				46B2415721014ACA00A2E45C /* CenterCollectionViewFlowLayout.swift */,
+				4698E1642107569500419713 /* OnClickButton.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -987,6 +990,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46A6C7FC2106C334003C2215 /* CreditHealthCell.swift in Sources */,
+				4698E1652107569500419713 /* OnClickButton.swift in Sources */,
 				46C6FEBA21066FDF00AC8856 /* CreditCardSummaryController.swift in Sources */,
 				46B24124210128C600A2E45C /* CreditCardWidgetModel.swift in Sources */,
 				161B6ADF21029A3800713CFB /* PersonalAccount.swift in Sources */,
@@ -1215,6 +1219,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZY7497MHJE;
 				INFOPLIST_FILE = "TD MyLevelUp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1234,6 +1239,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZY7497MHJE;
 				INFOPLIST_FILE = "TD MyLevelUp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

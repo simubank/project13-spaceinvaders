@@ -10,9 +10,13 @@ public class InvestingSimulationViewController: BaseCollectionViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         title = "Investing Simulation"
-        let controller = SearchSymbolViewController()
-        controller.delegate = self
-        present(controller, animated: true, completion: nil)
+        let alertController = UIAlertController(title: "Investing Simlation", message: "In this simulation, we will show how investing all your unecessary spending can make a dramatic impact on your wealth. Let's start by searching for a Stock Symbol.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Lets go!", style: .default, handler: { [unowned self] (action) -> Void in
+            let controller = SearchSymbolViewController()
+            controller.delegate = self
+            self.present(controller, animated: true, completion: nil)
+        }))
+        self.navigationController?.present(alertController, animated: true, completion: nil)
         presenter.view = self
         presenter.onViewReady()
     }
@@ -39,10 +43,12 @@ extension InvestingSimulationViewController: InvestingSimulationView {
         MBProgressHUD.hide(for: self.view, animated: true)
         objectsForList.append("Results" as ListDiffable)
         objectsForList.append(summary as ListDiffable)
-        objectsForList.append("Historical Prices of \(trades[0].stockSymbol)" as ListDiffable)
-        objectsForList.append(CandleStickChartModel(stockName: trades[0].stockSymbol, data: historicalData) as ListDiffable)
-        objectsForList.append("Trades to be made" as ListDiffable)
-        objectsForList.append(contentsOf: trades)
+        if !trades.isEmpty {
+            objectsForList.append("Historical Prices of \(trades[0].stockSymbol)" as ListDiffable)
+            objectsForList.append(CandleStickChartModel(stockName: trades[0].stockSymbol, data: historicalData) as ListDiffable)
+            objectsForList.append("Trades to be made" as ListDiffable)
+            objectsForList.append(contentsOf: trades)
+        }
         adapter.performUpdates(animated: true, completion: nil)
     }
     
@@ -52,6 +58,10 @@ extension InvestingSimulationViewController: InvestingSimulationView {
 }
 
 extension InvestingSimulationViewController: SearchSymbolDelegate {
+    public func searchDidCancel(viewcontroller: SearchSymbolViewController) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     public func search(viewcontroller: SearchSymbolViewController, didSelect stock: YahooStock) {
         presenter.onUpdatedSymbol(stock.symbol)
         let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
