@@ -30,7 +30,7 @@ class DashboardViewController: BaseCollectionViewController {
         actionController.addAction(Action(ActionData(title: "Taylah Basora", subtitle: "51 - Female - Barista - Sharing Rent", image: UIImage(named: "female_icon")!), style: .default, handler: { action in
             self.updateUser(id: "1f9e0890-77b5-44ae-a987-03a0a6a1029a_46ecc00a-84f5-4b64-a1fa-4354edeba8c4")
         }))
-        actionController.addAction(Action(ActionData(title: "Rishi (Stubbed)", subtitle: "22 - Male - Developer - Living with Parents", image: UIImage(named: "male_icon")!), style: .default, handler: { action in
+        actionController.addAction(Action(ActionData(title: "Rishi", subtitle: "22 - Male - Developer - Living with Parents", image: UIImage(named: "male_icon")!), style: .default, handler: { action in
             self.updateUser(id: "")
         }))
         actionController.headerData = "Accounts"
