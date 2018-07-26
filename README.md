@@ -1,5 +1,5 @@
-# TD-LevelUp-iOS
-This is an application filters TD Products for users to work their way up to a bright Financial Future. 
+# TD MyLevelUp 
+This is an iOS application filters TD Products for users to work their way up to a bright Financial Future. 
 
 ## Problem 
 One of the largest irritations for customers is landing on a product page and there is a plethora of products to choose from. 
