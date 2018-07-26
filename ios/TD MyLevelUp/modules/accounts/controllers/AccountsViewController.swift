@@ -145,7 +145,7 @@ class AccountsViewController: UIViewController, UITableViewDelegate, UITableView
             recommendedText = "You seem to have over $4000 in your balances. Maybe you would be interested in a(n) "
             return PersonalAccounts.unlimitedChequing
         case 5000...:
-            recommendedText = "You seem to have over $5000 in your balances. Maybe you would be interested in a(n) "
+            recommendedText = "Because your balance is over $5000, you can take advantage of the rebate and get the "
             return PersonalAccounts.allInclusiveBanking
         default:
             return PersonalAccounts.minimumChequing
@@ -169,7 +169,7 @@ extension AccountsViewController {
         let cell = AccountCell(style: UITableViewCellStyle.default, reuseIdentifier: "AccountCell")
         
         cell.type.text = accounts[indexPath.row].type ?? ""
-        cell.balance.text = "$\(accounts[indexPath.row].balance ?? 0.00) \(accounts[indexPath.row].currency ?? "")"
+        cell.balance.text = "\(String(format: "$%.2f", accounts[indexPath.row].balance?.round() ?? 0.00)) \(accounts[indexPath.row].currency ?? "")"
         
         return cell
     }
