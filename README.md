@@ -1,20 +1,20 @@
 # TD MyLevelUp 
-This is an iOS application filters TD Products for users to work their way up to a bright Financial Future. 
+This is an iOS application filters TD products for users to work their way up to a bright financial future. 
 
 ## Problem 
 One of the largest irritations for customers is landing on a product page and there is a plethora of products to choose from. 
-TD has 6 different chequing accounts, 10+ different credit cards, and thousands of investing products... where do you start? 
-what product is right for you? is this making you anxious? 
+TD has 6 different chequing accounts, 10+ different credit cards, and thousands of investing products... Where do you start? 
+What product is right for you? Is this making you anxious? 
 
 ## Solution
-Since we know all the user's income, transactions and financial position we are able to help you discover the product(s) that benefit you the most without the use of forms.
+Since we know all the user's income, transactions and financial position, we are able to help them discover the product(s) that benefit them the most without the use of forms.
 
 ## Benefits
-- Ensures customers are taking advantage of all the possible TD Products for them.
-- Encourages users to save, investing, growing wealth. 
-- Shows the customer where to start and what are the next steps.
-- As a customer's financial journey progresses, product recommendations will adapt to customer's financial position for them to take advantage of.
-- Educates the user why they should take advantage of a particular product. (Financial Literacy) 
+- Ensures customers are taking advantage of all the possible TD products for them.
+- Encourages users to save, invest, and grow wealth. 
+- Shows customers where to start and what are the next steps.
+- As a customer's financial journey progresses, product recommendations will adapt to the customer's financial position for him/her to take full advantage of.
+- Educates users why they should take advantage of a particular product. (Increase financial literacy) 
 
 ## Running the Application
 ### Prerequisites 
